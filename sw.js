@@ -1,6 +1,6 @@
 /* Chiang Mai Trip — service worker, стратегия cache-first для app-shell и данных */
 
-const CACHE_NAME = "cm-trip-v4";
+const CACHE_NAME = "cm-trip-v5";
 
 const APP_SHELL = [
   "./",

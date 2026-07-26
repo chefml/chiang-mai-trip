@@ -20,6 +20,12 @@
   --star: #F59E0B;
   --radius: 14px;
   --tap: 44px;
+
+  /* Акцент контентной области. Днём — ровно цвет шапки; ночью осветляется,
+     иначе тёмно-зелёный ложится на почти чёрную карточку с контрастом 1.8:1.
+     Шапка и активная вкладка всегда берут --brand: там белый фон под текстом. */
+  --accent: var(--brand);
+  --accent-on: #FFFFFF;
 }
 
 * { box-sizing: border-box; }
@@ -194,7 +200,7 @@ body {
   gap: 12px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 5px solid var(--brand);
+  border-left: 5px solid var(--accent);
   border-radius: var(--radius);
   padding: 12px 14px;
   margin-bottom: 14px;
@@ -273,7 +279,7 @@ body {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   font-size: 15px;
-  color: var(--brand);
+  color: var(--accent);
 }
 
 .loc__name {
@@ -351,8 +357,8 @@ body {
 
 .btn--primary {
   flex: 1 1 auto;
-  background: var(--brand);
-  color: #fff;
+  background: var(--accent);
+  color: var(--accent-on);
 }
 
 .btn--primary:active { filter: brightness(.9); }
@@ -360,7 +366,7 @@ body {
 .btn--ghost {
   flex: 0 0 auto;
   background: transparent;
-  color: var(--brand);
+  color: var(--accent);
   border-color: var(--border);
 }
 
@@ -387,6 +393,10 @@ body {
    Настройка ОС (prefers-color-scheme) намеренно не учитывается — днём светло, ночью темно. */
 :root[data-theme="dark"] {
   color-scheme: dark;
+
+  /* тот же тон, что у #14532D (hue 140°), но светлее — читаемо на тёмной карточке */
+  --accent: #55A876;
+  --accent-on: #0A2416;
 
   --bg: #101410;
   --surface: #182018;
