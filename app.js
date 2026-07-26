@@ -45,12 +45,6 @@
     }
   };
 
-  /* Акцент дня: оттенки вокруг бренд-зелёного, по одному на каждый из 12 дней */
-  var DAY_ACCENTS = [
-    "#14532D", "#166534", "#15803D", "#0F766E", "#0E7490", "#1D4ED8",
-    "#4C1D95", "#86198F", "#9F1239", "#B45309", "#4D7C0F", "#115E59"
-  ];
-
   var tabsEl = document.getElementById("day-tabs");
   var viewEl = document.getElementById("day-view");
   var titleEl = document.getElementById("trip-title");
@@ -250,10 +244,6 @@
     return lang === "zh" ? word + day.day + "天" : word + " " + day.day;
   }
 
-  function accentFor(index) {
-    return DAY_ACCENTS[index % DAY_ACCENTS.length];
-  }
-
   /* ---------- Переключатель языка ---------- */
 
   function buildLangSwitcher() {
@@ -325,7 +315,6 @@
     var day = days[index];
 
     viewEl.textContent = "";
-    viewEl.style.setProperty("--day-accent", accentFor(index));
 
     var head = el("section", "day-head");
 

@@ -194,7 +194,7 @@ body {
   gap: 12px;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-left: 5px solid var(--day-accent, var(--brand));
+  border-left: 5px solid var(--brand);
   border-radius: var(--radius);
   padding: 12px 14px;
   margin-bottom: 14px;
@@ -273,7 +273,7 @@ body {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
   font-size: 15px;
-  color: var(--day-accent, var(--brand));
+  color: var(--brand);
 }
 
 .loc__name {
@@ -351,7 +351,7 @@ body {
 
 .btn--primary {
   flex: 1 1 auto;
-  background: var(--day-accent, var(--brand));
+  background: var(--brand);
   color: #fff;
 }
 
@@ -360,7 +360,7 @@ body {
 .btn--ghost {
   flex: 0 0 auto;
   background: transparent;
-  color: var(--day-accent, var(--brand));
+  color: var(--brand);
   border-color: var(--border);
 }
 
