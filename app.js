@@ -7,12 +7,12 @@
   var LANG_STORAGE_KEY = "cm-trip-lang";
   var FALLBACK_LANG = "en";
 
-  /* Строки интерфейса, которых нет в ui[lang] датасета (обзорная карта, предупреждения,
+  /* Строки интерфейса, которых нет в ui[lang] датасета (маршрут дня, предупреждения,
      служебные тексты, форматы дат). Ключи датасета всегда имеют приоритет. */
   var EXTRA_UI = {
     en: {
       language: "Language",
-      overview: "Day overview map",
+      dayRoute: "Route through the day",
       warn: "Warning",
       loading: "Loading…",
       dataError: "Could not load the trip data",
@@ -23,7 +23,7 @@
     },
     ru: {
       language: "Язык",
-      overview: "Обзорная карта дня",
+      dayRoute: "Маршрут по точкам дня",
       warn: "Внимание",
       loading: "Загрузка…",
       dataError: "Не удалось загрузить данные поездки",
@@ -34,7 +34,7 @@
     },
     zh: {
       language: "语言",
-      overview: "当天概览地图",
+      dayRoute: "当天全程路线",
       warn: "注意",
       loading: "加载中…",
       dataError: "无法加载行程数据",
@@ -166,6 +166,40 @@
     var url = "https://www.google.com/maps/search/?api=1&query=" +
       encodeURIComponent(localized(loc.name));
     if (loc.placeId) url += "&query_place_id=" + loc.placeId;
+    return url;
+  }
+
+  /* Точка как параметр маршрута: координаты, иначе название */
+  function waypointOf(loc) {
+    return hasCoords(loc) ? loc.lat + "," + loc.lng : localized(loc.name);
+  }
+
+  /* Цепочка по всем точкам дня: старт — первая точка (не текущее положение),
+     финиш — последняя, промежуточные уходят в waypoints (universal URL держит до 9). */
+  function dayRouteUrl(points) {
+    var origin = points[0];
+    var destination = points[points.length - 1];
+    var middle = points.slice(1, -1);
+
+    var url = "https://www.google.com/maps/dir/?api=1" +
+      "&origin=" + encodeURIComponent(waypointOf(origin)) +
+      "&destination=" + encodeURIComponent(waypointOf(destination));
+
+    if (origin.placeId) url += "&origin_place_id=" + origin.placeId;
+    if (destination.placeId) url += "&destination_place_id=" + destination.placeId;
+
+    if (middle.length) {
+      url += "&waypoints=" + encodeURIComponent(middle.map(waypointOf).join("|"));
+
+      /* waypoint_place_ids принимается только когда id есть у КАЖДОЙ промежуточной точки —
+         иначе списки разной длины и Google отбрасывает маршрут целиком */
+      var allHaveId = middle.every(function (loc) { return !!loc.placeId; });
+      if (allHaveId) {
+        url += "&waypoint_place_ids=" +
+          encodeURIComponent(middle.map(function (loc) { return loc.placeId; }).join("|"));
+      }
+    }
+
     return url;
   }
 
@@ -310,11 +344,13 @@
 
     var locations = day.locations || [];
 
-    var first = locations.filter(isMappable)[0];
-    if (first) {
-      var overview = el("div", "day-overview");
-      overview.appendChild(mapsLink("btn btn--ghost btn--wide", t("overview"), searchUrl(first)));
-      viewEl.appendChild(overview);
+    /* Маршрут показываем только когда есть что связывать: одна точка — это просто её карточка */
+    var routePoints = locations.filter(isMappable);
+    if (routePoints.length > 1) {
+      var route = el("div", "day-route");
+      var text = t("dayRoute") + " · " + routePoints.length;
+      route.appendChild(mapsLink("btn btn--ghost btn--wide", text, dayRouteUrl(routePoints)));
+      viewEl.appendChild(route);
     }
 
     var list = el("ul", "locations");

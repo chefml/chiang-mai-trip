@@ -12,6 +12,26 @@
   <link rel="icon" href="./icons/icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="./icons/icon-192.png">
   <link rel="stylesheet" href="./styles.css">
+  <script>
+    /* Тема по времени суток телефона: светлая днём, тёмная ночью.
+       Инлайн в <head> — иначе ночью успевает мигнуть светлый фон до загрузки app.js. */
+    (function () {
+      var DAY_START = 7;   /* с 07:00 — светлая тема */
+      var DAY_END = 19;    /* с 19:00 — тёмная тема */
+
+      function apply() {
+        var hour = new Date().getHours();
+        var daytime = hour >= DAY_START && hour < DAY_END;
+        document.documentElement.setAttribute("data-theme", daytime ? "light" : "dark");
+      }
+
+      apply();
+      setInterval(apply, 60000);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) apply(); /* приложение могли свернуть до заката */
+      });
+    })();
+  </script>
 </head>
 <body>
   <header class="topbar">

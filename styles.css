@@ -1,6 +1,8 @@
 /* Chiang Mai Trip — mobile-first, без внешних CDN */
 
 :root {
+  color-scheme: light;
+
   --brand: #14532D;
   --brand-light: #E7F0E9;
   --brand-dark: #0C3A1E;
@@ -366,7 +368,7 @@ body {
   width: 100%;
 }
 
-.day-overview {
+.day-route {
   margin-bottom: 14px;
 }
 
@@ -381,24 +383,26 @@ body {
 
 /* ---------- Тёмная тема ---------- */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #101410;
-    --surface: #182018;
-    --text: #E8EFE9;
-    --text-muted: #9FB0A3;
-    --border: #2A362C;
-    --brand-light: #1E3A28;
-    --brand-dark: #C9E7D3;
-    --amber-bg: #3A2A0C;
-    --meal-bg: #3A2413;
-    --meal: #FDBA74;
-    --optional-bg: #26303A;
-    --optional: #A8B8C6;
-  }
+/* Тема переключается по времени суток: data-theme на <html> ставит скрипт в <head>.
+   Настройка ОС (prefers-color-scheme) намеренно не учитывается — днём светло, ночью темно. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
 
-  .loc--optional { background: #141A14; }
-  .loc--warn { border-color: #7A5A12; }
-  .loc--warn .loc__note { color: #FBBF24; }
-  .badge--warn { background: #4A3508; color: #FBBF24; }
+  --bg: #101410;
+  --surface: #182018;
+  --text: #E8EFE9;
+  --text-muted: #9FB0A3;
+  --border: #2A362C;
+  --brand-light: #1E3A28;
+  --brand-dark: #C9E7D3;
+  --amber-bg: #3A2A0C;
+  --meal-bg: #3A2413;
+  --meal: #FDBA74;
+  --optional-bg: #26303A;
+  --optional: #A8B8C6;
 }
+
+:root[data-theme="dark"] .loc--optional { background: #141A14; }
+:root[data-theme="dark"] .loc--warn { border-color: #7A5A12; }
+:root[data-theme="dark"] .loc--warn .loc__note { color: #FBBF24; }
+:root[data-theme="dark"] .badge--warn { background: #4A3508; color: #FBBF24; }
