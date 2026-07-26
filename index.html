@@ -45,11 +45,16 @@
         <select id="lang-select" class="lang__select"></select>
       </div>
     </div>
+    <nav id="section-tabs" class="sections" role="tablist"></nav>
     <nav id="day-tabs" class="tabs" aria-label="Days"></nav>
   </header>
 
-  <main id="day-view" class="day-view" aria-live="polite">
-    <p id="loading" class="loading">Loading…</p>
+  <main aria-live="polite">
+    <section id="view-itinerary" class="page">
+      <p id="loading" class="loading">Loading…</p>
+    </section>
+    <section id="view-info" class="page" hidden></section>
+    <section id="view-guide" class="page" hidden></section>
   </main>
 
   <footer class="footer">

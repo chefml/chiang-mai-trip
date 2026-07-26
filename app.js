@@ -13,6 +13,8 @@
     en: {
       language: "Language",
       dayRoute: "Route through the day",
+      dayDetails: "Day details",
+      legendTitle: "Legend",
       warn: "Warning",
       loading: "Loading…",
       dataError: "Could not load the trip data",
@@ -24,6 +26,8 @@
     ru: {
       language: "Язык",
       dayRoute: "Маршрут по точкам дня",
+      dayDetails: "Детали дня",
+      legendTitle: "Обозначения",
       warn: "Внимание",
       loading: "Загрузка…",
       dataError: "Не удалось загрузить данные поездки",
@@ -35,6 +39,8 @@
     zh: {
       language: "语言",
       dayRoute: "当天全程路线",
+      dayDetails: "当天详情",
+      legendTitle: "图例",
       warn: "注意",
       loading: "加载中…",
       dataError: "无法加载行程数据",
@@ -45,8 +51,18 @@
     }
   };
 
+  /* Разделы верхних вкладок; подписи — из ui[lang] датасета */
+  var SECTIONS = [
+    { id: "itinerary", labelKey: "tabItinerary" },
+    { id: "info", labelKey: "tabInfo" },
+    { id: "guide", labelKey: "tabGuide" }
+  ];
+
   var tabsEl = document.getElementById("day-tabs");
-  var viewEl = document.getElementById("day-view");
+  var sectionTabsEl = document.getElementById("section-tabs");
+  var viewEl = document.getElementById("view-itinerary");
+  var infoEl = document.getElementById("view-info");
+  var guideEl = document.getElementById("view-guide");
   var titleEl = document.getElementById("trip-title");
   var datesEl = document.getElementById("trip-dates");
   var footerEl = document.getElementById("footer-note");
@@ -58,6 +74,10 @@
   var days = [];
   var lang = FALLBACK_LANG;
   var dayIndex = 0;
+  var section = SECTIONS[0].id;
+
+  /* Раскрытые «Детали дня» — по номеру дня, только на время сессии (без localStorage) */
+  var expandedDays = {};
 
   /* ---------- Язык ---------- */
 
@@ -311,6 +331,44 @@
     return item;
   }
 
+  /* Сворачиваемые заметки дня. Состояние — своё на каждый день, живёт до перезагрузки. */
+  function renderDayDetails(day) {
+    var rows = [
+      { label: t("roadsLabel"), value: localized(day.roads) },
+      { label: t("clothingLabel"), value: localized(day.clothing) }
+    ];
+
+    /* extra есть не у всех дней и часто равно null — тогда строки просто нет */
+    if (day.extra) rows.push({ label: t("noteLabel"), value: localized(day.extra) });
+
+    rows = rows.filter(function (row) { return row.value; });
+    if (!rows.length) return null;
+
+    var box = document.createElement("details");
+    box.className = "details";
+    box.open = !!expandedDays[day.day];
+
+    var summary = document.createElement("summary");
+    summary.className = "details__summary";
+    summary.textContent = t("dayDetails");
+    box.appendChild(summary);
+
+    var body = el("div", "details__body");
+    rows.forEach(function (row) {
+      var item = el("div", "detail");
+      item.appendChild(el("span", "detail__label", row.label));
+      item.appendChild(el("p", "detail__text", row.value));
+      body.appendChild(item);
+    });
+    box.appendChild(body);
+
+    box.addEventListener("toggle", function () {
+      expandedDays[day.day] = box.open;
+    });
+
+    return box;
+  }
+
   function renderDay(index) {
     var day = days[index];
 
@@ -321,6 +379,10 @@
     var left = el("div", "day-head__text");
     left.appendChild(el("p", "day-head__date", formatDate(day)));
     left.appendChild(el("h2", "day-head__title", localized(day.title)));
+
+    var focus = localized(day.focus);
+    if (focus) left.appendChild(el("p", "day-head__focus", focus));
+
     head.appendChild(left);
 
     var busy = el("div", "busyness");
@@ -347,6 +409,113 @@
       list.appendChild(renderLocation(loc));
     });
     viewEl.appendChild(list);
+
+    var details = renderDayDetails(day);
+    if (details) viewEl.appendChild(details);
+  }
+
+  /* ---------- Раздел «О поездке» ---------- */
+
+  function renderInfo() {
+    infoEl.textContent = "";
+
+    var overview = localized(trip.overview);
+    if (overview) {
+      var intro = el("section", "card");
+      intro.appendChild(el("p", "card__text", overview));
+      infoEl.appendChild(intro);
+    }
+
+    var general = data.general;
+    if (general && general.items && general.items.length) {
+      var facts = el("section", "card");
+
+      var generalTitle = localized(general.title);
+      if (generalTitle) facts.appendChild(el("h2", "card__title", generalTitle));
+
+      var dl = el("dl", "facts");
+      general.items.forEach(function (item) {
+        dl.appendChild(el("dt", "facts__label", localized(item.label)));
+        dl.appendChild(el("dd", "facts__text", localized(item.text)));
+      });
+      facts.appendChild(dl);
+      infoEl.appendChild(facts);
+    }
+
+    var legend = data.legend;
+    if (legend && legend.length) {
+      var box = el("section", "card");
+      box.appendChild(el("h2", "card__title", t("legendTitle")));
+
+      var list = el("ul", "legend");
+      legend.forEach(function (entry) {
+        var row = el("li", "legend__row");
+        row.appendChild(el("span", "legend__symbol", entry.symbol));
+        row.appendChild(el("span", "legend__text", localized(entry.text)));
+        list.appendChild(row);
+      });
+      box.appendChild(list);
+      infoEl.appendChild(box);
+    }
+  }
+
+  /* ---------- Раздел «Как пользоваться» ---------- */
+
+  function renderGuide() {
+    guideEl.textContent = "";
+
+    var guide = data.appGuide;
+    if (!guide) return;
+
+    var card = el("section", "card");
+
+    var title = localized(guide.title);
+    if (title) card.appendChild(el("h2", "card__title", title));
+
+    var steps = el("ol", "steps");
+    (guide.steps || []).forEach(function (step) {
+      steps.appendChild(el("li", "steps__item", localized(step)));
+    });
+    card.appendChild(steps);
+
+    guideEl.appendChild(card);
+  }
+
+  function buildSectionTabs() {
+    sectionTabsEl.textContent = "";
+
+    SECTIONS.forEach(function (item) {
+      var btn = el("button", "section-tab", t(item.labelKey));
+      btn.type = "button";
+      btn.setAttribute("role", "tab");
+      btn.setAttribute("aria-selected", item.id === section ? "true" : "false");
+      btn.addEventListener("click", function () {
+        setSection(item.id);
+      });
+      sectionTabsEl.appendChild(btn);
+    });
+  }
+
+  /* Показывает активный раздел и рисует его содержимое на текущем языке */
+  function renderSection() {
+    var itinerary = section === "itinerary";
+
+    tabsEl.hidden = !itinerary; /* чипы дней нужны только в «Маршруте» */
+    viewEl.hidden = !itinerary;
+    infoEl.hidden = section !== "info";
+    guideEl.hidden = section !== "guide";
+
+    if (itinerary) selectDay(dayIndex, false);
+    else if (section === "info") renderInfo();
+    else renderGuide();
+  }
+
+  function setSection(id) {
+    if (id === section) return;
+    section = id;
+    buildSectionTabs();
+    renderSection();
+    window.scrollTo(0, 0);
   }
 
   function buildTabs() {
@@ -389,7 +558,8 @@
     if (scrollTop) window.scrollTo(0, 0);
   }
 
-  /* Полная перерисовка: шапка, вкладки, карточка дня — всё на активном языке */
+  /* Полная перерисовка на активном языке. Активный раздел, выбранный день и
+     раскрытые «Детали» переживают смену языка — это состояние живёт отдельно. */
   function renderAll() {
     document.documentElement.lang = lang;
 
@@ -402,8 +572,9 @@
     if (footerEl) footerEl.textContent = t("footer");
 
     buildLangSwitcher();
+    buildSectionTabs();
     buildTabs();
-    selectDay(dayIndex, false);
+    renderSection();
   }
 
   /* ---------- Загрузка данных ---------- */

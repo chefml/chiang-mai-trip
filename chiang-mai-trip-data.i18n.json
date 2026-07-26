@@ -1,7 +1,7 @@
 {
   "_instructions": {
-    "en": "Multilingual dataset for the Chiang Mai trip PWA. Text fields (trip.title, day.title, day.weekday, location.name, location.note) are objects {en,ru,zh}: pick the active language. UI strings (buttons, category names, meal names) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up display labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic only). Build a language switcher over trip.languages; default = trip.defaultLanguage.",
-    "ru": "Мультиязычный датасет для PWA поездки в Чиангмай. Текстовые поля — объекты {en,ru,zh}. Строки интерфейса — в 'ui' по коду языка. Коды 'category'/'meal' — языконезависимые, подписи берутся из ui[lang]. Ссылки Google Maps строятся по lat/lng + placeId. Переключатель языка — по trip.languages, по умолчанию trip.defaultLanguage."
+    "en": "Multilingual dataset for the Chiang Mai trip PWA. Text fields (trip.title, trip.overview, day.title/focus/roads/clothing/extra, day.weekday, location.name/note, general.*, appGuide.*, legend.*) are objects {en,ru,zh}: render the active language. UI strings (buttons, tab labels, category/meal names, field labels) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic). Suggested tabs: Itinerary (days), Trip info (trip.overview + general.items + legend), How to use (appGuide). Language switcher over trip.languages; default = trip.defaultLanguage. day.extra may be null.",
+    "ru": "Мультиязычный датасет для PWA. Текстовые поля — объекты {en,ru,zh}. Строки интерфейса, подписи вкладок и меток — в 'ui' по коду языка. Коды 'category'/'meal' — языконезависимые. Ссылки Google Maps — по lat/lng + placeId. Вкладки: Маршрут (дни), О поездке (trip.overview + general.items + legend), Как пользоваться (appGuide). Переключатель языка — по trip.languages, по умолчанию trip.defaultLanguage. day.extra может быть null."
   },
   "trip": {
     "title": {
@@ -16,7 +16,12 @@
       "ru",
       "zh"
     ],
-    "defaultLanguage": "ru"
+    "defaultLanguage": "ru",
+    "overview": {
+      "en": "8th: arrive (night near the airport). 9–11: based at The Sher Homestay in the Mae Rim hills. Move to the city on the 12th, staying through the 19th. Get around by motorbike (Mai Phare, 150–160cc), kept for the whole trip. Two main meals a day — breakfast and dinner; the rest are snacks / night market. Green season: outdoor activities are set in the morning; always carry a rain layer.",
+      "ru": "8-го — прилёт (ночь у аэропорта). 9–11 — база The Sher Homestay в горах Мае Рим. 12-го переезд в город, до 19-го. Передвижение на байке (Mai Phare, 150–160cc), остаётся с вами весь маршрут. Два основных приёма пищи — завтрак и ужин; остальное — перекус/найт-маркет. Зелёный сезон: уличные активности — утром; дождевик всегда.",
+      "zh": "8号：抵达（住机场附近）。9–11号：入住湄林山区的 The Sher 民宿。12号搬到市区，住到19号。全程骑摩托车（Mai Phare，150–160cc），整趟行程保留。每天两顿正餐——早餐和晚餐；其余为小吃/夜市。雨季：户外活动安排在上午；随身携带雨衣。"
+    }
   },
   "ui": {
     "en": {
@@ -26,6 +31,12 @@
       "load": "Load",
       "optional": "optional",
       "dayWord": "Day",
+      "tabItinerary": "Itinerary",
+      "tabInfo": "Trip info",
+      "tabGuide": "How to use",
+      "roadsLabel": "Roads",
+      "clothingLabel": "Clothing / footwear",
+      "noteLabel": "Note",
       "meals": {
         "breakfast": "Breakfast",
         "dinner": "Dinner",
@@ -52,6 +63,12 @@
       "load": "Нагрузка",
       "optional": "опционально",
       "dayWord": "День",
+      "tabItinerary": "Маршрут",
+      "tabInfo": "О поездке",
+      "tabGuide": "Как пользоваться",
+      "roadsLabel": "Дорога",
+      "clothingLabel": "Одежда / обувь",
+      "noteLabel": "Внимание",
       "meals": {
         "breakfast": "Завтрак",
         "dinner": "Ужин",
@@ -78,6 +95,12 @@
       "load": "繁忙度",
       "optional": "可选",
       "dayWord": "第",
+      "tabItinerary": "行程",
+      "tabInfo": "出行信息",
+      "tabGuide": "使用说明",
+      "roadsLabel": "路况",
+      "clothingLabel": "着装 / 鞋履",
+      "noteLabel": "注意",
       "meals": {
         "breakfast": "早餐",
         "dinner": "晚餐",
@@ -98,6 +121,238 @@
       }
     }
   },
+  "appGuide": {
+    "title": {
+      "en": "How to use this app",
+      "ru": "Как пользоваться приложением",
+      "zh": "如何使用本应用"
+    },
+    "steps": [
+      {
+        "en": "Pick a day using the selector at the top.",
+        "ru": "Выберите день в переключателе сверху.",
+        "zh": "使用顶部的选择器选择某一天。"
+      },
+      {
+        "en": "Tap 'Directions' on any activity to open it in Google Maps.",
+        "ru": "Нажмите «Маршрут» у любой активности, чтобы открыть её в Google Maps.",
+        "zh": "点击任一活动的“路线导航”即可在 Google 地图中打开。"
+      },
+      {
+        "en": "The stars in each day's header show how busy that day is (1–5).",
+        "ru": "Звёзды в шапке дня показывают его загруженность (1–5).",
+        "zh": "每天标题栏的星星表示当天的繁忙程度（1–5）。"
+      },
+      {
+        "en": "'optional' marks stops you can skip without affecting the day.",
+        "ru": "«опционально» — точки, которые можно пропустить без ущерба для дня.",
+        "zh": "“可选”表示可以跳过、不影响当天安排的地点。"
+      },
+      {
+        "en": "Each day also has Roads and Clothing/footwear notes below its stops.",
+        "ru": "Под остановками каждого дня есть заметки «Дорога» и «Одежда/обувь».",
+        "zh": "每天的地点下方还有“路况”和“着装/鞋履”提示。"
+      },
+      {
+        "en": "Switch language with the selector at the top (English / Русский / 中文).",
+        "ru": "Язык переключается сверху (English / Русский / 中文).",
+        "zh": "在顶部切换语言（English / Русский / 中文）。"
+      },
+      {
+        "en": "Works offline after the first load. Use 'Add to Home Screen' to install it as an app.",
+        "ru": "После первой загрузки работает офлайн. «Добавить на экран „Домой“», чтобы установить как приложение.",
+        "zh": "首次加载后可离线使用。使用“添加到主屏幕”即可作为应用安装。"
+      },
+      {
+        "en": "Directions still need internet or Google Maps offline maps.",
+        "ru": "Для маршрутов нужен интернет или офлайн-карты Google Maps.",
+        "zh": "路线导航仍需联网或 Google 地图的离线地图。"
+      }
+    ]
+  },
+  "legend": [
+    {
+      "symbol": "★",
+      "text": {
+        "en": "Day busyness (1–5)",
+        "ru": "Загруженность дня (1–5)",
+        "zh": "当天繁忙程度（1–5）"
+      }
+    },
+    {
+      "symbol": "opt.",
+      "text": {
+        "en": "Optional stop — easy to skip",
+        "ru": "Опциональная точка — легко пропустить",
+        "zh": "可选地点——可跳过"
+      }
+    },
+    {
+      "symbol": "⛽",
+      "text": {
+        "en": "Refuel — top up the tank en route",
+        "ru": "Заправка — дозаправиться по пути",
+        "zh": "加油——途中补充油量"
+      }
+    },
+    {
+      "symbol": "⚠",
+      "text": {
+        "en": "Note / caution",
+        "ru": "Внимание",
+        "zh": "注意事项"
+      }
+    },
+    {
+      "symbol": "🍽",
+      "text": {
+        "en": "Meal (breakfast / dinner / snack / main)",
+        "ru": "Приём пищи (завтрак / ужин / перекус / осн.)",
+        "zh": "用餐（早餐/晚餐/小食/主餐）"
+      }
+    }
+  ],
+  "general": {
+    "title": {
+      "en": "Trip info",
+      "ru": "О поездке",
+      "zh": "出行信息"
+    },
+    "items": [
+      {
+        "label": {
+          "en": "Bike",
+          "ru": "Байк",
+          "zh": "摩托车"
+        },
+        "text": {
+          "en": "Recommend 150–160cc (two-up + luggage + mountains). Category A licence + IDP + always a helmet. Kept for the whole trip.",
+          "ru": "Реко 150–160cc (двое + багаж + горы). Права категории A + МВУ + всегда каска. Остаётся с вами весь маршрут.",
+          "zh": "建议150–160cc（双人+行李+山路）。A类驾照+国际驾照+全程佩戴头盔。整趟行程保留。"
+        }
+      },
+      {
+        "label": {
+          "en": "Fuel",
+          "ru": "Топливо",
+          "zh": "燃油"
+        },
+        "text": {
+          "en": "Full tank in the morning on ride days. Days 10 and 17 — MUST refuel en route (one tank may not cover ~150/~120 km two-up in the hills). No fuel in the upper Mae Sa valley past Pong Yang.",
+          "ru": "Полный бак утром в дни выездов. Дни 10 и 17 — обязательно дозаправиться по пути (одного бака на ~150/~120 км вдвоём в горах может не хватить). В верхней долине Мае Са после Понг Янг заправок нет.",
+          "zh": "出行日早上加满油。第10天和第17天务必途中加油（双人约150/120公里山路，单箱油可能不够）。蓬阳以上的湄沙上谷没有加油站。"
+        }
+      },
+      {
+        "label": {
+          "en": "Payment",
+          "ru": "Оплата",
+          "zh": "支付"
+        },
+        "text": {
+          "en": "Thai QR (PromptPay) almost everywhere; cash for entry fees, animal feed, street food, markets.",
+          "ru": "Thai QR (PromptPay) почти везде; наличные — билеты, корм животным, уличная еда, рынки.",
+          "zh": "泰国二维码（PromptPay）几乎处处可用；现金用于门票、喂动物、街头小吃、市场。"
+        }
+      },
+      {
+        "label": {
+          "en": "Weather",
+          "ru": "Погода",
+          "zh": "天气"
+        },
+        "text": {
+          "en": "Rain in the afternoon; outdoor activities in the morning; always carry a rain layer.",
+          "ru": "Дождь во 2-й половине дня; уличное — утром; дождевик всегда.",
+          "zh": "午后有雨；户外活动安排在上午；随身带雨衣。"
+        }
+      },
+      {
+        "label": {
+          "en": "Temples",
+          "ru": "Храмы",
+          "zh": "寺庙"
+        },
+        "text": {
+          "en": "Shoulders and knees covered (sarongs ~20–50 THB on site).",
+          "ru": "Плечи и колени закрыты (саронг ~20–50 THB на месте).",
+          "zh": "遮住肩膀和膝盖（现场可租纱笼，约20–50泰铢）。"
+        }
+      },
+      {
+        "label": {
+          "en": "Night riding",
+          "ru": "Ночная езда",
+          "zh": "夜间骑行"
+        },
+        "text": {
+          "en": "In Mae Rim, dine at the homestay (The Sher) — no switchbacks in the dark.",
+          "ru": "В Мае Рим ужинайте при доме (The Sher) — не ехать по серпантинам в темноте.",
+          "zh": "在湄林，晚餐在民宿（The Sher）解决——不要摸黑骑盘山公路。"
+        }
+      },
+      {
+        "label": {
+          "en": "Navigation",
+          "ru": "Навигация",
+          "zh": "导航"
+        },
+        "text": {
+          "en": "In Thailand Google Maps routes correctly; on mountain shortcuts, cross-check the map.",
+          "ru": "В Таиланде Google Maps строит маршруты корректно; на горных срезках сверяйтесь.",
+          "zh": "在泰国 Google 地图导航准确；走山间近道时仍需核对地图。"
+        }
+      },
+      {
+        "label": {
+          "en": "Walking streets",
+          "ru": "Уок-стрит",
+          "zh": "步行夜市"
+        },
+        "text": {
+          "en": "Sat — Wualai (Saturday Walking Street); Sun — Ratchadamnoen (Sunday Walking Street). Evening ~16:00–22:00.",
+          "ru": "Сб — Wualai (Saturday Walking Street); Вс — Ratchadamnoen (Sunday Walking Street). Вечер ~16:00–22:00.",
+          "zh": "周六——Wualai路（周六夜市）；周日——Ratchadamnoen路（周日夜市）。傍晚约16:00–22:00。"
+        }
+      },
+      {
+        "label": {
+          "en": "Closures",
+          "ru": "Закрытия",
+          "zh": "闭馆日"
+        },
+        "text": {
+          "en": "MAIIAM: Fri–Mon. Bo Sang: closed Tue. Khao Soi Maesai: closed Sun.",
+          "ru": "MAIIAM: Пт–Пн. Bo Sang: закр. Вт. Khao Soi Maesai: закр. Вс.",
+          "zh": "MAIIAM：周五至周一开放。Bo Sang：周二闭馆。Khao Soi Maesai：周日闭店。"
+        }
+      },
+      {
+        "label": {
+          "en": "Load rating",
+          "ru": "Нагрузка",
+          "zh": "繁忙度"
+        },
+        "text": {
+          "en": "The stars in a day's header show how busy it is. Busiest — day 10 (5 stars); lightest — days 8, 12, 19.",
+          "ru": "Звёзды в шапке дня показывают загруженность. Самый тяжёлый — 10 (5 звёзд); лёгкие — 8, 12, 19.",
+          "zh": "标题栏的星星表示当天繁忙程度。最忙——第10天（5星）；最轻松——第8、12、19天。"
+        }
+      },
+      {
+        "label": {
+          "en": "White Temple",
+          "ru": "Белый храм",
+          "zh": "白庙"
+        },
+        "text": {
+          "en": "The 'White Temple' (Wat Rong Khun) is in Chiang Rai, ~190 km / ~3 hrs one way — not part of this route; a separate trip (tour/bus/car), ideally with an overnight.",
+          "ru": "«Белый храм» (Wat Rong Khun) — в Чианг Рае, ~190 км / ~3 ч в одну сторону — не входит в маршрут; отдельная поездка (тур/автобус/машина), в идеале с ночёвкой.",
+          "zh": "“白庙”（Wat Rong Khun）在清莱，单程约190公里/3小时——不在本行程内；需单独安排（跟团/巴士/包车），最好过夜。"
+        }
+      }
+    ]
+  },
   "days": [
     {
       "day": 8,
@@ -112,7 +367,23 @@
         "ru": "Прилёт (вечер)",
         "zh": "抵达（傍晚）"
       },
+      "focus": {
+        "en": "Transfer and rest only.",
+        "ru": "Только трансфер и отдых.",
+        "zh": "仅接送和休息。"
+      },
       "busyness": 1,
+      "roads": {
+        "en": "—",
+        "ru": "—",
+        "zh": "—"
+      },
+      "clothing": {
+        "en": "Pack compactly and in soft bags — tomorrow all luggage goes on the bike.",
+        "ru": "Соберите вещи компактно и в мягкие сумки — завтра весь багаж поедет на байке.",
+        "zh": "把行李收拾得紧凑、装进软包——明天所有行李都要放摩托车上。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d8-capitalo",
@@ -146,11 +417,27 @@
         "zh": "周日"
       },
       "title": {
-        "en": "Bike rental + Sirikit garden (lightened)",
-        "ru": "Аренда байка + сад Сирикит (разгружен)",
-        "zh": "租摩托车+诗丽吉植物园（已减负）"
+        "en": "Bike rental + Sirikit garden",
+        "ru": "Аренда байка + сад Сирикит",
+        "zh": "租摩托车+诗丽吉植物园"
+      },
+      "focus": {
+        "en": "Logistics in the morning → into Mae Rim. An easy day: reach the base and the Sirikit garden.",
+        "ru": "Логистика утром → въезд в Мае Рим. Спокойный день: заезд на базу и сад Сирикит.",
+        "zh": "上午办手续 → 进入湄林。轻松的一天：抵达大本营和诗丽吉植物园。"
       },
       "busyness": 2,
+      "roads": {
+        "en": "City → 107 → Mae Rim → climb on 1096. Luggage on the bike — soft bags, careful on the climb.",
+        "ru": "Город → 107 → Мае Рим → подъём по 1096. Багаж на байке — мягкие сумки, аккуратно на подъёме.",
+        "zh": "市区 → 107 → 湄林 → 沿1096盘山。行李在摩托车上——用软包，上山时小心。"
+      },
+      "clothing": {
+        "en": "Light layers; comfortable shoes for the garden (glasshouses get hot/humid); rain layer.",
+        "ru": "Лёгкие слои; удобная обувь для сада (в оранжереях жарко/влажно); дождевик.",
+        "zh": "轻便分层；逛花园穿舒适鞋（温室内闷热潮湿）；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d9-maiphare",
@@ -251,7 +538,23 @@
         "ru": "Мае Таенг: липкий водопад + гранд-храм",
         "zh": "湄登：粘性瀑布+宏伟寺庙"
       },
+      "focus": {
+        "en": "The busiest ride: far north — waterfall in the morning and a big temple.",
+        "ru": "Самый насыщённый выезд: дальний север — водопад утром и большой храм.",
+        "zh": "最紧凑的一次出行：远北——上午瀑布、大型寺庙。"
+      },
       "busyness": 5,
+      "roads": {
+        "en": "Longest mileage (~150 km two-up). MUST refuel en route (Route 107 corridor) — one tank may not be enough.",
+        "ru": "Самый длинный пробег (~150 км вдвоём). Обязательно дозаправиться по пути (коридор 107) — одного бака может не хватить.",
+        "zh": "全程里程最长（双人约150公里）。务必途中加油（107公路沿线）——单箱油可能不够。"
+      },
+      "clothing": {
+        "en": "Swimwear/quick-dry + a FULL change of clothes for Bua Tong; barefoot on the climb; insect repellent; waterproof phone pouch; covered shoulders/knees for Wat Ban Den; rain layer.",
+        "ru": "Купальник/быстросохнущее + ПОЛНЫЙ комплект сменной одежды для Bua Tong; босиком на подъёме; репеллент; влагозащитный чехол; закрытые плечи/колени для Wat Ban Den; дождевик.",
+        "zh": "泳衣/速干衣 + 一整套换洗衣物用于布瓦通；攀爬时赤脚；驱虫剂；手机防水套；参观班德寺需遮肩盖膝；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d10-buatong",
@@ -309,7 +612,7 @@
           "placeId": null,
           "note": {
             "en": "MUST refuel: ~150 km two-up, one tank may not be enough.",
-            "ru": "ОБЯЗАТЕЛЬНО дозаправиться: ~150 км вдвоём, одного бака может не хватить.",
+            "ru": "Обязательно дозаправиться: ~150 км вдвоём, одного бака может не хватить.",
             "zh": "务必加油：双人约150公里，单箱油可能不够。"
           },
           "optional": false,
@@ -331,7 +634,23 @@
         "ru": "Верхняя долина: ферма + зиплайн",
         "zh": "上谷：牧场+滑索"
       },
+      "focus": {
+        "en": "Weather-sensitive outdoor day — zipline strictly in the morning.",
+        "ru": "Погодочувствительный уличный день — зиплайн строго утром.",
+        "zh": "受天气影响的户外日——滑索务必安排在上午。"
+      },
       "busyness": 3,
+      "roads": {
+        "en": "Short hops within the upper 1096 valley. A full tank in the morning is enough.",
+        "ru": "Короткие переезды в пределах верхней долины 1096. Полного бака с утра достаточно.",
+        "zh": "在1096上谷内短途往返。早上加满油即可。"
+      },
+      "clothing": {
+        "en": "Warm layer for the cool morning (~800–1000 m altitude); closed sneakers MANDATORY for the zipline; rain layer.",
+        "ru": "Тёплый слой на прохладное утро (высота ~800–1000 м); ОБЯЗАТЕЛЬНО закрытые кроссовки для зиплайна; дождевик.",
+        "zh": "凉爽的早晨穿保暖层（海拔约800–1000米）；滑索必须穿包脚运动鞋；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d11-maekee",
@@ -407,11 +726,27 @@
         "zh": "周三"
       },
       "title": {
-        "en": "Move to the city (Mother's Day, lightened)",
-        "ru": "Переезд в город (День матери, разгружен)",
-        "zh": "搬到市区（母亲节，已减负）"
+        "en": "Move to the city (Mother's Day)",
+        "ru": "Переезд в город (День матери)",
+        "zh": "搬到市区（母亲节）"
+      },
+      "focus": {
+        "en": "Descend to the city and check in; an easy evening.",
+        "ru": "Спуск в город и заселение; лёгкий вечер.",
+        "zh": "下山进城、入住；轻松的傍晚。"
       },
       "busyness": 2,
+      "roads": {
+        "en": "Descend on 1096, then into the city. The bike stays with you.",
+        "ru": "Спуск по 1096, затем в город. Байк остаётся с вами.",
+        "zh": "沿1096下山，然后进城。摩托车一直跟着你。"
+      },
+      "clothing": {
+        "en": "Covered shoulders/knees for the temple; comfortable shoes; rain layer.",
+        "ru": "Закрытые плечи/колени для храма; удобная обувь; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝；舒适鞋；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d12-chedi",
@@ -449,7 +784,23 @@
         "ru": "Старый город (храмы пешком) + Нимман",
         "zh": "古城（步行游寺）+尼曼"
       },
+      "focus": {
+        "en": "Getting to know the city: walkable temples + creative Nimman. Relaxed.",
+        "ru": "Знакомство с городом: пешие храмы + креативный Нимман. Расслабленно.",
+        "zh": "熟悉城市：步行游寺 + 创意尼曼区。轻松。"
+      },
       "busyness": 3,
+      "roads": {
+        "en": "Old City — on foot; ~10 min by bike to Nimman.",
+        "ru": "Старый город — пешком; до Нимман ~10 мин на байке.",
+        "zh": "古城——步行；骑车到尼曼约10分钟。"
+      },
+      "clothing": {
+        "en": "Covered shoulders/knees for temples (sarong rentable on site); comfortable shoes; rain layer.",
+        "ru": "Закрытые плечи/колени для храмов (саронг можно арендовать на месте); удобная обувь; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝（现场可租纱笼）；舒适鞋；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d13-phrasingh",
@@ -529,7 +880,23 @@
         "ru": "Дой Сутеп + северный кластер Мае Рим + бильярд",
         "zh": "素贴山+湄林北部集群+台球"
       },
+      "focus": {
+        "en": "Arc: Doi Suthep (morning) → lake and northern Mae Rim temples → billiards (evening).",
+        "ru": "Дуга: Дой Сутеп (утро) → озеро и северные храмы Мае Рим → бильярд (вечер).",
+        "zh": "环线：素贴山（上午）→ 湖泊和湄林北部寺庙 → 台球（傍晚）。"
+      },
       "busyness": 4,
+      "roads": {
+        "en": "NW (Doi Suthep) → northern Mae Rim (lake/temple/POOPOOPAPER) → city. A full tank is enough.",
+        "ru": "СЗ (Дой Сутеп) → север Мае Рим (озеро/храм/POOPOOPAPER) → город. Полного бака хватает.",
+        "zh": "西北（素贴山）→ 湄林北部（湖/寺/POOPOOPAPER）→ 市区。一箱油够用。"
+      },
+      "clothing": {
+        "en": "Covered shoulders/knees for temples; a jacket (cooler on the mountain); shoes for the staircase (306 steps) or the cable car; swimwear if you swim in the lake; rain layer.",
+        "ru": "Закрытые плечи/колени для храмов; куртка (на горе прохладнее); обувь для лестницы (306 ступеней) или фуникулёр; купальник, если купаться в озере; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝；外套（山上较凉）；爬台阶（306级）的鞋或坐缆车；若在湖中游泳带泳衣；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d14-phalat",
@@ -607,9 +974,9 @@
           "lng": 98.9412655,
           "placeId": "ChIJ_____0g82jARs6bXHupxVPY",
           "note": {
-            "en": "A hidden-gem temple (moved here — you ride light). 06:00–18:00, free. Dress code.",
-            "ru": "Храм-жемчужина (перенесён сюда — едете налегке). 06:00–18:00, бесплатно. Дресс-код.",
-            "zh": "小众宝藏寺庙（移到此日——轻装前往）。06:00–18:00，免费。着装要求。"
+            "en": "A hidden-gem temple, Lanna architecture, no crowds. 06:00–18:00, free. Dress code.",
+            "ru": "Храм-жемчужина, ланна-архитектура, без толп. 06:00–18:00, бесплатно. Дресс-код.",
+            "zh": "小众宝藏寺庙，兰纳建筑，人少。06:00–18:00，免费。着装要求。"
           },
           "optional": false,
           "meal": null,
@@ -628,9 +995,9 @@
           "lng": 98.9316088,
           "placeId": "ChIJrV5fNtM92jARyz7dyA05JDs",
           "note": {
-            "en": "DIY paper from elephant dung (moved; optional). 08:30–17:15.",
-            "ru": "DIY-бумага из слоновьего навоза (перенесён; опционально). 08:30–17:15.",
-            "zh": "用大象粪便手工造纸（已移动；可选）。08:30–17:15。"
+            "en": "DIY paper from elephant dung. 08:30–17:15.",
+            "ru": "DIY-бумага из слоновьего навоза. 08:30–17:15.",
+            "zh": "用大象粪便手工造纸。08:30–17:15。"
           },
           "optional": true,
           "meal": null,
@@ -672,7 +1039,23 @@
         "ru": "Кулинарный класс + Saturday Walking Street",
         "zh": "烹饪课+周六夜市"
       },
+      "focus": {
+        "en": "Food day + the Saturday walking street. The Silver Temple is right on it.",
+        "ru": "Гастро-день + субботняя уок-стрит. Серебряный храм — прямо на ней.",
+        "zh": "美食日 + 周六夜市。银庙就在夜市街上。"
+      },
       "busyness": 3,
+      "roads": {
+        "en": "Class with pickup; ~10 min by bike to Wualai in the evening (or on foot from the Old City).",
+        "ru": "Класс с пикапом; вечером до Wualai ~10 мин на байке (или пешком из Старого города).",
+        "zh": "烹饪课含接送；傍晚骑车到Wualai约10分钟（若住古城可步行）。"
+      },
+      "clothing": {
+        "en": "For the class — comfortable clothes; for the temple/walking street — covered shoulders/knees and comfortable shoes; rain layer.",
+        "ru": "На класс — удобная одежда; для храма/уок-стрит — закрытые плечи/колени и удобная обувь; дождевик.",
+        "zh": "上课穿舒适衣物；去寺庙/夜市需遮肩盖膝、舒适鞋；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d15-zabbelee",
@@ -752,7 +1135,23 @@
         "ru": "Южный кластер (сад + храм) + Sunday Walking Street",
         "zh": "南部集群（花园+寺庙）+周日夜市"
       },
+      "focus": {
+        "en": "Rajapruek rose garden + a hilltop temple; the main Sunday walking street in the evening.",
+        "ru": "Сад роз Rajapruek + храм на холме; вечером — главная воскресная уок-стрит.",
+        "zh": "Rajapruek玫瑰园 + 山顶寺庙；傍晚是主要的周日夜市。"
+      },
       "busyness": 3,
+      "roads": {
+        "en": "~30 min by bike SW to Mae Hia; the evening walking street is in the Old City.",
+        "ru": "До Мае Хиа ~30 мин на байке ЮЗ; вечерняя уок-стрит — в Старом городе.",
+        "zh": "骑车向西南到湄嘉约30分钟；傍晚的夜市在古城。"
+      },
+      "clothing": {
+        "en": "Covered shoulders/knees for temples; comfortable shoes; rain layer.",
+        "ru": "Закрытые плечи/колени для храмов; удобная обувь; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝；舒适鞋；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d16-doikham",
@@ -832,7 +1231,23 @@
         "ru": "Горная деревня Mae Kampong (восток)",
         "zh": "湄康蓬山村（东部）"
       },
+      "focus": {
+        "en": "A big nature day east: village, waterfall, cafés + hot springs.",
+        "ru": "Большой природный день на востоке: деревня, водопад, кафе + горячие источники.",
+        "zh": "东部的重头自然日：村庄、瀑布、咖啡馆 + 温泉。"
+      },
       "busyness": 4,
+      "roads": {
+        "en": "The longest city radius (~3 hrs in the saddle round trip). Refuel en route (San Kamphaeng).",
+        "ru": "Самый длинный городской радиус (~3 ч в седле туда-обратно). Дозаправка по пути (Сан Кампхэнг).",
+        "zh": "全程最长的市郊往返（在车上约3小时）。途中加油（山甘烹）。"
+      },
+      "clothing": {
+        "en": "Good shoes for the wet steps at the waterfall; a light layer (cooler in the mountains); swimwear for the springs; rain layer.",
+        "ru": "Хорошая обувь для мокрых ступеней у водопада; лёгкий слой (в горах прохладнее); купальник для источников; дождевик.",
+        "zh": "瀑布湿滑台阶穿防滑鞋；轻便保暖层（山里较凉）；温泉带泳衣；雨衣。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d17-maekampong",
@@ -912,7 +1327,27 @@
         "ru": "Аквапарк / релакс (предпоследний день)",
         "zh": "水上乐园/放松（倒数第二天）"
       },
+      "focus": {
+        "en": "An active-relaxed day. Massage/spa toward evening.",
+        "ru": "Активно-расслабленный день. Массаж/спа под вечер.",
+        "zh": "动静结合的一天。傍晚按摩/水疗。"
+      },
       "busyness": 3,
+      "roads": {
+        "en": "~30 min by bike south to Hang Dong.",
+        "ru": "До Ханг Донг ~30 мин на байке на юг.",
+        "zh": "骑车向南到Hang Dong约30分钟。"
+      },
+      "clothing": {
+        "en": "Swimwear + a change of clothes for the water park; rain layer.",
+        "ru": "Купальник + сменная одежда для аквапарка; дождевик.",
+        "zh": "水上乐园带泳衣 + 换洗衣物；雨衣。"
+      },
+      "extra": {
+        "en": "Not in the mood for water? The eastern crafts/art cluster (Bo Sang + MAIIAM), but both are CLOSED on Tuesday → a spa day in the city is better.",
+        "ru": "Не хочется воды — восточный кластер (Bo Sang + MAIIAM), но во вторник оба закрыты → лучше спа-день в городе.",
+        "zh": "不想玩水？东部手工艺/艺术集群（Bo Sang + MAIIAM），但周二两处都闭馆 → 在市区安排水疗更好。"
+      },
       "locations": [
         {
           "id": "d18-grandcanyon",
@@ -950,7 +1385,23 @@
         "ru": "Отъезд",
         "zh": "离开"
       },
+      "focus": {
+        "en": "Flexible around your flight. Return the bike, last-minute souvenirs.",
+        "ru": "Гибко под ваш рейс. Возврат байка, последние сувениры.",
+        "zh": "根据航班灵活安排。还摩托车、买最后的纪念品。"
+      },
       "busyness": 1,
+      "roads": {
+        "en": "As needed; return the bike before departure.",
+        "ru": "По ситуации; байк сдаём до отъезда.",
+        "zh": "视情况而定；出发前还车。"
+      },
+      "clothing": {
+        "en": "Per the weather; rain layer to the last.",
+        "ru": "По погоде; дождевик до последнего.",
+        "zh": "视天气而定；雨衣备到最后。"
+      },
+      "extra": null,
       "locations": [
         {
           "id": "d19-warorot",
