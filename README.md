@@ -36,8 +36,15 @@ app.js                            загрузка данных, рендер, i
 chiang-mai-trip-data.i18n.json    данные поездки на трёх языках
 manifest.json                     манифест PWA
 sw.js                             service worker, cache-first
-icons/                            icon-192.png, icon-512.png
+icons/                            icon.svg — источник, icon-192.png, icon-512.png
 chiang-mai-pwa-spec.md            исходное техническое задание
+```
+
+Иконки пересобираются из `icons/icon.svg`:
+
+```bash
+rsvg-convert -w 192 -h 192 icons/icon.svg -o icons/icon-192.png
+rsvg-convert -w 512 -h 512 icons/icon.svg -o icons/icon-512.png
 ```
 
 ## Данные
