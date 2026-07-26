@@ -5,9 +5,9 @@
   },
   "trip": {
     "title": {
-      "en": "Chiang Mai — Mae Rim — City",
-      "ru": "Чиангмай — Мае Рим — город",
-      "zh": "清迈 — 湄林 — 市区"
+      "en": "Chiang Mai — Mae Rim",
+      "ru": "Чиангмай — Мае Рим",
+      "zh": "清迈 — 湄林"
     },
     "dates": "2026-08-08 … 2026-08-19",
     "brandColor": "#14532D",

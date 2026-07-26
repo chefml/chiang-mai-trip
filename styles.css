@@ -60,80 +60,45 @@ body {
 }
 
 .topbar__row {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
   padding: 0 14px 8px;
 }
 
 .topbar__title {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.topbar h1 {
   margin: 0;
   font-size: 17px;
   font-weight: 700;
   letter-spacing: .2px;
 }
 
-.topbar__dates {
-  margin: 2px 0 0;
-  font-size: 13px;
-  opacity: .82;
-}
-
-/* ---------- Переключатель языка ---------- */
-
-.lang {
-  flex: 0 0 auto;
-}
+/* ---------- Переключатель языка (живёт в разделе «Как пользоваться») ---------- */
 
 .lang__select {
   min-height: var(--tap);
-  max-width: 130px;
-  padding: 6px 28px 6px 10px;
-  border: 1px solid rgba(255, 255, 255, .38);
+  width: 100%;
+  max-width: 260px;
+  padding: 10px 34px 10px 12px;
+  border: 1px solid var(--border);
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, .12);
-  color: #fff;
+  background-color: transparent;
+  color: var(--text);
   font: inherit;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  /* стрелка нарисована инлайн (без внешних ресурсов — работает офлайн) */
+  /* стрелка нарисована градиентами (без внешних ресурсов — работает офлайн) */
   appearance: none;
   -webkit-appearance: none;
   background-image:
-    linear-gradient(45deg, transparent 50%, #fff 50%),
-    linear-gradient(135deg, #fff 50%, transparent 50%);
-  background-position: right 13px center, right 8px center;
+    linear-gradient(45deg, transparent 50%, var(--text) 50%),
+    linear-gradient(135deg, var(--text) 50%, transparent 50%);
+  background-position: right 17px center, right 12px center;
   background-size: 5px 5px, 5px 5px;
   background-repeat: no-repeat;
 }
 
 .lang__select:focus-visible {
-  outline: 2px solid #fff;
+  outline: 2px solid var(--accent);
   outline-offset: 1px;
-}
-
-/* Нативный выпадающий список рисуется системой — пункты нужны читаемыми на светлом фоне */
-.lang__select option {
-  color: #16211A;
-  background: #fff;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 /* ---------- Вкладки разделов ---------- */

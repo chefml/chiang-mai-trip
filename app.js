@@ -64,10 +64,7 @@
   var infoEl = document.getElementById("view-info");
   var guideEl = document.getElementById("view-guide");
   var titleEl = document.getElementById("trip-title");
-  var datesEl = document.getElementById("trip-dates");
   var footerEl = document.getElementById("footer-note");
-  var langSelect = document.getElementById("lang-select");
-  var langLabelEl = document.getElementById("lang-label");
 
   var data = null;
   var trip = {};
@@ -266,8 +263,12 @@
 
   /* ---------- Переключатель языка ---------- */
 
-  function buildLangSwitcher() {
-    langSelect.textContent = "";
+  /* Живёт в разделе «Как пользоваться», поэтому создаётся заново при каждом
+     рендере этого раздела — статического элемента в разметке нет. */
+  function buildLangControl() {
+    var select = document.createElement("select");
+    select.className = "lang__select";
+    select.setAttribute("aria-label", t("language"));
 
     availableLangs().forEach(function (code) {
       var option = document.createElement("option");
@@ -275,11 +276,14 @@
       var ui = data && data.ui && data.ui[code];
       option.textContent = (ui && ui.langName) || code.toUpperCase();
       if (code === lang) option.selected = true;
-      langSelect.appendChild(option);
+      select.appendChild(option);
     });
 
-    langSelect.setAttribute("aria-label", t("language"));
-    if (langLabelEl) langLabelEl.textContent = t("language");
+    select.addEventListener("change", function () {
+      setLang(select.value);
+    });
+
+    return select;
   }
 
   function setLang(code) {
@@ -288,10 +292,6 @@
     storeLang(code);
     renderAll();
   }
-
-  langSelect.addEventListener("change", function () {
-    setLang(langSelect.value);
-  });
 
   /* ---------- Рендер ---------- */
 
@@ -464,6 +464,12 @@
   function renderGuide() {
     guideEl.textContent = "";
 
+    /* Выбор языка живёт здесь, а не в шапке */
+    var langCard = el("section", "card");
+    langCard.appendChild(el("h2", "card__title", t("language")));
+    langCard.appendChild(buildLangControl());
+    guideEl.appendChild(langCard);
+
     var guide = data.appGuide;
     if (!guide) return;
 
@@ -568,10 +574,8 @@
       titleEl.textContent = tripTitle;
       document.title = tripTitle;
     }
-    if (trip.dates) datesEl.textContent = trip.dates;
     if (footerEl) footerEl.textContent = t("footer");
 
-    buildLangSwitcher();
     buildSectionTabs();
     buildTabs();
     renderSection();
