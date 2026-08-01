@@ -1,7 +1,7 @@
 {
   "_instructions": {
-    "en": "Multilingual dataset for the Chiang Mai trip PWA. Text fields (trip.title, trip.overview, day.title/focus/roads/clothing/extra, day.weekday, location.name/note, general.*, appGuide.*, legend.*) are objects {en,ru,zh}: render the active language. UI strings (buttons, tab labels, category/meal names, field labels) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic). Suggested tabs: Itinerary (days), Trip info (trip.overview + general.items + legend), How to use (appGuide). Language switcher over trip.languages; default = trip.defaultLanguage. day.extra may be null.",
-    "ru": "Мультиязычный датасет для PWA. Текстовые поля — объекты {en,ru,zh}. Строки интерфейса, подписи вкладок и меток — в 'ui' по коду языка. Коды 'category'/'meal' — языконезависимые. Ссылки Google Maps — по lat/lng + placeId. Вкладки: Маршрут (дни), О поездке (trip.overview + general.items + legend), Как пользоваться (appGuide). Переключатель языка — по trip.languages, по умолчанию trip.defaultLanguage. day.extra может быть null."
+    "en": "Multilingual dataset for the Chiang Mai trip PWA (dates 2026-08-06…16). Text fields (trip.title, trip.overview, day.title/focus/roads/clothing/extra, day.weekday, location.name/note, general.*, appGuide.*, legend.*) are objects {en,ru,zh}: render the active language. UI strings (buttons, tab labels, category/meal names, field labels) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic). Tabs: Itinerary (days), Trip info (trip.overview + general.items + legend), How to use (appGuide). Language switcher over trip.languages; default = trip.defaultLanguage. day.extra may be null. The Day-6 city-hotel entry has placeholder coordinates (Old City center) — replace with the actual hotel once booked.",
+    "ru": "Мультиязычный датасет для PWA (даты 06–16.08.2026). Текстовые поля — объекты {en,ru,zh}. Строки интерфейса — в 'ui'. Коды category/meal — языконезависимые. Ссылки Google Maps — по lat/lng + placeId. Вкладки: Маршрут, О поездке, Как пользоваться. Язык по умолчанию — trip.defaultLanguage. day.extra может быть null. У записи городского отеля (день 6) координаты-заглушка (центр Старого города) — замените на ваш отель после брони."
   },
   "trip": {
     "title": {
@@ -9,7 +9,7 @@
       "ru": "Чиангмай — Мае Рим",
       "zh": "清迈 — 湄林"
     },
-    "dates": "2026-08-08 … 2026-08-19",
+    "dates": "2026-08-06 … 2026-08-16",
     "brandColor": "#14532D",
     "languages": [
       "en",
@@ -18,9 +18,9 @@
     ],
     "defaultLanguage": "ru",
     "overview": {
-      "en": "8th: arrive (night near the airport). 9–11: based at The Sher Homestay in the Mae Rim hills. Move to the city on the 12th, staying through the 19th. Get around by motorbike (Mai Phare, 150–160cc), kept for the whole trip. Two main meals a day — breakfast and dinner; the rest are snacks / night market. Green season: outdoor activities are set in the morning; always carry a rain layer.",
-      "ru": "8-го — прилёт (ночь у аэропорта). 9–11 — база The Sher Homestay в горах Мае Рим. 12-го переезд в город, до 19-го. Передвижение на байке (Mai Phare, 150–160cc), остаётся с вами весь маршрут. Два основных приёма пищи — завтрак и ужин; остальное — перекус/найт-маркет. Зелёный сезон: уличные активности — утром; дождевик всегда.",
-      "zh": "8号：抵达（住机场附近）。9–11号：入住湄林山区的 The Sher 民宿。12号搬到市区，住到19号。全程骑摩托车（Mai Phare，150–160cc），整趟行程保留。每天两顿正餐——早餐和晚餐；其余为小吃/夜市。雨季：户外活动安排在上午；随身携带雨衣。"
+      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman. 8th: cooking class + Saturday Walking Street. 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13–15: Doi Suthep + billiards, Mae Kampong, southern gardens. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
+      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман. 8-го — кулинарный класс + Saturday Walking Street. 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13–15 — Дой Сутеп + бильярд, Mae Kampong, южные сады. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
+      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼。8号：烹饪课+周六夜市。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13–15号：素贴山+台球、湄康蓬、南部花园。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
     }
   },
   "ui": {
@@ -53,7 +53,8 @@
         "activity": "Activity",
         "pool": "Billiards",
         "market": "Market",
-        "food": "Food"
+        "food": "Food",
+        "transport": "Transport"
       }
     },
     "ru": {
@@ -85,7 +86,8 @@
         "activity": "Активность",
         "pool": "Бильярд",
         "market": "Рынок",
-        "food": "Еда"
+        "food": "Еда",
+        "transport": "Транспорт"
       }
     },
     "zh": {
@@ -117,7 +119,8 @@
         "activity": "活动",
         "pool": "台球",
         "market": "市场",
-        "food": "餐饮"
+        "food": "餐饮",
+        "transport": "交通"
       }
     }
   },
@@ -149,9 +152,9 @@
         "zh": "“可选”表示可以跳过、不影响当天安排的地点。"
       },
       {
-        "en": "Each day also has Roads and Clothing/footwear notes below its stops.",
-        "ru": "Под остановками каждого дня есть заметки «Дорога» и «Одежда/обувь».",
-        "zh": "每天的地点下方还有“路况”和“着装/鞋履”提示。"
+        "en": "Each day also has collapsible Roads and Clothing/footwear notes below its stops.",
+        "ru": "Под остановками каждого дня — сворачиваемые заметки «Дорога» и «Одежда/обувь».",
+        "zh": "每天地点下方还有可折叠的“路况”和“着装/鞋履”提示。"
       },
       {
         "en": "Switch language with the selector at the top (English / Русский / 中文).",
@@ -226,9 +229,9 @@
           "zh": "摩托车"
         },
         "text": {
-          "en": "Recommend 150–160cc (two-up + luggage + mountains). Category A licence + IDP + always a helmet. Kept for the whole trip.",
-          "ru": "Реко 150–160cc (двое + багаж + горы). Права категории A + МВУ + всегда каска. Остаётся с вами весь маршрут.",
-          "zh": "建议150–160cc（双人+行李+山路）。A类驾照+国际驾照+全程佩戴头盔。整趟行程保留。"
+          "en": "Recommend 150–160cc (two-up + luggage + mountains). Category A licence + IDP + always a helmet. Rent on the 7th (morning), return on the 16th by ~12:30 — 10 days.",
+          "ru": "Реко 150–160cc (двое + багаж + горы). Права категории A + МВУ + всегда каска. Аренда 7-го утром, возврат 16-го до ~12:30 — 10 суток.",
+          "zh": "建议150–160cc（双人+行李+山路）。A类驾照+国际驾照+全程佩戴头盔。7号上午取车，16号约12:30前还车——共10天。"
         }
       },
       {
@@ -238,9 +241,9 @@
           "zh": "燃油"
         },
         "text": {
-          "en": "Full tank in the morning on ride days. Days 10 and 17 — MUST refuel en route (one tank may not cover ~150/~120 km two-up in the hills). No fuel in the upper Mae Sa valley past Pong Yang.",
-          "ru": "Полный бак утром в дни выездов. Дни 10 и 17 — обязательно дозаправиться по пути (одного бака на ~150/~120 км вдвоём в горах может не хватить). В верхней долине Мае Са после Понг Янг заправок нет.",
-          "zh": "出行日早上加满油。第10天和第17天务必途中加油（双人约150/120公里山路，单箱油可能不够）。蓬阳以上的湄沙上谷没有加油站。"
+          "en": "Full tank in the morning on ride days. Days 10 and 14 — MUST refuel en route (one tank may not cover ~150/~120 km two-up in the hills). No fuel in the upper Mae Sa valley past Pong Yang.",
+          "ru": "Полный бак утром в дни выездов. Дни 10 и 14 — обязательно дозаправиться по пути (одного бака на ~150/~120 км вдвоём в горах может не хватить). В верхней долине Мае Са после Понг Янг заправок нет.",
+          "zh": "出行日早上加满油。第10天和第14天务必途中加油（双人约150/120公里山路，单箱油可能不够）。蓬阳以上的湄沙上谷没有加油站。"
         }
       },
       {
@@ -310,9 +313,9 @@
           "zh": "步行夜市"
         },
         "text": {
-          "en": "Sat — Wualai (Saturday Walking Street); Sun — Ratchadamnoen (Sunday Walking Street). Evening ~16:00–22:00.",
-          "ru": "Сб — Wualai (Saturday Walking Street); Вс — Ratchadamnoen (Sunday Walking Street). Вечер ~16:00–22:00.",
-          "zh": "周六——Wualai路（周六夜市）；周日——Ratchadamnoen路（周日夜市）。傍晚约16:00–22:00。"
+          "en": "Saturday Walking Street (Wualai Rd) — evening of the 8th, optionally again on the 15th. The Sunday one (Ratchadamnoen) is not reachable on these dates: on the 9th you're in the hills, on the 16th you fly out.",
+          "ru": "Saturday Walking Street (ул. Wualai) — вечером 8-го, по желанию повторно 15-го. Воскресная (Ratchadamnoen) в эти даты недоступна: 9-го вы в горах, 16-го — вылет.",
+          "zh": "周六夜市（Wualai路）——8号晚上，15号可再去一次。周日夜市（Ratchadamnoen路）本行程赶不上：9号在山里，16号飞离。"
         }
       },
       {
@@ -322,9 +325,9 @@
           "zh": "闭馆日"
         },
         "text": {
-          "en": "MAIIAM: Fri–Mon. Bo Sang: closed Tue. Khao Soi Maesai: closed Sun.",
-          "ru": "MAIIAM: Пт–Пн. Bo Sang: закр. Вт. Khao Soi Maesai: закр. Вс.",
-          "zh": "MAIIAM：周五至周一开放。Bo Sang：周二闭馆。Khao Soi Maesai：周日闭店。"
+          "en": "MAIIAM: Fri–Mon. Bo Sang: closed Tue. Khao Soi Maesai: closed Sun. Cafe Arte: closed Wed.",
+          "ru": "MAIIAM: Пт–Пн. Bo Sang: закр. Вт. Khao Soi Maesai: закр. Вс. Cafe Arte: закр. Ср.",
+          "zh": "MAIIAM：周五至周一开放。Bo Sang：周二闭馆。Khao Soi Maesai：周日闭店。Cafe Arte：周三闭店。"
         }
       },
       {
@@ -334,9 +337,9 @@
           "zh": "繁忙度"
         },
         "text": {
-          "en": "The stars in a day's header show how busy it is. Busiest — day 10 (5 stars); lightest — days 8, 12, 19.",
-          "ru": "Звёзды в шапке дня показывают загруженность. Самый тяжёлый — 10 (5 звёзд); лёгкие — 8, 12, 19.",
-          "zh": "标题栏的星星表示当天繁忙程度。最忙——第10天（5星）；最轻松——第8、12、19天。"
+          "en": "Stars in a day's header show how busy it is. Busiest — day 10 (5 stars); lightest — 6, 12, 16; days 13–15 are three full days in a row — use the optional stops to lighten them.",
+          "ru": "Звёзды в шапке дня — загруженность. Самый тяжёлый — 10-й (5 звёзд); лёгкие — 6, 12, 16; дни 13–15 — три плотных подряд, для разгрузки снимайте опциональные точки.",
+          "zh": "标题栏星星表示繁忙度。最忙——第10天（5星）；最轻松——第6、12、16天；13–15号连续三天较满，可通过跳过可选地点来减负。"
         }
       },
       {
@@ -355,12 +358,12 @@
   },
   "days": [
     {
-      "day": 8,
-      "date": "2026-08-08",
+      "day": 6,
+      "date": "2026-08-06",
       "weekday": {
-        "en": "Sat",
-        "ru": "Сб",
-        "zh": "周六"
+        "en": "Thu",
+        "ru": "Чт",
+        "zh": "周四"
       },
       "title": {
         "en": "Arrival (evening)",
@@ -374,36 +377,291 @@
       },
       "busyness": 1,
       "roads": {
-        "en": "—",
-        "ru": "—",
-        "zh": "—"
+        "en": "Grab/taxi from the airport to the city center, ~25 min.",
+        "ru": "Grab/такси из аэропорта в центр, ~25 мин.",
+        "zh": "从机场乘Grab/出租车到市中心，约25分钟。"
       },
       "clothing": {
-        "en": "Pack compactly and in soft bags — tomorrow all luggage goes on the bike.",
-        "ru": "Соберите вещи компактно и в мягкие сумки — завтра весь багаж поедет на байке.",
-        "zh": "把行李收拾得紧凑、装进软包——明天所有行李都要放摩托车上。"
+        "en": "Pack compactly and in soft bags — on the 9th all luggage goes on the bike.",
+        "ru": "Вещи — компактно, в мягкие сумки: 9-го весь багаж поедет на байке.",
+        "zh": "行李收拾得紧凑、装进软包——9号所有行李都要放摩托车上。"
       },
       "extra": null,
       "locations": [
         {
-          "id": "d8-capitalo",
+          "id": "d6-cnx",
           "name": {
-            "en": "Capital O Million Pillows",
-            "ru": "Capital O Million Pillows",
-            "zh": "Capital O Million Pillows"
+            "en": "Chiang Mai Airport (CNX) — arrival",
+            "ru": "Аэропорт Чиангмая (CNX) — прилёт",
+            "zh": "清迈机场（CNX）——抵达"
           },
           "time": "21:30",
-          "category": "hotel",
-          "lat": 18.7572878,
-          "lng": 98.9711906,
-          "placeId": "ChIJORjzX5k62jAR3xPuSHwKS9w",
+          "category": "transport",
+          "lat": 18.7692428,
+          "lng": 98.9681891,
+          "placeId": "ChIJifGY5ogw2jARl0WT_eN0JKA",
           "note": {
-            "en": "Check in, arrival night. 3 km from the airport.",
-            "ru": "Заселение, ночь прилёта. 3 км от аэропорта.",
-            "zh": "入住，抵达当晚。距机场3公里。"
+            "en": "Landing, baggage claim.",
+            "ru": "Посадка, получение багажа.",
+            "zh": "降落、提取行李。"
           },
           "optional": false,
           "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d6-cityhotel",
+          "name": {
+            "en": "City hotel (your booking)",
+            "ru": "Городской отель (по вашей брони)",
+            "zh": "市区酒店（按您的预订）"
+          },
+          "time": "22:30",
+          "category": "hotel",
+          "lat": 18.7876,
+          "lng": 98.993,
+          "placeId": null,
+          "note": {
+            "en": "3 nights (6–8), Old City / nearby. Placeholder coordinates — replace with your hotel in data.json.",
+            "ru": "3 ночи (6–8), Старый город / рядом. Координаты-заглушка — замените на ваш отель в data.json.",
+            "zh": "3晚（6–8号），古城或附近。占位坐标——请在 data.json 中替换为您的酒店。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-08-07",
+      "weekday": {
+        "en": "Fri",
+        "ru": "Пт",
+        "zh": "周五"
+      },
+      "title": {
+        "en": "Bike rental + Old City + Nimman",
+        "ru": "Аренда байка + Старый город + Нимман",
+        "zh": "租摩托车+古城+尼曼"
+      },
+      "focus": {
+        "en": "Bike in the morning, then walkable temples and the creative quarter.",
+        "ru": "Байк с утра, затем пешие храмы и креативный квартал.",
+        "zh": "上午取车，随后步行游寺和创意街区。"
+      },
+      "busyness": 3,
+      "roads": {
+        "en": "All within the city; ~10 min by bike to Nimman. Fill the tank after pickup.",
+        "ru": "Всё в пределах города; до Нимман ~10 мин на байке. После проката — полный бак.",
+        "zh": "都在市区内；骑车到尼曼约10分钟。取车后加满油。"
+      },
+      "clothing": {
+        "en": "Covered shoulders/knees for temples (sarong rentable on site); comfortable shoes; rain layer.",
+        "ru": "Закрытые плечи/колени для храмов (саронг на месте); удобная обувь; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝（现场可租纱笼）；舒适鞋；雨衣。"
+      },
+      "extra": null,
+      "locations": [
+        {
+          "id": "d7-maiphare",
+          "name": {
+            "en": "Mai Phare (bike rental)",
+            "ru": "Mai Phare (прокат байка)",
+            "zh": "Mai Phare（租摩托车）"
+          },
+          "time": "09:00",
+          "category": "rental",
+          "lat": 18.7933256,
+          "lng": 98.9883969,
+          "placeId": "ChIJA9_7OJg72jARNna-S4CnOdE",
+          "note": {
+            "en": "Rent 150–160cc for 10 days (7–16). Deposit 3000 THB / passport copy. Helmets included. Reserve in advance.",
+            "ru": "Аренда 150–160cc на 10 суток (7–16). Депозит 3000 THB / копия паспорта. Шлемы включены. Резервируйте заранее.",
+            "zh": "租150–160cc共10天（7–16号）。押金3000泰铢/护照复印件。含头盔。建议提前预订。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d7-phrasingh",
+          "name": {
+            "en": "Wat Phra Singh",
+            "ru": "Wat Phra Singh",
+            "zh": "帕辛寺"
+          },
+          "time": "10:00",
+          "category": "temple",
+          "lat": 18.7885265,
+          "lng": 98.9819946,
+          "placeId": "ChIJbyRKbps62jAR6VTNF-fZVpY",
+          "note": {
+            "en": "Old City's most revered temple. 05:30–19:30, ~50 THB.",
+            "ru": "Самый почитаемый храм Старого города. 05:30–19:30, ~50 THB.",
+            "zh": "古城最受尊崇的寺庙。05:30–19:30，约50泰铢。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d7-chedi",
+          "name": {
+            "en": "Wat Chedi Luang",
+            "ru": "Wat Chedi Luang",
+            "zh": "契迪龙寺"
+          },
+          "time": "11:15",
+          "category": "temple",
+          "lat": 18.7869693,
+          "lng": 98.9865804,
+          "placeId": "ChIJFRQRM5k62jARuqhLBJpw91w",
+          "note": {
+            "en": "Massive ancient chedi. 05:00–22:30, ~50 THB.",
+            "ru": "Массивная древняя чеди. 05:00–22:30, ~50 THB.",
+            "zh": "宏伟的古老佛塔。05:00–22:30，约50泰铢。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d7-khaosoi",
+          "name": {
+            "en": "Khao Soi Maesai",
+            "ru": "Khao Soi Maesai",
+            "zh": "Khao Soi Maesai 咖喱面馆"
+          },
+          "time": "12:15",
+          "category": "food",
+          "lat": 18.7995989,
+          "lng": 98.9752135,
+          "placeId": "ChIJqcysHow62jAR6ElsdYpG8EU",
+          "note": {
+            "en": "Michelin-listed khao soi (open Fri; closed Sun). Often a queue.",
+            "ru": "Мишленовский кхао сой (пт открыто; закрыт вс). Часто очередь.",
+            "zh": "米其林推荐的咖喱面（周五营业；周日闭店）。常需排队。"
+          },
+          "optional": false,
+          "meal": "snack",
+          "warn": false
+        },
+        {
+          "id": "d7-onenimman",
+          "name": {
+            "en": "One Nimman",
+            "ru": "One Nimman",
+            "zh": "One Nimman（尼曼）"
+          },
+          "time": "13:30",
+          "category": "market",
+          "lat": 18.8000644,
+          "lng": 98.9676299,
+          "placeId": "ChIJ8QdNKPU72jARtz_iHmA6_zk",
+          "note": {
+            "en": "Creative quarter: cafés, boutiques, design. 11:00–22:00. Dinner in Nimman.",
+            "ru": "Креативный квартал: кафе, бутики, дизайн. 11:00–22:00. Ужин в Нимман.",
+            "zh": "创意街区：咖啡馆、精品店、设计。11:00–22:00。晚餐在尼曼。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-08-08",
+      "weekday": {
+        "en": "Sat",
+        "ru": "Сб",
+        "zh": "周六"
+      },
+      "title": {
+        "en": "Cooking class + Saturday Walking Street",
+        "ru": "Кулинарный класс + Saturday Walking Street",
+        "zh": "烹饪课+周六夜市"
+      },
+      "focus": {
+        "en": "Food day; in the evening — the Saturday walking street, the Silver Temple is right on it.",
+        "ru": "Гастро-день; вечером — субботняя уок-стрит, Серебряный храм прямо на ней.",
+        "zh": "美食日；傍晚逛周六夜市，银庙就在夜市街上。"
+      },
+      "busyness": 3,
+      "roads": {
+        "en": "Class with hotel pickup; ~10 min by bike to Wualai in the evening (or on foot from the Old City).",
+        "ru": "Класс с пикапом от отеля; вечером до Wualai ~10 мин на байке (или пешком из Старого города).",
+        "zh": "烹饪课含酒店接送；傍晚骑车到Wualai约10分钟（住古城可步行）。"
+      },
+      "clothing": {
+        "en": "For the class — comfortable clothes; for the temple/walking street — covered shoulders/knees and comfortable shoes; rain layer.",
+        "ru": "На класс — удобная одежда; для храма/уок-стрит — закрытые плечи/колени и удобная обувь; дождевик.",
+        "zh": "上课穿舒适衣物；去寺庙/夜市需遮肩盖膝、舒适鞋；雨衣。"
+      },
+      "extra": null,
+      "locations": [
+        {
+          "id": "d8-zabbelee",
+          "name": {
+            "en": "Zabb E Lee Thai Cooking School",
+            "ru": "Zabb E Lee Thai Cooking School",
+            "zh": "Zabb E Lee 泰餐烹饪学校"
+          },
+          "time": "09:00",
+          "category": "activity",
+          "lat": 18.7916249,
+          "lng": 98.9931172,
+          "placeId": "ChIJ3x3B6ZA62jARvdzTBB6KPUg",
+          "note": {
+            "en": "Market + cooking + tasting (hearty midday meal). Hotel pickup ~08:45. ~5 hrs. Book in advance.",
+            "ru": "Рынок + готовка + дегустация (плотный дневной приём). Пикап ~08:45. ~5 ч. Бронировать заранее.",
+            "zh": "逛市场+烹饪+品尝（丰盛午餐）。约08:45接送。约5小时。需提前预订。"
+          },
+          "optional": false,
+          "meal": "main",
+          "warn": false
+        },
+        {
+          "id": "d8-silvertemple",
+          "name": {
+            "en": "Wat Sri Suphan (Silver Temple)",
+            "ru": "Wat Sri Suphan (Silver Temple)",
+            "zh": "西苏潘寺（银庙）"
+          },
+          "time": "17:00",
+          "category": "temple",
+          "lat": 18.7787227,
+          "lng": 98.9836524,
+          "placeId": "ChIJ81yeUHYw2jARY_cUFjY3Yxk",
+          "note": {
+            "en": "On Wualai Rd. Sat until 23:00, ~50 THB. Main hall — men only.",
+            "ru": "На ул. Wualai. Сб до 23:00, ~50 THB. В главный зал — только мужчины.",
+            "zh": "位于Wualai路。周六开放至23:00，约50泰铢。主殿仅限男性进入。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d8-satwalkingst",
+          "name": {
+            "en": "Saturday Walking Street (Wualai Rd)",
+            "ru": "Saturday Walking Street (Wualai Rd)",
+            "zh": "周六夜市（Wualai路）"
+          },
+          "time": "18:00",
+          "category": "market",
+          "lat": 18.7846,
+          "lng": 98.9855,
+          "placeId": null,
+          "note": {
+            "en": "Silver, crafts, street food. ~17:00–22:00. Dinner by snacking.",
+            "ru": "Серебро, ремёсла, стрит-фуд. ~17:00–22:00. Ужин перекусами.",
+            "zh": "银器、手工艺、街头小吃。约17:00–22:00。以小吃当晚餐。"
+          },
+          "optional": false,
+          "meal": "dinner",
           "warn": false
         }
       ]
@@ -417,20 +675,20 @@
         "zh": "周日"
       },
       "title": {
-        "en": "Bike rental + Sirikit garden",
-        "ru": "Аренда байка + сад Сирикит",
-        "zh": "租摩托车+诗丽吉植物园"
+        "en": "Move to Mae Rim + Sirikit garden",
+        "ru": "Переезд в Мае Рим + сад Сирикит",
+        "zh": "前往湄林+诗丽吉植物园"
       },
       "focus": {
-        "en": "Logistics in the morning → into Mae Rim. An easy day: reach the base and the Sirikit garden.",
-        "ru": "Логистика утром → въезд в Мае Рим. Спокойный день: заезд на базу и сад Сирикит.",
-        "zh": "上午办手续 → 进入湄林。轻松的一天：抵达大本营和诗丽吉植物园。"
+        "en": "Ride to the base with luggage; an easy day, no adventures with bags.",
+        "ru": "Выезд с багажом на базу; день спокойный, без остановок-приключений.",
+        "zh": "带行李骑往大本营；轻松的一天，不安排带行李的游玩。"
       },
       "busyness": 2,
       "roads": {
-        "en": "City → 107 → Mae Rim → climb on 1096. Luggage on the bike — soft bags, careful on the climb.",
-        "ru": "Город → 107 → Мае Рим → подъём по 1096. Багаж на байке — мягкие сумки, аккуратно на подъёме.",
-        "zh": "市区 → 107 → 湄林 → 沿1096盘山。行李在摩托车上——用软包，上山时小心。"
+        "en": "City → 107 → Mae Rim → climb on 1096, ~55 min. Full tank on the way out. Luggage on the bike — soft bags, careful on the climb.",
+        "ru": "Город → 107 → Мае Рим → подъём по 1096, ~55 мин. Полный бак на выезде. Багаж на байке — мягкие сумки, аккуратно на подъёме.",
+        "zh": "市区 → 107 → 湄林 → 沿1096盘山约55分钟。出城加满油。行李在车上——用软包，上山小心。"
       },
       "clothing": {
         "en": "Light layers; comfortable shoes for the garden (glasshouses get hot/humid); rain layer.",
@@ -440,42 +698,21 @@
       "extra": null,
       "locations": [
         {
-          "id": "d9-maiphare",
-          "name": {
-            "en": "Mai Phare (bike rental)",
-            "ru": "Mai Phare (прокат байка)",
-            "zh": "Mai Phare（租摩托车）"
-          },
-          "time": "08:45",
-          "category": "rental",
-          "lat": 18.7933256,
-          "lng": 98.9883969,
-          "placeId": "ChIJA9_7OJg72jARNna-S4CnOdE",
-          "note": {
-            "en": "Rent 150–160cc. Deposit 3000 THB / passport copy. Helmets included.",
-            "ru": "Аренда 150–160cc. Депозит 3000 THB / копия паспорта. Шлемы включены.",
-            "zh": "租150–160cc。押金3000泰铢/护照复印件。含头盔。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
           "id": "d9-cafearte",
           "name": {
             "en": "Cafe Arte",
             "ru": "Cafe Arte",
             "zh": "Cafe Arte 咖啡馆"
           },
-          "time": "09:45",
+          "time": "09:20",
           "category": "cafe",
           "lat": 18.8104759,
           "lng": 98.9670261,
           "placeId": "ChIJsyN09PE72jARrFl9p-zWaWE",
           "note": {
-            "en": "Breakfast. 09:00–17:00, closed Wed.",
-            "ru": "Завтрак. 09:00–17:00, закрыто по средам.",
-            "zh": "早餐。09:00–17:00，周三闭店。"
+            "en": "Breakfast en route north. Open Sun (closed Wed).",
+            "ru": "Завтрак по пути на север. Вс открыто (закрыто ср).",
+            "zh": "北上途中吃早餐。周日营业（周三闭店）。"
           },
           "optional": false,
           "meal": "breakfast",
@@ -488,15 +725,15 @@
             "ru": "The Sher Homestay",
             "zh": "The Sher 民宿"
           },
-          "time": "11:40",
+          "time": "11:30",
           "category": "hotel",
           "lat": 18.8672102,
           "lng": 98.8512489,
           "placeId": "ChIJux_L5s852jAR86I_oGIc2g4",
           "note": {
-            "en": "BASE 9–11. Check in, drop luggage. Dinners at the homestay.",
-            "ru": "БАЗА 9–11. Заселение, выгрузка багажа. Ужины при доме.",
-            "zh": "9–11号大本营。入住、卸行李。晚餐在民宿。"
+            "en": "BASE 9–11. Check in, drop luggage. Confirm dinners for all three evenings.",
+            "ru": "БАЗА 9–11. Заселение, выгрузка багажа. Подтвердите ужины на все три вечера.",
+            "zh": "9–11号大本营。入住、卸行李。请确认三晚的晚餐。"
           },
           "optional": false,
           "meal": null,
@@ -515,9 +752,9 @@
           "lng": 98.8618687,
           "placeId": "ChIJ09XFoDY_2jARLzwh9iOPI6U",
           "note": {
-            "en": "Glasshouses, glass dome with waterfall, canopy walkway. 08:30–16:30, ~150 THB.",
-            "ru": "Оранжереи, купол с водопадом, навесная тропа. 08:30–16:30, ~150 THB.",
-            "zh": "温室、带瀑布的玻璃穹顶、树冠步道。08:30–16:30，约150泰铢。"
+            "en": "Glasshouses (rain shelter), glass dome with waterfall, canopy walkway. 08:30–16:30, ~150 THB.",
+            "ru": "Оранжереи (укрытие от дождя), купол с водопадом, навесная тропа. 08:30–16:30, ~150 THB.",
+            "zh": "温室（避雨）、带瀑布的玻璃穹顶、树冠步道。08:30–16:30，约150泰铢。"
           },
           "optional": false,
           "meal": null,
@@ -545,14 +782,14 @@
       },
       "busyness": 5,
       "roads": {
-        "en": "Longest mileage (~150 km two-up). MUST refuel en route (Route 107 corridor) — one tank may not be enough.",
-        "ru": "Самый длинный пробег (~150 км вдвоём). Обязательно дозаправиться по пути (коридор 107) — одного бака может не хватить.",
-        "zh": "全程里程最长（双人约150公里）。务必途中加油（107公路沿线）——单箱油可能不够。"
+        "en": "Longest mileage (~150 km two-up). MUST refuel en route (Route 107 corridor).",
+        "ru": "Самый длинный пробег (~150 км вдвоём). Обязательная дозаправка по пути (коридор 107).",
+        "zh": "全程里程最长（双人约150公里）。务必途中加油（107公路沿线）。"
       },
       "clothing": {
         "en": "Swimwear/quick-dry + a FULL change of clothes for Bua Tong; barefoot on the climb; insect repellent; waterproof phone pouch; covered shoulders/knees for Wat Ban Den; rain layer.",
-        "ru": "Купальник/быстросохнущее + ПОЛНЫЙ комплект сменной одежды для Bua Tong; босиком на подъёме; репеллент; влагозащитный чехол; закрытые плечи/колени для Wat Ban Den; дождевик.",
-        "zh": "泳衣/速干衣 + 一整套换洗衣物用于布瓦通；攀爬时赤脚；驱虫剂；手机防水套；参观班德寺需遮肩盖膝；雨衣。"
+        "ru": "Купальник/быстросохнущее + ПОЛНЫЙ комплект сменного для Bua Tong; босиком на подъёме; репеллент; влагозащита телефона; закрытые плечи/колени для храма; дождевик.",
+        "zh": "泳衣/速干衣 + 一整套换洗衣物用于布瓦通；攀爬时赤脚；驱虫剂；手机防水套；参观寺庙需遮肩盖膝；雨衣。"
       },
       "extra": null,
       "locations": [
@@ -642,7 +879,7 @@
       "busyness": 3,
       "roads": {
         "en": "Short hops within the upper 1096 valley. A full tank in the morning is enough.",
-        "ru": "Короткие переезды в пределах верхней долины 1096. Полного бака с утра достаточно.",
+        "ru": "Короткие переезды в верхней долине 1096. Полного бака с утра достаточно.",
         "zh": "在1096上谷内短途往返。早上加满油即可。"
       },
       "clothing": {
@@ -728,45 +965,66 @@
       "title": {
         "en": "Move to the city (Mother's Day)",
         "ru": "Переезд в город (День матери)",
-        "zh": "搬到市区（母亲节）"
+        "zh": "返回市区（母亲节）"
       },
       "focus": {
-        "en": "Descend to the city and check in; an easy evening.",
-        "ru": "Спуск в город и заселение; лёгкий вечер.",
-        "zh": "下山进城、入住；轻松的傍晚。"
+        "en": "Descend with luggage, check in; an easy evening at the Night Bazaar. Skip Doi Suthep today — holiday crowds.",
+        "ru": "Спуск с багажом, заселение; лёгкий вечер на Night Bazaar. Дой Сутеп сегодня не планируем — праздник, переполнен.",
+        "zh": "带行李下山、入住；傍晚轻松逛夜市。今天避开素贴山——节日人多。"
       },
       "busyness": 2,
       "roads": {
-        "en": "Descend on 1096, then into the city. The bike stays with you.",
-        "ru": "Спуск по 1096, затем в город. Байк остаётся с вами.",
-        "zh": "沿1096下山，然后进城。摩托车一直跟着你。"
+        "en": "Descend on 1096, then into the city, ~1 hr 15 min. No stops. The bike stays with you.",
+        "ru": "Спуск по 1096, затем в город, ~1 ч 15 мин. Без остановок. Байк остаётся с вами.",
+        "zh": "沿1096下山进城，约1小时15分。不停留。摩托车一直跟着你。"
       },
       "clothing": {
-        "en": "Covered shoulders/knees for the temple; comfortable shoes; rain layer.",
-        "ru": "Закрытые плечи/колени для храма; удобная обувь; дождевик.",
-        "zh": "参观寺庙需遮肩盖膝；舒适鞋；雨衣。"
+        "en": "Comfortable shoes; rain layer.",
+        "ru": "Удобная обувь; дождевик.",
+        "zh": "舒适鞋；雨衣。"
       },
       "extra": null,
       "locations": [
         {
-          "id": "d12-chedi",
+          "id": "d12-cityhotel",
           "name": {
-            "en": "Wat Chedi Luang",
-            "ru": "Wat Chedi Luang",
-            "zh": "契迪龙寺"
+            "en": "City hotel — check in",
+            "ru": "Городской отель — заселение",
+            "zh": "市区酒店——入住"
           },
-          "time": "17:00",
-          "category": "temple",
-          "lat": 18.7869693,
-          "lng": 98.9865804,
-          "placeId": "ChIJFRQRM5k62jARuqhLBJpw91w",
+          "time": "11:45",
+          "category": "hotel",
+          "lat": 18.7876,
+          "lng": 98.993,
+          "placeId": null,
           "note": {
-            "en": "Evening stroll: ancient chedi, fine at sunset. 05:00–22:30, ~50 THB.",
-            "ru": "Вечерняя прогулка: древняя чеди, хороша на закате. 05:00–22:30, ~50 THB.",
-            "zh": "傍晚散步：古老佛塔，日落时尤美。05:00–22:30，约50泰铢。"
+            "en": "4 nights (12–15). Placeholder coordinates — replace with your hotel.",
+            "ru": "4 ночи (12–15). Координаты-заглушка — замените на ваш отель.",
+            "zh": "4晚（12–15号）。占位坐标——请替换为您的酒店。"
           },
           "optional": false,
           "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d12-nightbazaar",
+          "name": {
+            "en": "Chiang Mai Night Bazaar",
+            "ru": "Chiang Mai Night Bazaar",
+            "zh": "清迈夜市"
+          },
+          "time": "18:00",
+          "category": "market",
+          "lat": 18.7852244,
+          "lng": 99.0002986,
+          "placeId": "ChIJW0qnDKY62jARHbAmfwD1Lgs",
+          "note": {
+            "en": "Evening stroll + dinner. Chang Khlan Rd, 17:00–24:00 daily.",
+            "ru": "Вечерняя прогулка + ужин. Ул. Чанг Кхлан, 17:00–24:00 ежедневно.",
+            "zh": "傍晚散步+晚餐。长康路，每天17:00–24:00。"
+          },
+          "optional": false,
+          "meal": "dinner",
           "warn": false
         }
       ]
@@ -778,102 +1036,6 @@
         "en": "Thu",
         "ru": "Чт",
         "zh": "周四"
-      },
-      "title": {
-        "en": "Old City (temples on foot) + Nimman",
-        "ru": "Старый город (храмы пешком) + Нимман",
-        "zh": "古城（步行游寺）+尼曼"
-      },
-      "focus": {
-        "en": "Getting to know the city: walkable temples + creative Nimman. Relaxed.",
-        "ru": "Знакомство с городом: пешие храмы + креативный Нимман. Расслабленно.",
-        "zh": "熟悉城市：步行游寺 + 创意尼曼区。轻松。"
-      },
-      "busyness": 3,
-      "roads": {
-        "en": "Old City — on foot; ~10 min by bike to Nimman.",
-        "ru": "Старый город — пешком; до Нимман ~10 мин на байке.",
-        "zh": "古城——步行；骑车到尼曼约10分钟。"
-      },
-      "clothing": {
-        "en": "Covered shoulders/knees for temples (sarong rentable on site); comfortable shoes; rain layer.",
-        "ru": "Закрытые плечи/колени для храмов (саронг можно арендовать на месте); удобная обувь; дождевик.",
-        "zh": "参观寺庙需遮肩盖膝（现场可租纱笼）；舒适鞋；雨衣。"
-      },
-      "extra": null,
-      "locations": [
-        {
-          "id": "d13-phrasingh",
-          "name": {
-            "en": "Wat Phra Singh",
-            "ru": "Wat Phra Singh",
-            "zh": "帕辛寺"
-          },
-          "time": "09:30",
-          "category": "temple",
-          "lat": 18.7885265,
-          "lng": 98.9819946,
-          "placeId": "ChIJbyRKbps62jAR6VTNF-fZVpY",
-          "note": {
-            "en": "Old City's most revered temple. 05:30–19:30, ~50 THB.",
-            "ru": "Самый почитаемый храм Старого города. 05:30–19:30, ~50 THB.",
-            "zh": "古城最受尊崇的寺庙。05:30–19:30，约50泰铢。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d13-khaosoi",
-          "name": {
-            "en": "Khao Soi Maesai",
-            "ru": "Khao Soi Maesai",
-            "zh": "Khao Soi Maesai 咖喱面馆"
-          },
-          "time": "12:00",
-          "category": "food",
-          "lat": 18.7995989,
-          "lng": 98.9752135,
-          "placeId": "ChIJqcysHow62jAR6ElsdYpG8EU",
-          "note": {
-            "en": "Michelin-listed khao soi. 08:00–16:00, closed Sun. Often a queue.",
-            "ru": "Мишленовский кхао сой. 08:00–16:00, закрыто по вс. Часто очередь.",
-            "zh": "米其林推荐的咖喱面。08:00–16:00，周日闭店。常需排队。"
-          },
-          "optional": false,
-          "meal": "snack",
-          "warn": false
-        },
-        {
-          "id": "d13-onenimman",
-          "name": {
-            "en": "One Nimman",
-            "ru": "One Nimman",
-            "zh": "One Nimman（尼曼）"
-          },
-          "time": "13:30",
-          "category": "market",
-          "lat": 18.8000644,
-          "lng": 98.9676299,
-          "placeId": "ChIJ8QdNKPU72jARtz_iHmA6_zk",
-          "note": {
-            "en": "Creative quarter: cafés, boutiques, design. 11:00–22:00.",
-            "ru": "Креативный квартал: кафе, бутики, дизайн. 11:00–22:00.",
-            "zh": "创意街区：咖啡馆、精品店、设计。11:00–22:00。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        }
-      ]
-    },
-    {
-      "day": 14,
-      "date": "2026-08-14",
-      "weekday": {
-        "en": "Fri",
-        "ru": "Пт",
-        "zh": "周五"
       },
       "title": {
         "en": "Doi Suthep + northern Mae Rim cluster + billiards",
@@ -899,7 +1061,7 @@
       "extra": null,
       "locations": [
         {
-          "id": "d14-phalat",
+          "id": "d13-phalat",
           "name": {
             "en": "Wat Pha Lat",
             "ru": "Wat Pha Lat",
@@ -920,7 +1082,7 @@
           "warn": false
         },
         {
-          "id": "d14-doisuthep",
+          "id": "d13-doisuthep",
           "name": {
             "en": "Wat Phra That Doi Suthep",
             "ru": "Wat Phra That Doi Suthep",
@@ -941,7 +1103,7 @@
           "warn": false
         },
         {
-          "id": "d14-huaytungtao",
+          "id": "d13-huaytungtao",
           "name": {
             "en": "Huay Tung Tao Lake",
             "ru": "Huay Tung Tao Lake",
@@ -962,7 +1124,7 @@
           "warn": false
         },
         {
-          "id": "d14-daraphirom",
+          "id": "d13-daraphirom",
           "name": {
             "en": "Wat Pa Dara Phirom",
             "ru": "Wat Pa Dara Phirom",
@@ -983,7 +1145,7 @@
           "warn": false
         },
         {
-          "id": "d14-poopoopaper",
+          "id": "d13-poopoopaper",
           "name": {
             "en": "Elephant POOPOOPAPER Park",
             "ru": "Elephant POOPOOPAPER Park",
@@ -1004,7 +1166,7 @@
           "warn": false
         },
         {
-          "id": "d14-gameon",
+          "id": "d13-gameon",
           "name": {
             "en": "Game On Pool Hall",
             "ru": "Game On Pool Hall",
@@ -1027,204 +1189,12 @@
       ]
     },
     {
-      "day": 15,
-      "date": "2026-08-15",
+      "day": 14,
+      "date": "2026-08-14",
       "weekday": {
-        "en": "Sat",
-        "ru": "Сб",
-        "zh": "周六"
-      },
-      "title": {
-        "en": "Cooking class + Saturday Walking Street",
-        "ru": "Кулинарный класс + Saturday Walking Street",
-        "zh": "烹饪课+周六夜市"
-      },
-      "focus": {
-        "en": "Food day + the Saturday walking street. The Silver Temple is right on it.",
-        "ru": "Гастро-день + субботняя уок-стрит. Серебряный храм — прямо на ней.",
-        "zh": "美食日 + 周六夜市。银庙就在夜市街上。"
-      },
-      "busyness": 3,
-      "roads": {
-        "en": "Class with pickup; ~10 min by bike to Wualai in the evening (or on foot from the Old City).",
-        "ru": "Класс с пикапом; вечером до Wualai ~10 мин на байке (или пешком из Старого города).",
-        "zh": "烹饪课含接送；傍晚骑车到Wualai约10分钟（若住古城可步行）。"
-      },
-      "clothing": {
-        "en": "For the class — comfortable clothes; for the temple/walking street — covered shoulders/knees and comfortable shoes; rain layer.",
-        "ru": "На класс — удобная одежда; для храма/уок-стрит — закрытые плечи/колени и удобная обувь; дождевик.",
-        "zh": "上课穿舒适衣物；去寺庙/夜市需遮肩盖膝、舒适鞋；雨衣。"
-      },
-      "extra": null,
-      "locations": [
-        {
-          "id": "d15-zabbelee",
-          "name": {
-            "en": "Zabb E Lee Thai Cooking School",
-            "ru": "Zabb E Lee Thai Cooking School",
-            "zh": "Zabb E Lee 泰餐烹饪学校"
-          },
-          "time": "09:00",
-          "category": "activity",
-          "lat": 18.7916249,
-          "lng": 98.9931172,
-          "placeId": "ChIJ3x3B6ZA62jARvdzTBB6KPUg",
-          "note": {
-            "en": "Market + cooking + tasting (hearty midday meal). Hotel pickup. ~5 hrs.",
-            "ru": "Рынок + готовка + дегустация (плотный дневной приём). Пикап от отеля. ~5 ч.",
-            "zh": "逛市场+烹饪+品尝（丰盛的午餐）。酒店接送。约5小时。"
-          },
-          "optional": false,
-          "meal": "main",
-          "warn": false
-        },
-        {
-          "id": "d15-silvertemple",
-          "name": {
-            "en": "Wat Sri Suphan (Silver Temple)",
-            "ru": "Wat Sri Suphan (Silver Temple)",
-            "zh": "西苏潘寺（银庙）"
-          },
-          "time": "17:00",
-          "category": "temple",
-          "lat": 18.7787227,
-          "lng": 98.9836524,
-          "placeId": "ChIJ81yeUHYw2jARY_cUFjY3Yxk",
-          "note": {
-            "en": "On Wualai Rd. Sat until 23:00, ~50 THB. Main hall — men only.",
-            "ru": "На ул. Wualai. Сб до 23:00, ~50 THB. В главный зал — только мужчины.",
-            "zh": "位于Wualai路。周六开放至23:00，约50泰铢。主殿仅限男性进入。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d15-satwalkingst",
-          "name": {
-            "en": "Saturday Walking Street (Wualai Rd)",
-            "ru": "Saturday Walking Street (Wualai Rd)",
-            "zh": "周六夜市（Wualai路）"
-          },
-          "time": "18:00",
-          "category": "market",
-          "lat": 18.7846,
-          "lng": 98.9855,
-          "placeId": null,
-          "note": {
-            "en": "Silver, crafts, street food. ~17:00–22:00. Dinner by snacking.",
-            "ru": "Серебро, ремёсла, стрит-фуд. ~17:00–22:00. Ужин перекусами.",
-            "zh": "银器、手工艺、街头小吃。约17:00–22:00。以小吃当晚餐。"
-          },
-          "optional": false,
-          "meal": "dinner",
-          "warn": false
-        }
-      ]
-    },
-    {
-      "day": 16,
-      "date": "2026-08-16",
-      "weekday": {
-        "en": "Sun",
-        "ru": "Вс",
-        "zh": "周日"
-      },
-      "title": {
-        "en": "Southern cluster (garden + temple) + Sunday Walking Street",
-        "ru": "Южный кластер (сад + храм) + Sunday Walking Street",
-        "zh": "南部集群（花园+寺庙）+周日夜市"
-      },
-      "focus": {
-        "en": "Rajapruek rose garden + a hilltop temple; the main Sunday walking street in the evening.",
-        "ru": "Сад роз Rajapruek + храм на холме; вечером — главная воскресная уок-стрит.",
-        "zh": "Rajapruek玫瑰园 + 山顶寺庙；傍晚是主要的周日夜市。"
-      },
-      "busyness": 3,
-      "roads": {
-        "en": "~30 min by bike SW to Mae Hia; the evening walking street is in the Old City.",
-        "ru": "До Мае Хиа ~30 мин на байке ЮЗ; вечерняя уок-стрит — в Старом городе.",
-        "zh": "骑车向西南到湄嘉约30分钟；傍晚的夜市在古城。"
-      },
-      "clothing": {
-        "en": "Covered shoulders/knees for temples; comfortable shoes; rain layer.",
-        "ru": "Закрытые плечи/колени для храмов; удобная обувь; дождевик.",
-        "zh": "参观寺庙需遮肩盖膝；舒适鞋；雨衣。"
-      },
-      "extra": null,
-      "locations": [
-        {
-          "id": "d16-doikham",
-          "name": {
-            "en": "Wat Phra That Doi Kham",
-            "ru": "Wat Phra That Doi Kham",
-            "zh": "督坎山寺"
-          },
-          "time": "09:30",
-          "category": "temple",
-          "lat": 18.7595235,
-          "lng": 98.9188375,
-          "placeId": "ChIJ2ZcVCjY32jARe1S2KiDFHNc",
-          "note": {
-            "en": "Hilltop temple: panorama, big Buddha. 07:00–19:00.",
-            "ru": "Храм на холме: панорама, большой Будда. 07:00–19:00.",
-            "zh": "山顶寺庙：全景、大佛。07:00–19:00。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d16-rajapruek",
-          "name": {
-            "en": "Royal Park Rajapruek",
-            "ru": "Royal Park Rajapruek",
-            "zh": "皇家花园 Rajapruek"
-          },
-          "time": "11:00",
-          "category": "garden",
-          "lat": 18.7445479,
-          "lng": 98.9280108,
-          "placeId": "ChIJkQi8v9Mw2jAR93jK7vlaxvg",
-          "note": {
-            "en": "Themed gardens, orchid houses, Lanna pavilion; the Rose Garden. 08:00–18:00, ~200 THB. Roses peak in the cool season.",
-            "ru": "Тематические сады, орхидейные оранжереи, ланна-павильон; «Сад роз». 08:00–18:00, ~200 THB. Розы — пик в прохладный сезон.",
-            "zh": "主题花园、兰花温室、兰纳亭；玫瑰园。08:00–18:00，约200泰铢。玫瑰在凉季盛开。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d16-sunwalkingst",
-          "name": {
-            "en": "Sunday Walking Street (Ratchadamnoen Rd)",
-            "ru": "Sunday Walking Street (Ratchadamnoen Rd)",
-            "zh": "周日夜市（Ratchadamnoen路）"
-          },
-          "time": "17:00",
-          "category": "market",
-          "lat": 18.7876,
-          "lng": 98.9931,
-          "placeId": null,
-          "note": {
-            "en": "The main walking street: crafts, street food. ~16:00–22:00. Dinner by snacking.",
-            "ru": "Главная уок-стрит: ремёсла, стрит-фуд. ~16:00–22:00. Ужин перекусами.",
-            "zh": "主要步行夜市：手工艺、街头小吃。约16:00–22:00。以小吃当晚餐。"
-          },
-          "optional": false,
-          "meal": "dinner",
-          "warn": false
-        }
-      ]
-    },
-    {
-      "day": 17,
-      "date": "2026-08-17",
-      "weekday": {
-        "en": "Mon",
-        "ru": "Пн",
-        "zh": "周一"
+        "en": "Fri",
+        "ru": "Пт",
+        "zh": "周五"
       },
       "title": {
         "en": "Mae Kampong mountain village (east)",
@@ -1250,7 +1220,7 @@
       "extra": null,
       "locations": [
         {
-          "id": "d17-maekampong",
+          "id": "d14-maekampong",
           "name": {
             "en": "Mae Kampong (village/waterfall)",
             "ru": "Mae Kampong (деревня/водопад)",
@@ -1271,7 +1241,7 @@
           "warn": false
         },
         {
-          "id": "d17-hotsprings",
+          "id": "d14-hotsprings",
           "name": {
             "en": "San Kamphaeng Hot Springs",
             "ru": "San Kamphaeng Hot Springs",
@@ -1292,7 +1262,7 @@
           "warn": false
         },
         {
-          "id": "d17-maiiam",
+          "id": "d14-maiiam",
           "name": {
             "en": "MAIIAM Contemporary Art (alternative)",
             "ru": "MAIIAM Contemporary Art (альтернатива)",
@@ -1315,86 +1285,128 @@
       ]
     },
     {
-      "day": 18,
-      "date": "2026-08-18",
+      "day": 15,
+      "date": "2026-08-15",
       "weekday": {
-        "en": "Tue",
-        "ru": "Вт",
-        "zh": "周二"
+        "en": "Sat",
+        "ru": "Сб",
+        "zh": "周六"
       },
       "title": {
-        "en": "Water park / relaxation (penultimate day)",
-        "ru": "Аквапарк / релакс (предпоследний день)",
-        "zh": "水上乐园/放松（倒数第二天）"
+        "en": "South: hilltop temple + rose garden + spa",
+        "ru": "Юг: храм на холме + сад роз + спа",
+        "zh": "南部：山顶寺庙+玫瑰园+水疗"
       },
       "focus": {
-        "en": "An active-relaxed day. Massage/spa toward evening.",
-        "ru": "Активно-расслабленный день. Массаж/спа под вечер.",
-        "zh": "动静结合的一天。傍晚按摩/水疗。"
+        "en": "Southern day: hilltop temple and Rajapruek in the morning; afternoon — spa/massage (main scenario); farewell dinner.",
+        "ru": "Южный день: храм на холме и Rajapruek утром; после обеда — спа/массаж (основной сценарий); прощальный ужин.",
+        "zh": "南部日：上午山顶寺庙和Rajapruek；下午——水疗/按摩（主方案）；告别晚餐。"
       },
-      "busyness": 3,
+      "busyness": 4,
       "roads": {
-        "en": "~30 min by bike south to Hang Dong.",
-        "ru": "До Ханг Донг ~30 мин на байке на юг.",
-        "zh": "骑车向南到Hang Dong约30分钟。"
+        "en": "Everything south: ~30 min by bike SW to Mae Hia; Hang Dong is ~15 min further.",
+        "ru": "Всё на юге: до Мае Хиа ~30 мин на байке ЮЗ; Ханг Донг — ещё ~15 мин.",
+        "zh": "都在南部：骑车向西南到湄嘉约30分钟；Hang Dong再约15分钟。"
       },
       "clothing": {
-        "en": "Swimwear + a change of clothes for the water park; rain layer.",
-        "ru": "Купальник + сменная одежда для аквапарка; дождевик.",
-        "zh": "水上乐园带泳衣 + 换洗衣物；雨衣。"
+        "en": "Covered shoulders/knees for the temple; swimwear + a change of clothes if you go to the water park; rain layer.",
+        "ru": "Закрытые плечи/колени для храма; купальник + сменное, если поедете в аквапарк; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝；若去水上乐园带泳衣+换洗衣物；雨衣。"
       },
       "extra": {
-        "en": "Not in the mood for water? The eastern crafts/art cluster (Bo Sang + MAIIAM), but both are CLOSED on Tuesday → a spa day in the city is better.",
-        "ru": "Не хочется воды — восточный кластер (Bo Sang + MAIIAM), но во вторник оба закрыты → лучше спа-день в городе.",
-        "zh": "不想玩水？东部手工艺/艺术集群（Bo Sang + MAIIAM），但周二两处都闭馆 → 在市区安排水疗更好。"
+        "en": "Main scenario: after lunch return to the city for a spa/massage (book a good spa 1–2 days ahead); farewell dinner — optionally a second Saturday Walking Street on Wualai. The water park only if energy and weather allow; if going, better in the morning and the garden after lunch.",
+        "ru": "Основной сценарий: после обеда — возврат в город и спа/массаж (хорошее спа бронируйте за 1–2 дня); прощальный ужин — по желанию повторно Saturday Walking Street на Wualai. Аквапарк — только если будут силы и погода; если едете, лучше утром, а сад — после обеда.",
+        "zh": "主方案：午后返回市区做水疗/按摩（好的水疗提前1–2天预订）；告别晚餐——可选择再逛一次Wualai周六夜市。水上乐园仅在体力和天气允许时前往；若去，建议上午玩、下午逛花园。"
       },
       "locations": [
         {
-          "id": "d18-grandcanyon",
+          "id": "d15-doikham",
+          "name": {
+            "en": "Wat Phra That Doi Kham",
+            "ru": "Wat Phra That Doi Kham",
+            "zh": "督坎山寺"
+          },
+          "time": "09:30",
+          "category": "temple",
+          "lat": 18.7595235,
+          "lng": 98.9188375,
+          "placeId": "ChIJ2ZcVCjY32jARe1S2KiDFHNc",
+          "note": {
+            "en": "Hilltop temple: panorama, big Buddha. 07:00–19:00.",
+            "ru": "Храм на холме: панорама, большой Будда. 07:00–19:00.",
+            "zh": "山顶寺庙：全景、大佛。07:00–19:00。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d15-rajapruek",
+          "name": {
+            "en": "Royal Park Rajapruek",
+            "ru": "Royal Park Rajapruek",
+            "zh": "皇家花园 Rajapruek"
+          },
+          "time": "11:00",
+          "category": "garden",
+          "lat": 18.7445479,
+          "lng": 98.9280108,
+          "placeId": "ChIJkQi8v9Mw2jAR93jK7vlaxvg",
+          "note": {
+            "en": "Themed gardens, orchid houses (rain shelter), Lanna pavilion; the Rose Garden. 08:00–18:00, ~200 THB. Roses peak in the cool season.",
+            "ru": "Тематические сады, орхидейные оранжереи (укрытие от дождя), ланна-павильон; «Сад роз». 08:00–18:00, ~200 THB. Розы — пик в прохладный сезон.",
+            "zh": "主题花园、兰花温室（避雨）、兰纳亭；玫瑰园。08:00–18:00，约200泰铢。玫瑰在凉季盛开。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d15-grandcanyon",
           "name": {
             "en": "Grand Canyon Water Park",
             "ru": "Grand Canyon Water Park",
             "zh": "大峡谷水上乐园"
           },
-          "time": "11:00",
+          "time": "14:30",
           "category": "activity",
           "lat": 18.6959737,
           "lng": 98.8919586,
           "placeId": "ChIJ8ctJP4M22jARPV0etTHeozI",
           "note": {
-            "en": "Inflatable courses, wakeboarding, ziplines over water. Hang Dong (south). 10:00–19:00, ~400 THB.",
-            "ru": "Надувные полосы, вейкборд, зиплайны над водой. Ханг Донг (юг). 10:00–19:00, ~400 THB.",
-            "zh": "充气障碍道、尾波滑水、水上滑索。Hang Dong（南部）。10:00–19:00，约400泰铢。"
+            "en": "Backup option — likely skip. Flooded-quarry park: floating obstacle course, 10 m slides, 400 m zipline over water, kayaks/SUP. 10:00–19:00, ~950 THB at the gate. Life jackets mandatory; water activities pause during thunderstorms.",
+            "ru": "Запасной вариант — скорее всего пропустите. Парк в затопленном карьере: надувная полоса, горки 10 м, зиплайн 400 м над водой, каяки/SUP. 10:00–19:00, ~950 THB на входе. Спасжилет обязателен; при грозе водные активности приостанавливают.",
+            "zh": "备选方案——大概率跳过。废弃采石场水上乐园：漂浮障碍道、10米滑梯、400米水上滑索、皮划艇/桨板。10:00–19:00，门票约950泰铢。必须穿救生衣；雷雨时水上项目暂停。"
           },
-          "optional": false,
+          "optional": true,
           "meal": null,
           "warn": false
         }
       ]
     },
     {
-      "day": 19,
-      "date": "2026-08-19",
+      "day": 16,
+      "date": "2026-08-16",
       "weekday": {
-        "en": "Wed",
-        "ru": "Ср",
-        "zh": "周三"
+        "en": "Sun",
+        "ru": "Вс",
+        "zh": "周日"
       },
       "title": {
-        "en": "Departure",
-        "ru": "Отъезд",
-        "zh": "离开"
+        "en": "Departure (flight ~15:40)",
+        "ru": "Отъезд (рейс ~15:40)",
+        "zh": "离开（航班约15:40）"
       },
       "focus": {
-        "en": "Flexible around your flight. Return the bike, last-minute souvenirs.",
-        "ru": "Гибко под ваш рейс. Возврат байка, последние сувениры.",
-        "zh": "根据航班灵活安排。还摩托车、买最后的纪念品。"
+        "en": "Short flexible morning: market, bike return, airport by ~13:30.",
+        "ru": "Короткое гибкое утро: рынок, возврат байка, в аэропорту к ~13:30.",
+        "zh": "短暂灵活的上午：逛市场、还车，约13:30抵达机场。"
       },
       "busyness": 1,
       "roads": {
-        "en": "As needed; return the bike before departure.",
-        "ru": "По ситуации; байк сдаём до отъезда.",
-        "zh": "视情况而定；出发前还车。"
+        "en": "Return the bike at Mai Phare by ~12:30; leave for the airport ~13:00 (Grab ~15–20 min).",
+        "ru": "Возврат байка в Mai Phare до ~12:30; выезд в аэропорт ~13:00 (Grab ~15–20 мин).",
+        "zh": "约12:30前在Mai Phare还车；约13:00出发去机场（Grab约15–20分钟）。"
       },
       "clothing": {
         "en": "Per the weather; rain layer to the last.",
@@ -1404,42 +1416,63 @@
       "extra": null,
       "locations": [
         {
-          "id": "d19-warorot",
+          "id": "d16-warorot",
           "name": {
             "en": "Warorot Market",
             "ru": "Warorot Market",
             "zh": "Warorot 市场"
           },
-          "time": "—",
+          "time": "09:30",
           "category": "market",
           "lat": 18.7898494,
           "lng": 99.0009964,
           "placeId": "ChIJUXF8Lzo72jARQGy1_Bh_wCQ",
           "note": {
-            "en": "In the morning, optional: souvenirs — tea, snacks, textiles. 06:00–17:00.",
-            "ru": "Утром, по желанию: сувениры — чай, снеки, ткани. 06:00–17:00.",
-            "zh": "上午（可选）：纪念品——茶叶、零食、纺织品。06:00–17:00。"
+            "en": "Optional: souvenirs — tea, snacks, textiles. 06:00–17:00.",
+            "ru": "По желанию: сувениры — чай, снеки, ткани. 06:00–17:00.",
+            "zh": "可选：纪念品——茶叶、零食、纺织品。06:00–17:00。"
           },
           "optional": true,
           "meal": null,
           "warn": false
         },
         {
-          "id": "d19-maipharereturn",
+          "id": "d16-maipharereturn",
           "name": {
             "en": "Mai Phare (bike return)",
             "ru": "Mai Phare (возврат байка)",
             "zh": "Mai Phare（还车）"
           },
-          "time": "—",
+          "time": "11:45",
           "category": "rental",
           "lat": 18.7933256,
           "lng": 98.9883969,
           "placeId": "ChIJA9_7OJg72jARNna-S4CnOdE",
           "note": {
-            "en": "Return the bike before departure.",
-            "ru": "Сдать байк до отъезда.",
-            "zh": "出发前还摩托车。"
+            "en": "Return the bike by ~12:30.",
+            "ru": "Сдать байк до ~12:30.",
+            "zh": "约12:30前还车。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d16-cnx",
+          "name": {
+            "en": "Chiang Mai Airport (CNX)",
+            "ru": "Аэропорт Чиангмая (CNX)",
+            "zh": "清迈机场（CNX）"
+          },
+          "time": "13:30",
+          "category": "transport",
+          "lat": 18.7692428,
+          "lng": 98.9681891,
+          "placeId": "ChIJifGY5ogw2jARl0WT_eN0JKA",
+          "note": {
+            "en": "Arrive ~2 hrs before the ~15:40 flight.",
+            "ru": "Прибыть за ~2 ч до рейса ~15:40.",
+            "zh": "在约15:40的航班前约2小时到达。"
           },
           "optional": false,
           "meal": null,
