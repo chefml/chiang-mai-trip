@@ -18,9 +18,9 @@
     ],
     "defaultLanguage": "ru",
     "overview": {
-      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman. 8th: cooking class + Saturday Walking Street. 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13–15: Doi Suthep + billiards, Mae Kampong, southern gardens. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
-      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман. 8-го — кулинарный класс + Saturday Walking Street. 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13–15 — Дой Сутеп + бильярд, Mae Kampong, южные сады. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
-      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼。8号：烹饪课+周六夜市。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13–15号：素贴山+台球、湄康蓬、南部花园。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
+      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman. 8th: Mae Kampong mountain village (east). 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13th: Doi Suthep + billiards. 14th: Thai cooking class. 15th: southern gardens + Saturday Walking Street. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
+      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман. 8-го — горная деревня Mae Kampong (восток). 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13-го — Дой Сутеп + бильярд. 14-го — кулинарный класс. 15-го — южные сады + Saturday Walking Street. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
+      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼。8号：湄康蓬山村（东部）。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13号：素贴山+台球。14号：泰餐烹饪课。15号：南部花园+周六夜市。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
     }
   },
   "ui": {
@@ -241,9 +241,9 @@
           "zh": "燃油"
         },
         "text": {
-          "en": "Full tank in the morning on ride days. Days 10 and 14 — MUST refuel en route (one tank may not cover ~150/~120 km two-up in the hills). No fuel in the upper Mae Sa valley past Pong Yang.",
-          "ru": "Полный бак утром в дни выездов. Дни 10 и 14 — обязательно дозаправиться по пути (одного бака на ~150/~120 км вдвоём в горах может не хватить). В верхней долине Мае Са после Понг Янг заправок нет.",
-          "zh": "出行日早上加满油。第10天和第14天务必途中加油（双人约150/120公里山路，单箱油可能不够）。蓬阳以上的湄沙上谷没有加油站。"
+          "en": "Full tank in the morning on ride days. Days 8 and 10 — MUST refuel en route (one tank may not cover the long two-up rides in the hills). No fuel in the upper Mae Sa valley past Pong Yang.",
+          "ru": "Полный бак утром в дни выездов. Дни 8 и 10 — обязательно дозаправиться по пути (одного бака на длинные горные перегоны вдвоём может не хватить). В верхней долине Мае Са после Понг Янг заправок нет.",
+          "zh": "出行日早上加满油。第8天和第10天务必途中加油（双人长途山路，单箱油可能不够）。蓬阳以上的湄沙上谷没有加油站。"
         }
       },
       {
@@ -313,9 +313,9 @@
           "zh": "步行夜市"
         },
         "text": {
-          "en": "Saturday Walking Street (Wualai Rd) — evening of the 8th, optionally again on the 15th. The Sunday one (Ratchadamnoen) is not reachable on these dates: on the 9th you're in the hills, on the 16th you fly out.",
-          "ru": "Saturday Walking Street (ул. Wualai) — вечером 8-го, по желанию повторно 15-го. Воскресная (Ratchadamnoen) в эти даты недоступна: 9-го вы в горах, 16-го — вылет.",
-          "zh": "周六夜市（Wualai路）——8号晚上，15号可再去一次。周日夜市（Ratchadamnoen路）本行程赶不上：9号在山里，16号飞离。"
+          "en": "Saturday Walking Street (Wualai Rd) — scheduled for the evening of the 15th (it also runs on the 8th). The Sunday one (Ratchadamnoen) is not reachable: on the 9th you're in the hills, on the 16th you fly out.",
+          "ru": "Saturday Walking Street (ул. Wualai) — запланирована на вечер 15-го (также работает 8-го). Воскресная (Ratchadamnoen) недоступна: 9-го вы в горах, 16-го — вылет.",
+          "zh": "周六夜市（Wualai路）——安排在15号傍晚（8号也开）。周日夜市（Ratchadamnoen路）赶不上：9号在山里，16号飞离。"
         }
       },
       {
@@ -337,9 +337,9 @@
           "zh": "繁忙度"
         },
         "text": {
-          "en": "Stars in a day's header show how busy it is. Busiest — day 10 (5 stars); lightest — 6, 12, 16; days 13–15 are three full days in a row — use the optional stops to lighten them.",
-          "ru": "Звёзды в шапке дня — загруженность. Самый тяжёлый — 10-й (5 звёзд); лёгкие — 6, 12, 16; дни 13–15 — три плотных подряд, для разгрузки снимайте опциональные точки.",
-          "zh": "标题栏星星表示繁忙度。最忙——第10天（5星）；最轻松——第6、12、16天；13–15号连续三天较满，可通过跳过可选地点来减负。"
+          "en": "Stars in a day's header show how busy it is. Busiest — day 10 (5 stars); lightest — 6, 12, 16. Use the optional stops to lighten fuller days.",
+          "ru": "Звёзды в шапке дня — загруженность. Самый тяжёлый — 10-й (5 звёзд); лёгкие — 6, 12, 16. Для разгрузки снимайте опциональные точки.",
+          "zh": "标题栏星星表示繁忙度。最忙——第10天（5星）；最轻松——第6、12、16天。可通过跳过可选地点来减负。"
         }
       },
       {
@@ -579,89 +579,93 @@
         "zh": "周六"
       },
       "title": {
-        "en": "Cooking class + Saturday Walking Street",
-        "ru": "Кулинарный класс + Saturday Walking Street",
-        "zh": "烹饪课+周六夜市"
+        "en": "Mae Kampong mountain village (east)",
+        "ru": "Горная деревня Mae Kampong (восток)",
+        "zh": "湄康蓬山村（东部）"
       },
       "focus": {
-        "en": "Food day; in the evening — the Saturday walking street, the Silver Temple is right on it.",
-        "ru": "Гастро-день; вечером — субботняя уок-стрит, Серебряный храм прямо на ней.",
-        "zh": "美食日；傍晚逛周六夜市，银庙就在夜市街上。"
+        "en": "A big nature day east: village, waterfall, cafés + hot springs. Bags stay at the city hotel — you ride light.",
+        "ru": "Большой природный день на востоке: деревня, водопад, кафе + горячие источники. Багаж остаётся в городском отеле — едете налегке.",
+        "zh": "东部的重头自然日：村庄、瀑布、咖啡馆 + 温泉。行李留在市区酒店——轻装出行。"
       },
-      "busyness": 3,
+      "busyness": 4,
       "roads": {
-        "en": "Class with hotel pickup; ~10 min by bike to Wualai in the evening (or on foot from the Old City).",
-        "ru": "Класс с пикапом от отеля; вечером до Wualai ~10 мин на байке (или пешком из Старого города).",
-        "zh": "烹饪课含酒店接送；傍晚骑车到Wualai约10分钟（住古城可步行）。"
+        "en": "The longest city radius (~3 hrs in the saddle round trip). Refuel en route (San Kamphaeng).",
+        "ru": "Самый длинный городской радиус (~3 ч в седле туда-обратно). Дозаправка по пути (Сан Кампхэнг).",
+        "zh": "全程最长的市郊往返（在车上约3小时）。途中加油（山甘烹）。"
       },
       "clothing": {
-        "en": "For the class — comfortable clothes; for the temple/walking street — covered shoulders/knees and comfortable shoes; rain layer.",
-        "ru": "На класс — удобная одежда; для храма/уок-стрит — закрытые плечи/колени и удобная обувь; дождевик.",
-        "zh": "上课穿舒适衣物；去寺庙/夜市需遮肩盖膝、舒适鞋；雨衣。"
+        "en": "Good shoes for the wet steps at the waterfall; a light layer (cooler in the mountains); swimwear for the springs; insect repellent; drinking water; rain layer.",
+        "ru": "Хорошая обувь для мокрых ступеней у водопада; лёгкий слой (в горах прохладнее); купальник для источников; репеллент; питьевая вода; дождевик.",
+        "zh": "瀑布湿滑台阶穿防滑鞋；轻便保暖层（山里较凉）；温泉带泳衣；驱蚊液；饮用水；雨衣。"
       },
-      "extra": null,
+      "extra": {
+        "en": "Dinner back in the city on return. The Saturday Walking Street (Wualai Rd) also runs tonight if you have energy — it's otherwise scheduled for the 15th.",
+        "ru": "Ужин по возвращении в город. Saturday Walking Street (ул. Wualai) работает и сегодня — если будут силы; иначе она запланирована на 15-е.",
+        "zh": "返回市区吃晚餐。若还有体力，周六夜市（Wualai路）今晚也开——否则已安排在15号。"
+      },
       "locations": [
         {
-          "id": "d8-zabbelee",
+          "id": "d8-maekampong",
           "name": {
-            "en": "Zabb E Lee Thai Cooking School",
-            "ru": "Zabb E Lee Thai Cooking School",
-            "zh": "Zabb E Lee 泰餐烹饪学校"
+            "en": "Mae Kampong (village/waterfall)",
+            "ru": "Mae Kampong (деревня/водопад)",
+            "zh": "湄康蓬村（村庄/瀑布）"
           },
-          "time": "09:00",
-          "category": "activity",
-          "lat": 18.7916249,
-          "lng": 98.9931172,
-          "placeId": "ChIJ3x3B6ZA62jARvdzTBB6KPUg",
+          "time": "10:00",
+          "category": "nature",
+          "lat": 18.8627143,
+          "lng": 99.3559305,
+          "placeId": "ChIJh6a3UOON2TAR9CjmcORB9lY",
           "note": {
-            "en": "Market + cooking + tasting (hearty midday meal). Hotel pickup ~08:45. ~5 hrs. Book in advance.",
-            "ru": "Рынок + готовка + дегустация (плотный дневной приём). Пикап ~08:45. ~5 ч. Бронировать заранее.",
-            "zh": "逛市场+烹饪+品尝（丰盛午餐）。约08:45接送。约5小时。需提前预订。"
-          },
-          "optional": false,
-          "meal": "main",
-          "warn": false
-        },
-        {
-          "id": "d8-silvertemple",
-          "name": {
-            "en": "Wat Sri Suphan (Silver Temple)",
-            "ru": "Wat Sri Suphan (Silver Temple)",
-            "zh": "西苏潘寺（银庙）"
-          },
-          "time": "17:00",
-          "category": "temple",
-          "lat": 18.7787227,
-          "lng": 98.9836524,
-          "placeId": "ChIJ81yeUHYw2jARY_cUFjY3Yxk",
-          "note": {
-            "en": "On Wualai Rd. Sat until 23:00, ~50 THB. Main hall — men only.",
-            "ru": "На ул. Wualai. Сб до 23:00, ~50 THB. В главный зал — только мужчины.",
-            "zh": "位于Wualai路。周六开放至23:00，约50泰铢。主殿仅限男性进入。"
+            "en": "Hmong mountain village: waterfall (steps), wooden temple, hillside cafés. ~1.5 hrs east.",
+            "ru": "Хмонг-деревня: водопад (ступени), деревянный храм, кафе на склонах. ~1.5 ч езды на восток.",
+            "zh": "苗族山村：瀑布（台阶）、木制寺庙、山坡咖啡馆。向东约1.5小时车程。"
           },
           "optional": false,
           "meal": null,
           "warn": false
         },
         {
-          "id": "d8-satwalkingst",
+          "id": "d8-hotsprings",
           "name": {
-            "en": "Saturday Walking Street (Wualai Rd)",
-            "ru": "Saturday Walking Street (Wualai Rd)",
-            "zh": "周六夜市（Wualai路）"
+            "en": "San Kamphaeng Hot Springs",
+            "ru": "San Kamphaeng Hot Springs",
+            "zh": "山甘烹温泉"
           },
-          "time": "18:00",
-          "category": "market",
-          "lat": 18.7846,
-          "lng": 98.9855,
-          "placeId": null,
+          "time": "14:30",
+          "category": "nature",
+          "lat": 18.8145004,
+          "lng": 99.2294265,
+          "placeId": "ChIJhc99mFSI2TARj6okSlMe5Ik",
           "note": {
-            "en": "Silver, crafts, street food. ~17:00–22:00. Dinner by snacking.",
-            "ru": "Серебро, ремёсла, стрит-фуд. ~17:00–22:00. Ужин перекусами.",
-            "zh": "银器、手工艺、街头小吃。约17:00–22:00。以小吃当晚餐。"
+            "en": "Mineral springs: feet in warm water, boil eggs. 07:00–18:00, ~100 THB. Refuel en route.",
+            "ru": "Минеральные источники: ноги в тёплой воде, варка яиц. 07:00–18:00, ~100 THB. Дозаправка по пути.",
+            "zh": "矿物温泉：泡脚、煮蛋。07:00–18:00，约100泰铢。途中加油。"
           },
           "optional": false,
-          "meal": "dinner",
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d8-maiiam",
+          "name": {
+            "en": "MAIIAM Contemporary Art (alternative)",
+            "ru": "MAIIAM Contemporary Art (альтернатива)",
+            "zh": "MAIIAM 当代艺术馆（备选）"
+          },
+          "time": "—",
+          "category": "activity",
+          "lat": 18.7572293,
+          "lng": 99.0936812,
+          "placeId": "ChIJVR_OJEkv2jARQbUhY1Jh7s8",
+          "note": {
+            "en": "Option for contemporary-art lovers. Open Fri–Mon (open Sat), 10:00–18:00, ~200 THB.",
+            "ru": "Опция для любителей современного искусства. Открыт Пт–Пн (в сб открыт), 10:00–18:00, ~200 THB.",
+            "zh": "当代艺术爱好者的备选。周五至周一开放（周六开），10:00–18:00，约200泰铢。"
+          },
+          "optional": true,
+          "meal": null,
           "warn": false
         }
       ]
@@ -1197,89 +1201,51 @@
         "zh": "周五"
       },
       "title": {
-        "en": "Mae Kampong mountain village (east)",
-        "ru": "Горная деревня Mae Kampong (восток)",
-        "zh": "湄康蓬山村（东部）"
+        "en": "Thai cooking class + free afternoon",
+        "ru": "Кулинарный класс + свободный день",
+        "zh": "泰餐烹饪课+自由下午"
       },
       "focus": {
-        "en": "A big nature day east: village, waterfall, cafés + hot springs.",
-        "ru": "Большой природный день на востоке: деревня, водопад, кафе + горячие источники.",
-        "zh": "东部的重头自然日：村庄、瀑布、咖啡馆 + 温泉。"
+        "en": "Cooking class in the morning (hotel pickup 8:30); relaxed afternoon and evening.",
+        "ru": "Кулинарный класс утром (пикап от отеля в 8:30); расслабленные вторая половина дня и вечер.",
+        "zh": "上午烹饪课（8:30酒店接送）；下午和晚上轻松安排。"
       },
-      "busyness": 4,
+      "busyness": 3,
       "roads": {
-        "en": "The longest city radius (~3 hrs in the saddle round trip). Refuel en route (San Kamphaeng).",
-        "ru": "Самый длинный городской радиус (~3 ч в седле туда-обратно). Дозаправка по пути (Сан Кампхэнг).",
-        "zh": "全程最长的市郊往返（在车上约3小时）。途中加油（山甘烹）。"
+        "en": "Hotel pickup for the class — no riding needed in the morning.",
+        "ru": "Пикап от отеля на класс — утром ехать не нужно.",
+        "zh": "烹饪课含酒店接送——上午无需骑车。"
       },
       "clothing": {
-        "en": "Good shoes for the wet steps at the waterfall; a light layer (cooler in the mountains); swimwear for the springs; rain layer.",
-        "ru": "Хорошая обувь для мокрых ступеней у водопада; лёгкий слой (в горах прохладнее); купальник для источников; дождевик.",
-        "zh": "瀑布湿滑台阶穿防滑鞋；轻便保暖层（山里较凉）；温泉带泳衣；雨衣。"
+        "en": "Comfortable clothes for the class; the school asked to bring insect repellent and drinking water; rain layer.",
+        "ru": "Удобная одежда на класс; школа просила взять репеллент и питьевую воду; дождевик.",
+        "zh": "上课穿舒适衣物；学校要求自带驱蚊液和饮用水；雨衣。"
       },
-      "extra": null,
+      "extra": {
+        "en": "Free afternoon after ~14:00: rest, a Thai massage, or optional billiards at Game On (your hobby).",
+        "ru": "Свободная вторая половина дня после ~14:00: отдых, тайский массаж или по желанию бильярд в Game On (ваше хобби).",
+        "zh": "约14:00后自由活动：休息、泰式按摩，或可选去 Game On 打台球（您的爱好）。"
+      },
       "locations": [
         {
-          "id": "d14-maekampong",
+          "id": "d14-zabbelee",
           "name": {
-            "en": "Mae Kampong (village/waterfall)",
-            "ru": "Mae Kampong (деревня/водопад)",
-            "zh": "湄康蓬村（村庄/瀑布）"
+            "en": "Zabb E Lee Thai Cooking School",
+            "ru": "Zabb E Lee Thai Cooking School",
+            "zh": "Zabb E Lee 泰餐烹饪学校"
           },
-          "time": "10:00",
-          "category": "nature",
-          "lat": 18.8627143,
-          "lng": 99.3559305,
-          "placeId": "ChIJh6a3UOON2TAR9CjmcORB9lY",
-          "note": {
-            "en": "Hmong mountain village: waterfall (steps), wooden temple, hillside cafés. ~1.5 hrs east.",
-            "ru": "Хмонг-деревня: водопад (ступени), деревянный храм, кафе на склонах. ~1.5 ч езды на восток.",
-            "zh": "苗族山村：瀑布（台阶）、木制寺庙、山坡咖啡馆。向东约1.5小时车程。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d14-hotsprings",
-          "name": {
-            "en": "San Kamphaeng Hot Springs",
-            "ru": "San Kamphaeng Hot Springs",
-            "zh": "山甘烹温泉"
-          },
-          "time": "14:30",
-          "category": "nature",
-          "lat": 18.8145004,
-          "lng": 99.2294265,
-          "placeId": "ChIJhc99mFSI2TARj6okSlMe5Ik",
-          "note": {
-            "en": "Mineral springs: feet in warm water, boil eggs. 07:00–18:00, ~100 THB. Refuel en route.",
-            "ru": "Минеральные источники: ноги в тёплой воде, варка яиц. 07:00–18:00, ~100 THB. Дозаправка по пути.",
-            "zh": "矿物温泉：泡脚、煮蛋。07:00–18:00，约100泰铢。途中加油。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d14-maiiam",
-          "name": {
-            "en": "MAIIAM Contemporary Art (alternative)",
-            "ru": "MAIIAM Contemporary Art (альтернатива)",
-            "zh": "MAIIAM 当代艺术馆（备选）"
-          },
-          "time": "—",
+          "time": "08:30",
           "category": "activity",
-          "lat": 18.7572293,
-          "lng": 99.0936812,
-          "placeId": "ChIJVR_OJEkv2jARQbUhY1Jh7s8",
+          "lat": 18.7916249,
+          "lng": 98.9931172,
+          "placeId": "ChIJ3x3B6ZA62jARvdzTBB6KPUg",
           "note": {
-            "en": "Option for contemporary-art lovers. Open Fri–Mon, 10:00–18:00, ~200 THB.",
-            "ru": "Опция для любителей современного искусства. Открыт Пт–Пн, 10:00–18:00, ~200 THB.",
-            "zh": "当代艺术爱好者的备选。周五至周一开放，10:00–18:00，约200泰铢。"
+            "en": "Booked. Hotel pickup at 08:30. Bring insect repellent and drinking water. Market + cooking + tasting. ~5 hrs, until ~14:00.",
+            "ru": "Забронировано. Пикап от отеля в 08:30. Взять репеллент и питьевую воду. Рынок + готовка + дегустация. ~5 ч, до ~14:00.",
+            "zh": "已预订。08:30酒店接送。自带驱蚊液和饮用水。逛市场+烹饪+品尝。约5小时，到约14:00。"
           },
-          "optional": true,
-          "meal": null,
+          "optional": false,
+          "meal": "main",
           "warn": false
         }
       ]
@@ -1293,30 +1259,30 @@
         "zh": "周六"
       },
       "title": {
-        "en": "South: hilltop temple + rose garden + spa",
-        "ru": "Юг: храм на холме + сад роз + спа",
-        "zh": "南部：山顶寺庙+玫瑰园+水疗"
+        "en": "South: hilltop temple + rose garden + Saturday Walking Street",
+        "ru": "Юг: храм на холме + сад роз + Saturday Walking Street",
+        "zh": "南部：山顶寺庙+玫瑰园+周六夜市"
       },
       "focus": {
-        "en": "Southern day: hilltop temple and Rajapruek in the morning; afternoon — spa/massage (main scenario); farewell dinner.",
-        "ru": "Южный день: храм на холме и Rajapruek утром; после обеда — спа/массаж (основной сценарий); прощальный ужин.",
-        "zh": "南部日：上午山顶寺庙和Rajapruek；下午——水疗/按摩（主方案）；告别晚餐。"
+        "en": "Hilltop temple and Rajapruek in the morning; spa in the afternoon; the Silver Temple and Saturday Walking Street in the evening.",
+        "ru": "Храм на холме и Rajapruek утром; спа во второй половине дня; вечером — Серебряный храм и Saturday Walking Street.",
+        "zh": "上午山顶寺庙和Rajapruek；下午水疗；傍晚银庙和周六夜市。"
       },
       "busyness": 4,
       "roads": {
-        "en": "Everything south: ~30 min by bike SW to Mae Hia; Hang Dong is ~15 min further.",
-        "ru": "Всё на юге: до Мае Хиа ~30 мин на байке ЮЗ; Ханг Донг — ещё ~15 мин.",
-        "zh": "都在南部：骑车向西南到湄嘉约30分钟；Hang Dong再约15分钟。"
+        "en": "South (Mae Hia) in the morning; the Silver Temple and walking street (Wualai Rd) are central in the evening. Hang Dong is ~15 min further if you do the water park.",
+        "ru": "Юг (Мае Хиа) утром; Серебряный храм и уок-стрит (Wualai) — в центре вечером. Ханг Донг ещё ~15 мин, если поедете в аквапарк.",
+        "zh": "上午在南部（湄嘉）；傍晚银庙和夜市（Wualai路）在市中心。若去水上乐园，Hang Dong再约15分钟。"
       },
       "clothing": {
-        "en": "Covered shoulders/knees for the temple; swimwear + a change of clothes if you go to the water park; rain layer.",
-        "ru": "Закрытые плечи/колени для храма; купальник + сменное, если поедете в аквапарк; дождевик.",
-        "zh": "参观寺庙需遮肩盖膝；若去水上乐园带泳衣+换洗衣物；雨衣。"
+        "en": "Covered shoulders/knees for the temples; comfortable shoes for the walking street; swimwear + a change of clothes if you go to the water park; rain layer.",
+        "ru": "Закрытые плечи/колени для храмов; удобная обувь для уок-стрит; купальник + сменное, если поедете в аквапарк; дождевик.",
+        "zh": "参观寺庙需遮肩盖膝；逛夜市穿舒适鞋；若去水上乐园带泳衣+换洗衣物；雨衣。"
       },
       "extra": {
-        "en": "Main scenario: after lunch return to the city for a spa/massage (book a good spa 1–2 days ahead); farewell dinner — optionally a second Saturday Walking Street on Wualai. The water park only if energy and weather allow; if going, better in the morning and the garden after lunch.",
-        "ru": "Основной сценарий: после обеда — возврат в город и спа/массаж (хорошее спа бронируйте за 1–2 дня); прощальный ужин — по желанию повторно Saturday Walking Street на Wualai. Аквапарк — только если будут силы и погода; если едете, лучше утром, а сад — после обеда.",
-        "zh": "主方案：午后返回市区做水疗/按摩（好的水疗提前1–2天预订）；告别晚餐——可选择再逛一次Wualai周六夜市。水上乐园仅在体力和天气允许时前往；若去，建议上午玩、下午逛花园。"
+        "en": "Main afternoon scenario: a spa/massage (book 1–2 days ahead); the water park is the backup. Farewell dinner at the Saturday Walking Street.",
+        "ru": "Основной сценарий на вторую половину дня: спа/массаж (бронь за 1–2 дня); аквапарк — запасной вариант. Прощальный ужин на Saturday Walking Street.",
+        "zh": "下午主方案：水疗/按摩（提前1–2天预订）；水上乐园为备选。在周六夜市吃告别晚餐。"
       },
       "locations": [
         {
@@ -1380,6 +1346,48 @@
           },
           "optional": true,
           "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d15-silvertemple",
+          "name": {
+            "en": "Wat Sri Suphan (Silver Temple)",
+            "ru": "Wat Sri Suphan (Silver Temple)",
+            "zh": "西苏潘寺（银庙）"
+          },
+          "time": "17:00",
+          "category": "temple",
+          "lat": 18.7787227,
+          "lng": 98.9836524,
+          "placeId": "ChIJ81yeUHYw2jARY_cUFjY3Yxk",
+          "note": {
+            "en": "On Wualai Rd. Sat until 23:00, ~50 THB. Main hall — men only.",
+            "ru": "На ул. Wualai. Сб до 23:00, ~50 THB. В главный зал — только мужчины.",
+            "zh": "位于Wualai路。周六开放至23:00，约50泰铢。主殿仅限男性进入。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d15-satwalkingst",
+          "name": {
+            "en": "Saturday Walking Street (Wualai Rd)",
+            "ru": "Saturday Walking Street (Wualai Rd)",
+            "zh": "周六夜市（Wualai路）"
+          },
+          "time": "18:00",
+          "category": "market",
+          "lat": 18.7846,
+          "lng": 98.9855,
+          "placeId": null,
+          "note": {
+            "en": "Silver, crafts, street food. ~17:00–22:00. Dinner by snacking.",
+            "ru": "Серебро, ремёсла, стрит-фуд. ~17:00–22:00. Ужин перекусами.",
+            "zh": "银器、手工艺、街头小吃。约17:00–22:00。以小吃当晚餐。"
+          },
+          "optional": false,
+          "meal": "dinner",
           "warn": false
         }
       ]
