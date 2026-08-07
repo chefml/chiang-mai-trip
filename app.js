@@ -714,10 +714,29 @@
   /* ---------- Service worker ---------- */
 
   if ("serviceWorker" in navigator) {
+    /* Была ли страница уже под управлением воркера на момент загрузки.
+       Если нет — это первая установка, и перезагружать нечего. */
+    var hadController = !!navigator.serviceWorker.controller;
+    var reloading = false;
+
+    /* Новый воркер перехватил управление (skipWaiting + clients.claim в sw.js).
+       Страница при этом всё ещё показывает файлы, отданные старым воркером,
+       поэтому перезагружаемся один раз — иначе обновление было бы видно
+       только со следующего запуска приложения. */
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (!hadController || reloading) return;
+      reloading = true;
+      window.location.reload();
+    });
+
     window.addEventListener("load", function () {
-      navigator.serviceWorker.register("./sw.js").catch(function (err) {
-        console.warn("SW registration failed:", err);
-      });
+      navigator.serviceWorker.register("./sw.js")
+        .then(function (registration) {
+          registration.update(); /* проверяем обновление сразу, не дожидаясь навигации */
+        })
+        .catch(function (err) {
+          console.warn("SW registration failed:", err);
+        });
     });
   }
 })();
