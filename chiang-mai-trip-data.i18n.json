@@ -5,9 +5,9 @@
   },
   "trip": {
     "title": {
-      "en": "Chiang Mai — Mae Rim",
-      "ru": "Чиангмай — Мае Рим",
-      "zh": "清迈 — 湄林"
+      "en": "Chiang Mai — Mae Rim — City",
+      "ru": "Чиангмай — Мае Рим — город",
+      "zh": "清迈 — 湄林 — 市区"
     },
     "dates": "2026-08-06 … 2026-08-16",
     "brandColor": "#14532D",
@@ -18,9 +18,9 @@
     ],
     "defaultLanguage": "ru",
     "overview": {
-      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman. 8th: Mae Kampong mountain village (east). 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13th: Doi Suthep + billiards. 14th: Thai cooking class. 15th: southern gardens + Saturday Walking Street. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
-      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман. 8-го — горная деревня Mae Kampong (восток). 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13-го — Дой Сутеп + бильярд. 14-го — кулинарный класс. 15-го — южные сады + Saturday Walking Street. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
-      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼。8号：湄康蓬山村（东部）。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13号：素贴山+台球。14号：泰餐烹饪课。15号：南部花园+周六夜市。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
+      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman + Rajapruek garden. 8th: Mae Kampong mountain village (east). 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13th: Doi Suthep + billiards. 14th: Thai cooking class. 15th: hilltop temple + spa + Saturday Walking Street. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
+      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман + сад Rajapruek. 8-го — горная деревня Mae Kampong (восток). 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13-го — Дой Сутеп + бильярд. 14-го — кулинарный класс. 15-го — храм на холме + спа + Saturday Walking Street. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
+      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼+Rajapruek花园。8号：湄康蓬山村（东部）。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13号：素贴山+台球。14号：泰餐烹饪课。15号：山顶寺庙+水疗+周六夜市。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
     }
   },
   "ui": {
@@ -441,20 +441,20 @@
         "zh": "周五"
       },
       "title": {
-        "en": "Bike rental + Old City + Nimman",
-        "ru": "Аренда байка + Старый город + Нимман",
-        "zh": "租摩托车+古城+尼曼"
+        "en": "Bike rental + Old City + Nimman + Rajapruek",
+        "ru": "Аренда байка + Старый город + Нимман + Rajapruek",
+        "zh": "租摩托车+古城+尼曼+Rajapruek"
       },
       "focus": {
-        "en": "Bike in the morning, then walkable temples and the creative quarter.",
-        "ru": "Байк с утра, затем пешие храмы и креативный квартал.",
-        "zh": "上午取车，随后步行游寺和创意街区。"
+        "en": "Bike in the morning, walkable temples and Nimman, then the Rajapruek garden in the afternoon — indoor orchid houses are fine under cloud.",
+        "ru": "Байк утром, пешие храмы и Нимман, во второй половине дня — сад Rajapruek: крытые орхидейные оранжереи хороши в облачную погоду.",
+        "zh": "上午取车、步行游寺和逛尼曼，下午去 Rajapruek 花园——室内兰花温室在阴天也很合适。"
       },
-      "busyness": 3,
+      "busyness": 4,
       "roads": {
-        "en": "All within the city; ~10 min by bike to Nimman. Fill the tank after pickup.",
-        "ru": "Всё в пределах города; до Нимман ~10 мин на байке. После проката — полный бак.",
-        "zh": "都在市区内；骑车到尼曼约10分钟。取车后加满油。"
+        "en": "City in the morning (~10 min by bike to Nimman); ~30 min SW to Mae Hia for Rajapruek in the afternoon. Fill the tank after pickup.",
+        "ru": "Город утром (до Нимман ~10 мин на байке); во второй половине дня ~30 мин на ЮЗ в Мае Хиа к Rajapruek. После проката — полный бак.",
+        "zh": "上午在市区（骑车到尼曼约10分钟）；下午向西南约30分钟到湄嘉的 Rajapruek。取车后加满油。"
       },
       "clothing": {
         "en": "Covered shoulders/knees for temples (sarong rentable on site); comfortable shoes; rain layer.",
@@ -563,6 +563,27 @@
             "en": "Creative quarter: cafés, boutiques, design. 11:00–22:00. Dinner in Nimman.",
             "ru": "Креативный квартал: кафе, бутики, дизайн. 11:00–22:00. Ужин в Нимман.",
             "zh": "创意街区：咖啡馆、精品店、设计。11:00–22:00。晚餐在尼曼。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false
+        },
+        {
+          "id": "d7-rajapruek",
+          "name": {
+            "en": "Royal Park Rajapruek",
+            "ru": "Royal Park Rajapruek",
+            "zh": "皇家花园 Rajapruek"
+          },
+          "time": "15:30",
+          "category": "garden",
+          "lat": 18.7445479,
+          "lng": 98.9280108,
+          "placeId": "ChIJkQi8v9Mw2jAR93jK7vlaxvg",
+          "note": {
+            "en": "Themed gardens, orchid houses (rain shelter), Lanna pavilion; the Rose Garden. 08:00–18:00, ~200 THB. Roses peak in the cool season.",
+            "ru": "Тематические сады, орхидейные оранжереи (укрытие от дождя), ланна-павильон; «Сад роз». 08:00–18:00, ~200 THB. Розы — пик в прохладный сезон.",
+            "zh": "主题花园、兰花温室（避雨）、兰纳亭；玫瑰园。08:00–18:00，约200泰铢。玫瑰在凉季盛开。"
           },
           "optional": false,
           "meal": null,
@@ -848,8 +869,8 @@
           },
           "time": "—",
           "category": "rental",
-          "lat": null,
-          "lng": null,
+          "lat": 18.9,
+          "lng": 99.0,
           "placeId": null,
           "note": {
             "en": "MUST refuel: ~150 km two-up, one tank may not be enough.",
@@ -1259,20 +1280,20 @@
         "zh": "周六"
       },
       "title": {
-        "en": "South: hilltop temple + rose garden + Saturday Walking Street",
-        "ru": "Юг: храм на холме + сад роз + Saturday Walking Street",
-        "zh": "南部：山顶寺庙+玫瑰园+周六夜市"
+        "en": "Hilltop temple + spa + Saturday Walking Street",
+        "ru": "Храм на холме + спа + Saturday Walking Street",
+        "zh": "山顶寺庙+水疗+周六夜市"
       },
       "focus": {
-        "en": "Hilltop temple and Rajapruek in the morning; spa in the afternoon; the Silver Temple and Saturday Walking Street in the evening.",
-        "ru": "Храм на холме и Rajapruek утром; спа во второй половине дня; вечером — Серебряный храм и Saturday Walking Street.",
-        "zh": "上午山顶寺庙和Rajapruek；下午水疗；傍晚银庙和周六夜市。"
+        "en": "A relaxed last full day: hilltop temple in the morning, spa in the afternoon, the Silver Temple and Saturday Walking Street in the evening.",
+        "ru": "Спокойный последний полный день: храм на холме утром, спа во второй половине дня, вечером — Серебряный храм и Saturday Walking Street.",
+        "zh": "轻松的最后一个完整日：上午山顶寺庙，下午水疗，傍晚银庙和周六夜市。"
       },
-      "busyness": 4,
+      "busyness": 3,
       "roads": {
-        "en": "South (Mae Hia) in the morning; the Silver Temple and walking street (Wualai Rd) are central in the evening. Hang Dong is ~15 min further if you do the water park.",
-        "ru": "Юг (Мае Хиа) утром; Серебряный храм и уок-стрит (Wualai) — в центре вечером. Ханг Донг ещё ~15 мин, если поедете в аквапарк.",
-        "zh": "上午在南部（湄嘉）；傍晚银庙和夜市（Wualai路）在市中心。若去水上乐园，Hang Dong再约15分钟。"
+        "en": "Doi Kham is SW (~30 min) in the morning; the Silver Temple and walking street (Wualai Rd) are central in the evening. Hang Dong is ~15 min further if you do the water park.",
+        "ru": "Doi Kham на ЮЗ (~30 мин) утром; Серебряный храм и уок-стрит (Wualai) — в центре вечером. Ханг Донг ещё ~15 мин, если поедете в аквапарк.",
+        "zh": "上午督坎山寺在西南（约30分钟）；傍晚银庙和夜市（Wualai路）在市中心。若去水上乐园，Hang Dong再约15分钟。"
       },
       "clothing": {
         "en": "Covered shoulders/knees for the temples; comfortable shoes for the walking street; swimwear + a change of clothes if you go to the water park; rain layer.",
@@ -1301,27 +1322,6 @@
             "en": "Hilltop temple: panorama, big Buddha. 07:00–19:00.",
             "ru": "Храм на холме: панорама, большой Будда. 07:00–19:00.",
             "zh": "山顶寺庙：全景、大佛。07:00–19:00。"
-          },
-          "optional": false,
-          "meal": null,
-          "warn": false
-        },
-        {
-          "id": "d15-rajapruek",
-          "name": {
-            "en": "Royal Park Rajapruek",
-            "ru": "Royal Park Rajapruek",
-            "zh": "皇家花园 Rajapruek"
-          },
-          "time": "11:00",
-          "category": "garden",
-          "lat": 18.7445479,
-          "lng": 98.9280108,
-          "placeId": "ChIJkQi8v9Mw2jAR93jK7vlaxvg",
-          "note": {
-            "en": "Themed gardens, orchid houses (rain shelter), Lanna pavilion; the Rose Garden. 08:00–18:00, ~200 THB. Roses peak in the cool season.",
-            "ru": "Тематические сады, орхидейные оранжереи (укрытие от дождя), ланна-павильон; «Сад роз». 08:00–18:00, ~200 THB. Розы — пик в прохладный сезон.",
-            "zh": "主题花园、兰花温室（避雨）、兰纳亭；玫瑰园。08:00–18:00，约200泰铢。玫瑰在凉季盛开。"
           },
           "optional": false,
           "meal": null,

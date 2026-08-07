@@ -188,26 +188,24 @@
   /* Цепочка по всем точкам дня: старт — первая точка (не текущее положение),
      финиш — последняя, промежуточные уходят в waypoints (universal URL держит до 9). */
   function dayRouteUrl(points) {
-    var origin = points[0];
     var destination = points[points.length - 1];
-    var middle = points.slice(1, -1);
+    var stops = points.slice(0, -1); /* все точки, кроме финальной */
 
+    /* origin не указываем: без него Google строит маршрут от текущего положения */
     var url = "https://www.google.com/maps/dir/?api=1" +
-      "&origin=" + encodeURIComponent(waypointOf(origin)) +
       "&destination=" + encodeURIComponent(waypointOf(destination));
 
-    if (origin.placeId) url += "&origin_place_id=" + origin.placeId;
     if (destination.placeId) url += "&destination_place_id=" + destination.placeId;
 
-    if (middle.length) {
-      url += "&waypoints=" + encodeURIComponent(middle.map(waypointOf).join("|"));
+    if (stops.length) {
+      url += "&waypoints=" + encodeURIComponent(stops.map(waypointOf).join("|"));
 
       /* waypoint_place_ids принимается только когда id есть у КАЖДОЙ промежуточной точки —
          иначе списки разной длины и Google отбрасывает маршрут целиком */
-      var allHaveId = middle.every(function (loc) { return !!loc.placeId; });
+      var allHaveId = stops.every(function (loc) { return !!loc.placeId; });
       if (allHaveId) {
         url += "&waypoint_place_ids=" +
-          encodeURIComponent(middle.map(function (loc) { return loc.placeId; }).join("|"));
+          encodeURIComponent(stops.map(function (loc) { return loc.placeId; }).join("|"));
       }
     }
 
@@ -609,8 +607,45 @@
     return 0;
   }
 
+  /* ---------- Нормализация датасета ----------
+     Генератор данных раз за разом возвращает две вещи, от которых мы отказались.
+     Правили их руками в JSON, и каждая перегенерация откатывала правку обратно,
+     поэтому теперь они применяются здесь — к любому файлу, что бы в нём ни лежало. */
+
+  /* «Chiang Mai — Mae Rim — City» → «Chiang Mai — Mae Rim»: третий сегмент лишний.
+     Режем по тире с пробелами, поэтому тире внутри самого названия не заденет. */
+  function trimTitle(value) {
+    if (typeof value !== "string") return value;
+    var parts = value.split(/\s+[—–-]\s+/);
+    return parts.length > 2 ? parts.slice(0, 2).join(" — ") : value;
+  }
+
+  function normalize(loaded) {
+    var title = loaded.trip && loaded.trip.title;
+    if (title) {
+      Object.keys(title).forEach(function (code) {
+        title[code] = trimTitle(title[code]);
+      });
+    }
+
+    (loaded.days || []).forEach(function (day) {
+      (day.locations || []).forEach(function (loc) {
+        /* Точка «дозаправиться по пути» — напоминание, а не место: координаты у неё
+           всегда условные (18.9, 99.0 — просто середина трассы). Убираем их, чтобы
+           кнопки карты не вели в случайную точку. Условие на placeId оставляет
+           возможность подставить настоящую заправку — такую запись мы не тронем. */
+        if (/-fuel$/.test(loc.id || "") && !loc.placeId) {
+          loc.lat = null;
+          loc.lng = null;
+        }
+      });
+    });
+
+    return loaded;
+  }
+
   function start(loaded) {
-    data = loaded;
+    data = normalize(loaded);
     trip = data.trip || {};
     days = data.days || [];
 
