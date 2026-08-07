@@ -1,7 +1,7 @@
 {
   "_instructions": {
-    "en": "Multilingual dataset for the Chiang Mai trip PWA (dates 2026-08-06…16). Text fields (trip.title, trip.overview, day.title/focus/roads/clothing/extra, day.weekday, location.name/note, general.*, appGuide.*, legend.*) are objects {en,ru,zh}: render the active language. UI strings (buttons, tab labels, category/meal names, field labels) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic). Tabs: Itinerary (days), Trip info (trip.overview + general.items + legend), How to use (appGuide). Language switcher over trip.languages; default = trip.defaultLanguage. day.extra may be null. The Day-6 city-hotel entry has placeholder coordinates (Old City center) — replace with the actual hotel once booked.",
-    "ru": "Мультиязычный датасет для PWA (даты 06–16.08.2026). Текстовые поля — объекты {en,ru,zh}. Строки интерфейса — в 'ui'. Коды category/meal — языконезависимые. Ссылки Google Maps — по lat/lng + placeId. Вкладки: Маршрут, О поездке, Как пользоваться. Язык по умолчанию — trip.defaultLanguage. day.extra может быть null. У записи городского отеля (день 6) координаты-заглушка (центр Старого города) — замените на ваш отель после брони."
+    "en": "Multilingual dataset for the Chiang Mai trip PWA (dates 2026-08-06…16). Text fields (trip.title, trip.overview, day.title/focus/roads/clothing/extra, day.weekday, location.name/note, general.*, appGuide.*, legend.*) are objects {en,ru,zh}: render the active language. UI strings (buttons, tab labels, category/meal names, field labels) live in 'ui' keyed by language code. 'location.category' and 'location.meal' are language-independent codes; look up labels in ui[lang].categories / ui[lang].meals. Google Maps links use lat/lng + placeId (name is cosmetic). Tabs: Itinerary (days), Trip info (trip.overview + general.items + legend), How to use (appGuide). Language switcher over trip.languages; default = trip.defaultLanguage. day.extra may be null. The Day-6 city-hotel entry has placeholder coordinates (Old City center) — replace with the actual hotel once booked. Each location also has a 'details' object {en,ru,zh}: an expanded reference (temple age/history, background) shown when the activity card is tapped/expanded.",
+    "ru": "Мультиязычный датасет для PWA (даты 06–16.08.2026). Текстовые поля — объекты {en,ru,zh}. Строки интерфейса — в 'ui'. Коды category/meal — языконезависимые. Ссылки Google Maps — по lat/lng + placeId. Вкладки: Маршрут, О поездке, Как пользоваться. Язык по умолчанию — trip.defaultLanguage. day.extra может быть null. У записи городского отеля (день 6) координаты-заглушка (центр Старого города) — замените на ваш отель после брони. У каждой точки есть объект 'details' {en,ru,zh}: расширенная справка (возраст/история храма, контекст), показываемая при раскрытии карточки активности."
   },
   "trip": {
     "title": {
@@ -407,7 +407,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Chiang Mai International Airport, ~15 min south of the Old City — a busy but compact and easy-to-navigate regional hub.",
+            "ru": "Международный аэропорт Чиангмая, ~15 мин к югу от Старого города — загруженный, но компактный и удобный региональный хаб.",
+            "zh": "清迈国际机场，位于古城以南约15分钟车程——繁忙但小巧、易于通行的地区枢纽。"
+          }
         },
         {
           "id": "d6-cityhotel",
@@ -428,7 +433,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Your city base for the first three nights (6–8). Replace these placeholder coordinates with your actual hotel.",
+            "ru": "Ваша городская база на первые три ночи (6–8). Замените координаты-заглушку на ваш реальный отель.",
+            "zh": "前三晚（6–8号）的市区落脚点。请将占位坐标替换为您的实际酒店。"
+          }
         }
       ]
     },
@@ -482,7 +492,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A small, highly rated Old-City rental shop known for well-kept 150–160cc bikes suited to two-up mountain riding; helmets included, passport copy + deposit.",
+            "ru": "Небольшой прокат с высоким рейтингом в Старом городе, известный ухоженными байками 150–160cc для езды вдвоём в горах; шлемы включены, копия паспорта + депозит.",
+            "zh": "古城内一家评价很高的小型租车店，以保养良好、适合双人山路的150–160cc摩托车著称；含头盔，需护照复印件+押金。"
+          }
         },
         {
           "id": "d7-phrasingh",
@@ -503,7 +518,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Founded in 1345 by King Phayu to enshrine his father's ashes; the Old City's most revered temple and the finest example of Late Lanna architecture. Named after the Phra Buddha Sihing ('Lion Buddha') brought here in 1367. Its jewel is the small, ornate Wihan Lai Kham chapel — gilded gold-pattern stucco and early-1800s murals of everyday Lanna life.",
+            "ru": "Основан в 1345 году королём Пхаю для праха отца; самый почитаемый храм Старого города и лучший образец поздней ланна-архитектуры. Назван в честь образа Пхра Будды Сихинг («Львиный Будда»), привезённого сюда в 1367 году. Жемчужина — небольшая нарядная часовня Wihan Lai Kham: золочёная лепнина и росписи начала XIX века о быте северного Таиланда.",
+            "zh": "1345年由帕育王为供奉其父骨灰而建；古城最受尊崇的寺庙，晚期兰纳建筑的典范。以1367年迎来的帕辛佛（“狮子佛”）命名。精华是小巧华丽的Wihan Lai Kham佛殿——描金灰泥与19世纪初描绘兰纳日常生活的壁画。"
+          }
         },
         {
           "id": "d7-chedi",
@@ -524,7 +544,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "The 'Temple of the Great Stupa.' The huge chedi was begun in 1391 by King Saen Muang Ma and finished in 1475 at ~80–84 m — the tallest structure in the Lanna kingdom. It housed the Emerald Buddha (now in Bangkok) from 1468 until a 1545 earthquake toppled its upper ~30 m; the ruined brick core still dominates the grounds. The city's guardian pillar (Lak Muang) also stands here.",
+            "ru": "«Храм Большой ступы». Огромная чеди начата в 1391 году при короле Саен Муанг Ма и завершена в 1475-м на высоте ~80–84 м — самое высокое сооружение королевства Ланна. С 1468 года здесь хранился Изумрудный Будда (ныне в Бангкоке), пока землетрясение 1545 года не обрушило верхние ~30 м; разрушенное кирпичное ядро по-прежнему доминирует. Тут же — городской столб-хранитель (Lak Muang).",
+            "zh": "“大佛塔寺”。这座巨大佛塔于1391年在盛孟玛王时期动工，1475年完工，高约80–84米——曾是兰纳王国最高建筑。1468年起供奉玉佛（现藏曼谷），直到1545年地震震塌上部约30米；残破的砖砌塔身至今仍是寺内主体。城市守护柱（Lak Muang）也在此。"
+          }
         },
         {
           "id": "d7-khaosoi",
@@ -545,7 +570,12 @@
           },
           "optional": false,
           "meal": "snack",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A long-running, Michelin-listed spot for khao soi — northern Thailand's signature dish of egg noodles in a rich coconut-curry broth, topped with crispy noodles and served with pickled greens, shallots and lime. Expect a queue; closed Sundays.",
+            "ru": "Давно работающее мишленовское место для кхао сой — фирменного северотайского блюда: яичная лапша в насыщенном кокосово-карри бульоне, с хрустящей лапшой сверху, маринованной зеленью, шалотом и лаймом. Бывает очередь; по воскресеньям закрыто.",
+            "zh": "一家历史悠久、入选米其林的咖喱面（khao soi）名店——泰北招牌菜：鸡蛋面浸在浓郁的椰香咖喱汤中，上覆酥脆炸面，配腌菜、红葱和青柠。常需排队；周日休息。"
+          }
         },
         {
           "id": "d7-onenimman",
@@ -566,7 +596,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A stylish open-air retail and dining complex anchoring the Nimmanhaemin ('Nimman') district — Chiang Mai's design-forward, café-heavy quarter popular with students, creatives and digital nomads.",
+            "ru": "Стильный открытый торгово-гастрономический комплекс — ядро района Ниммахемин («Нимман»), дизайнерского, богатого кафе квартала Чиангмая, популярного у студентов, креативщиков и цифровых кочевников.",
+            "zh": "一处时尚的露天零售与餐饮综合体，是尼曼（Nimmanhaemin）街区的核心——清迈以设计感和咖啡馆闻名的街区，深受学生、创意人士和数字游民喜爱。"
+          }
         },
         {
           "id": "d7-rajapruek",
@@ -587,7 +622,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A large royal park in Mae Hia, built for the 2006 International Horticultural Exposition marking King Bhumibol's 60th year on the throne. Its centrepiece is the gilded Lanna-style Ho Kham Royal Pavilion, surrounded by themed and international gardens, a rose garden and glasshouses — the indoor orchid houses make it a good rainy-day choice.",
+            "ru": "Большой королевский парк в Мае Хиа, созданный к Международной садоводческой выставке 2006 года в честь 60-летия правления короля Пхумипона. Центр — золочёный ланна-павильон Хо Кхам, окружённый тематическими и национальными садами, розарием и оранжереями; крытые орхидейные теплицы делают его удачным вариантом в дождь.",
+            "zh": "位于湄嘉的大型皇家花园，为纪念普密蓬国王在位60周年、于2006年国际园艺博览会而建。核心是描金的兰纳式皇家亭“Ho Kham”，周围环绕主题花园与各国园艺展区、玫瑰园和温室；室内兰花温室使其成为雨天的好选择。"
+          }
         }
       ]
     },
@@ -645,7 +685,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A former tea-and-coffee village perched at ~1,300 m in the eastern mountains, now a model of community-based tourism. Wooden houses cling to a forested ravine along a stream; highlights are the small waterfall, the timber temple built over the water, and hillside cafés with valley views.",
+            "ru": "Бывшая чайно-кофейная деревня на высоте ~1300 м в восточных горах, ставшая образцом общинного туризма. Деревянные дома лепятся к лесистому ущелью вдоль ручья; главное — небольшой водопад, деревянный храм над водой и кафе на склонах с видами на долину.",
+            "zh": "东部山区海拔约1300米处的一座旧茶与咖啡村，如今是社区旅游的典范。木屋沿溪流依附于林木葱郁的峡谷；亮点是小瀑布、建在水上的木制寺庙，以及可俯瞰山谷的山坡咖啡馆。"
+          }
         },
         {
           "id": "d8-hotsprings",
@@ -666,7 +711,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Geothermal springs in Mae On where mineral water surfaces near boiling — soak your feet in the channels and boil eggs in the hot pools. Set in landscaped grounds; a relaxing stop on the way back from Mae Kampong.",
+            "ru": "Геотермальные источники в Мае Он, где минеральная вода выходит почти кипящей — можно опустить ноги в каналы и сварить яйца в горячих бассейнах. В благоустроенном парке; расслабляющая остановка на обратном пути из Mae Kampong.",
+            "zh": "位于湄安的地热温泉，矿泉水涌出时接近沸腾——可在水渠中泡脚、在热池里煮蛋。园区绿化优美；是从湄康蓬返回途中放松的一站。"
+          }
         },
         {
           "id": "d8-maiiam",
@@ -687,7 +737,12 @@
           },
           "optional": true,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A private contemporary-art museum in San Kamphaeng, opened in 2016, with a mirror-mosaic façade. It shows modern and contemporary Thai and Southeast Asian art from the Bunnag–Beurdeley family collection plus rotating exhibitions. Open Fri–Mon.",
+            "ru": "Частный музей современного искусства в Сан Кампхэнг, открытый в 2016 году, с фасадом из зеркальной мозаики. Показывает современное тайское и юго-восточноазиатское искусство из коллекции семьи Буннаг–Бёрдели плюс сменные выставки. Открыт Пт–Пн.",
+            "zh": "位于山甘烹的私立当代艺术馆，2016年开馆，外立面为镜面马赛克。展出Bunnag–Beurdeley家族收藏的泰国及东南亚现当代艺术，并有轮换展览。周五至周一开放。"
+          }
         }
       ]
     },
@@ -741,7 +796,12 @@
           },
           "optional": false,
           "meal": "breakfast",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A photogenic house-café in Chang Phueak north of the city, a pleasant breakfast stop on the road toward Mae Rim. Closed Wednesdays.",
+            "ru": "Фотогеничное кафе-дом в Чанг Пхуак к северу от города, приятная остановка на завтрак по дороге в Мае Рим. Закрыто по средам.",
+            "zh": "位于城北昌抛（Chang Phueak）的一家上镜的庭院咖啡馆，是前往湄林途中惬意的早餐点。周三休息。"
+          }
         },
         {
           "id": "d9-thesher",
@@ -762,7 +822,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Your mountain base for nights 9–11: a small, well-reviewed homestay in the Mae Rim hills with an infinity pool and valley views, serving breakfast and dinner on site — which is why evenings stay up here rather than on dark mountain roads.",
+            "ru": "Ваша горная база на ночи 9–11: небольшой хорошо оценённый хоумстей в горах Мае Рим с бассейном-инфинити и видами на долину, с завтраком и ужином на месте — поэтому вечера проводим здесь, а не на тёмных горных дорогах.",
+            "zh": "第9–11晚的山间大本营：位于湄林山区、口碑良好的小型民宿，设无边泳池和山谷景观，提供早餐和晚餐——因此晚上留在这里，而不走漆黑的山路。"
+          }
         },
         {
           "id": "d9-qsbg",
@@ -783,7 +848,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Opened in 1992 as Thailand's first botanical garden and later named after Queen Sirikit. Spread over a forested Mae Rim hillside, its highlights are a rain-proof cluster of glasshouses, a canopy walkway high among the treetops, and extensive native and tropical plant collections.",
+            "ru": "Открыт в 1992 году как первый ботанический сад Таиланда, позже назван в честь королевы Сирикит. Раскинулся на лесистом склоне в Мае Рим; главное — защищённый от дождя комплекс оранжерей, навесная тропа высоко в кронах и обширные коллекции местных и тропических растений.",
+            "zh": "1992年开放，是泰国第一座植物园，后以诗丽吉王后命名。坐落于湄林一片林木葱郁的山坡；亮点包括可避雨的温室群、高悬于树冠间的空中步道，以及丰富的本土与热带植物收藏。"
+          }
         }
       ]
     },
@@ -837,7 +907,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A waterfall you can climb up. The rock is porous limestone/travertine coated in mineral deposits that give surprising grip, so barefoot visitors walk straight up the cascade against the flow. Spring-fed and free; lockers and showers on site.",
+            "ru": "Водопад, на который можно подняться. Порода — пористый известняк/травертин с минеральными отложениями, дающими неожиданное сцепление, поэтому босиком идут прямо вверх по каскаду против потока. Питается родником, бесплатный; локеры и душ на месте.",
+            "zh": "一处可以向上攀爬的瀑布。岩石为多孔的石灰岩/钙华，表面覆有矿物沉积，摩擦力出奇地好，赤脚游客可逆流直接爬上瀑布。由泉水补给，免费；现场有储物柜和淋浴。"
+          }
         },
         {
           "id": "d10-watbanden",
@@ -858,7 +933,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A vast, vividly colourful temple complex in Mae Taeng, largely built and expanded in recent decades under a revered local monk. Known for its ornate Lanna halls and a row of twelve pagodas for the twelve zodiac birth-years — very photogenic. Free; dress code applies.",
+            "ru": "Обширный, ярко раскрашенный храмовый комплекс в Мае Таенг, в основном построенный и расширенный в последние десятилетия под руководством почитаемого местного монаха. Известен нарядными ланна-залами и рядом из двенадцати пагод по годам зодиака — очень фотогеничен. Бесплатно; дресс-код.",
+            "zh": "位于湄登的一处宏大而色彩鲜艳的寺庙群，主要在近几十年由一位受尊崇的本地高僧主持兴建扩建。以华丽的兰纳殿堂和一排对应十二生肖年的十二座佛塔闻名——非常上镜。免费；有着装要求。"
+          }
         },
         {
           "id": "d10-fuel",
@@ -879,7 +959,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": true
+          "warn": true,
+          "details": {
+            "en": "A reminder, not a sight: top up the tank along the Route 107 corridor. The Mae Taeng loop is the trip's longest ride, and a full tank two-up in the hills may not stretch the whole way.",
+            "ru": "Не достопримечательность, а напоминание: дозаправьтесь вдоль коридора трассы 107. Петля Мае Таенг — самый длинный перегон поездки, и полного бака вдвоём в горах может не хватить на весь путь.",
+            "zh": "这不是景点，而是提醒：沿107公路沿线加满油。湄登环线是全程最长的一段，双人山路一箱油可能撑不到底。"
+          }
         }
       ]
     },
@@ -933,7 +1018,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A small highland farm-café with sheep and alpacas, cool morning air and mountain views. Feed is sold on site; go early before it warms up and fills.",
+            "ru": "Небольшая высокогорная ферма-кафе с овцами и альпаками, прохладным утренним воздухом и видами на горы. Корм продаётся на месте; приезжайте рано, до жары и толп.",
+            "zh": "一家高地上的小型牧场咖啡馆，有绵羊和羊驼，清晨空气凉爽、可赏山景。现场出售饲料；建议趁早、在天热和人多之前前往。"
+          }
         },
         {
           "id": "d11-pongyang",
@@ -954,7 +1044,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "An adventure park in the upper Mae Sa valley with a rail-mounted 'jungle coaster,' a gravity FlyLine and multi-station zipline courses strung across the forest. Closed shoes required; lockers with a deposit.",
+            "ru": "Парк приключений в верхней долине Мае Са с рельсовым «джангл-костером», гравитационной FlyLine и многостанционными зиплайн-трассами над лесом. Нужна закрытая обувь; локеры с депозитом.",
+            "zh": "位于湄沙上谷的探险乐园，设有轨道式“丛林过山车”、重力滑翔FlyLine，以及横跨森林的多站滑索线路。须穿包脚鞋；储物柜需押金。"
+          }
         },
         {
           "id": "d11-ainara",
@@ -975,7 +1070,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A cosy mountain café with resident dogs and a relaxed garden setting — an easy wind-down stop after the zipline park.",
+            "ru": "Уютное горное кафе с домашними собаками и расслабленным садом — лёгкая остановка «на расслабон» после зиплайн-парка.",
+            "zh": "一家温馨的山间咖啡馆，有店里的狗和悠闲的花园环境——是玩完滑索后放松的好去处。"
+          }
         }
       ]
     },
@@ -1029,7 +1129,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Your city base for the second stay (nights 12–15). Same placeholder coordinates — replace with your actual hotel.",
+            "ru": "Ваша городская база на второй заезд (ночи 12–15). Те же координаты-заглушка — замените на ваш реальный отель.",
+            "zh": "第二段入住（12–15晚）的市区落脚点。同样为占位坐标——请替换为您的实际酒店。"
+          }
         },
         {
           "id": "d12-nightbazaar",
@@ -1050,7 +1155,12 @@
           },
           "optional": false,
           "meal": "dinner",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Chiang Mai's original tourist night market, running nightly along Chang Khlan Road on the site of an old caravan-trade route. A sprawling maze of stalls — handicrafts, clothing, souvenirs — plus food courts and street food.",
+            "ru": "Исходный туристический ночной рынок Чиангмая, работающий каждый вечер вдоль улицы Чанг Кхлан на месте старого караванного торгового пути. Разросшийся лабиринт лотков — ремёсла, одежда, сувениры — плюс фуд-корты и уличная еда.",
+            "zh": "清迈最早的旅游夜市，每晚沿长康路（Chang Khlan）营业，此处曾是古商队贸易路线。摊位如迷宫般铺展——手工艺品、服饰、纪念品——外加美食广场和街头小吃。"
+          }
         }
       ]
     },
@@ -1104,7 +1214,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A serene, half-hidden forest temple on the slope of Doi Suthep, beside a stream and mossy stonework. It was a resting place for pilgrims on the old 'Monk's Trail' up to the summit temple; today many hike the jungle trail up to it.",
+            "ru": "Тихий, полускрытый лесной храм на склоне Дой Сутеп, у ручья и замшелой каменной кладки. Служил местом отдыха паломников на старой «тропе монаха» к вершинному храму; сегодня многие поднимаются к нему пешком через джунгли.",
+            "zh": "位于素贴山坡上、半隐于林间的静谧森林寺庙，旁有溪流与覆满青苔的石构。它曾是朝圣者沿古“僧侣小径”上山途中的歇脚处；如今许多人徒步穿越丛林登临于此。"
+          }
         },
         {
           "id": "d13-doisuthep",
@@ -1125,7 +1240,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Chiang Mai's most sacred temple, founded in 1383 to enshrine a Buddha relic. Legend says the relic was placed on a white elephant that climbed the mountain, trumpeted three times and died on this spot. Reached by a 306-step naga (serpent) staircase or a funicular; the golden chedi and city panorama are the reward. The mountain road was famously built by monk Khruba Srivichai's followers in 1935.",
+            "ru": "Самый священный храм Чиангмая, основан в 1383 году для хранения реликвии Будды. По легенде, реликвию возложили на белого слона, который поднялся на гору, трижды протрубил и умер на этом месте. Подъём — по лестнице-наге из 306 ступеней или на фуникулёре; награда — золотая чеди и панорама города. Горную дорогу знаменито построили последователи монаха Кхрубы Сивичая в 1935 году.",
+            "zh": "清迈最神圣的寺庙，1383年为供奉佛陀舍利而建。传说舍利被置于一头白象背上，白象登山、鸣叫三声后于此处倒下。可沿306级纳迦（蛇神）台阶或乘缆车登顶；金色佛塔与城市全景即是回报。上山公路由高僧Khruba Srivichai的信众于1935年修建，颇为著名。"
+          }
         },
         {
           "id": "d13-huaytungtao",
@@ -1146,7 +1266,12 @@
           },
           "optional": true,
           "meal": "snack",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A tranquil reservoir at the foot of Doi Suthep, ringed by simple bamboo huts on stilts over the water where you order food and lounge. A low-key spot to swim, paddle or just relax with a mountain backdrop.",
+            "ru": "Тихое водохранилище у подножия Дой Сутеп, окружённое простыми бамбуковыми хижинами на сваях над водой, где заказывают еду и отдыхают. Спокойное место, чтобы искупаться, покататься на лодке или просто расслабиться на фоне гор.",
+            "zh": "素贴山脚下一处宁静的水库，岸边环绕着建在水上的简易高脚竹屋，可点餐、慵懒消磨时光。是个低调的去处，可游泳、划船，或在山景中放松。"
+          }
         },
         {
           "id": "d13-daraphirom",
@@ -1167,7 +1292,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A quiet, elegant Lanna temple in Mae Rim with fine white-and-gold woodwork and few crowds — a 'hidden gem' associated with Princess Dara Rasami, the Lanna consort of King Chulalongkorn (Rama V).",
+            "ru": "Тихий, изящный ланна-храм в Мае Рим с тонкой бело-золотой резьбой и без толп — «скрытая жемчужина», связанная с принцессой Дара Расами, ланна-супругой короля Чулалонгкорна (Рамы V).",
+            "zh": "位于湄林的一座静谧雅致的兰纳寺庙，白金相间的木雕精美、游客稀少——一处“小众宝藏”，与兰纳公主达拉·拉斯米（拉玛五世朱拉隆功王的王妃）有关。"
+          }
         },
         {
           "id": "d13-poopoopaper",
@@ -1188,7 +1318,12 @@
           },
           "optional": true,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A quirky little eco-park where you can see (and try) making paper from elephant dung — the fibre is washed, pulped and dried into cards and souvenirs. A light, kid-friendly novelty stop.",
+            "ru": "Причудливый маленький эко-парк, где можно увидеть (и попробовать) изготовление бумаги из слоновьего навоза — волокно промывают, разбивают в массу и высушивают в открытки и сувениры. Лёгкая забавная остановка, подходит и детям.",
+            "zh": "一座别具一格的小型生态园，可参观（并亲手尝试）用大象粪便造纸——纤维经清洗、打浆、晾干制成卡片和纪念品。是个轻松有趣、适合亲子的小景点。"
+          }
         },
         {
           "id": "d13-gameon",
@@ -1209,7 +1344,12 @@
           },
           "optional": false,
           "meal": "dinner",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A well-regarded pool hall and sports bar in the Old City with proper 9-ft Diamond tables — good for combining dinner, drinks and a few frames of billiards. Open until the early hours.",
+            "ru": "Уважаемый пул-холл и спорт-бар в Старом городе с настоящими 9-футовыми столами Diamond — хорошо совместить ужин, напитки и партию-другую бильярда. Открыто до глубокой ночи.",
+            "zh": "古城内一家口碑不错的台球厅兼体育酒吧，配专业的9英尺Diamond球台——很适合把晚餐、小酌和几局台球结合起来。营业至凌晨。"
+          }
         }
       ]
     },
@@ -1267,7 +1407,12 @@
           },
           "optional": false,
           "meal": "main",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A top-rated Thai cooking school. The class usually starts with a local market tour to learn the ingredients, then you cook several northern/Thai dishes and eat what you make. Hotel pickup included; they ask you to bring insect repellent and drinking water.",
+            "ru": "Кулинарная школа тайской кухни с высшим рейтингом. Занятие обычно начинается с экскурсии на местный рынок для знакомства с ингредиентами, затем вы готовите несколько северо-тайских/тайских блюд и едите приготовленное. Пикап от отеля включён; просят взять репеллент и питьевую воду.",
+            "zh": "一家评价极高的泰餐烹饪学校。课程通常先逛本地市场认识食材，然后烹制数道泰北/泰式菜肴并享用自己的成果。含酒店接送；校方请您自带驱蚊液和饮用水。"
+          }
         }
       ]
     },
@@ -1325,7 +1470,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "One of the area's oldest sites — its chedi is said to date to 687 AD, built by the twin sons of Queen Chamadevi of Hariphunchai, centuries before Chiang Mai itself. Local legend ties it to two reformed man-eating giants, Pu Sae and Ya Sae. Today it's famous for a large golden seated Buddha and the wish-granting image Luang Por Tan Jai (thanked with jasmine garlands), plus a hilltop panorama over the city.",
+            "ru": "Одно из старейших мест в округе — его чеди, по преданию, датируется 687 годом и построена сыновьями-близнецами королевы Чамадеви из Харипунчая, за века до самого Чиангмая. Местная легенда связывает его с двумя раскаявшимися великанами-людоедами, Пу Сае и Я Сае. Сегодня известен большим золотым сидящим Буддой и исполняющим желания образом Луанг Пор Тан Джай (благодарят гирляндами жасмина), а также панорамой города с холма.",
+            "zh": "本地区最古老的遗迹之一——其佛塔相传可追溯至公元687年，由哈里奔猜女王查玛德维的孪生子所建，比清迈城本身还早数百年。当地传说将其与两位改过自新的食人巨人Pu Sae和Ya Sae相联系。如今以巨大的金色坐佛和有求必应的“Luang Por Tan Jai”佛像（还愿时献上茉莉花环）闻名，山顶还可俯瞰全城。"
+          }
         },
         {
           "id": "d15-grandcanyon",
@@ -1346,7 +1496,12 @@
           },
           "optional": true,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "A former quarry flooded into a striking blue lake ringed by red cliffs, now an inflatable water park: a floating obstacle course, high-jump platforms, a 400 m zipline over the water, plus kayaks and SUP. Life jackets are mandatory and water activities pause during thunderstorms.",
+            "ru": "Бывший карьер, затопленный в яркое голубое озеро в обрамлении красных скал, теперь надувной аквапарк: плавучая полоса препятствий, вышки для прыжков, зиплайн 400 м над водой, а также каяки и SUP. Спасжилет обязателен, при грозе водные активности приостанавливают.",
+            "zh": "由旧采石场蓄水而成的一片醒目蓝湖，四周红崖环绕，如今是充气水上乐园：漂浮障碍道、高跳台、400米水上滑索，还有皮划艇和桨板。必须穿救生衣，雷雨时水上项目暂停。"
+          }
         },
         {
           "id": "d15-silvertemple",
@@ -1367,7 +1522,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Founded around 1500 for the Wualai silversmith community, this is Chiang Mai's 'Silver Temple.' Its ordination hall (ubosot) is clad inside and out in intricately worked silver, nickel and aluminium — the only structure of its kind — crafted by local artisans over 2004–2016. By Lanna tradition women may not enter the ubosot (they're welcome everywhere else).",
+            "ru": "Основан около 1500 года для общины серебряных дел мастеров Wualai — это «Серебряный храм» Чиангмая. Его зал для посвящений (убосот) снаружи и внутри покрыт тонко проработанным серебром, никелем и алюминием — единственное сооружение подобного рода — работа местных мастеров в 2004–2016 годах. По ланна-традиции женщинам нельзя входить в убосот (везде остальное — можно).",
+            "zh": "约1500年为Wualai银匠社区而建，这是清迈的“银庙”。其戒堂（ubosot）内外皆以工艺精细的银、镍和铝包覆——世上独一无二——由本地工匠于2004–2016年打造。依兰纳传统，女性不得进入戒堂（其余各处均欢迎）。"
+          }
         },
         {
           "id": "d15-satwalkingst",
@@ -1388,7 +1548,12 @@
           },
           "optional": false,
           "meal": "dinner",
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "The Saturday-night market along Wualai Road, the historic silver quarter. Stalls of handicrafts, silverwork and street food fill the street from late afternoon; the Silver Temple sits right on it.",
+            "ru": "Субботний ночной рынок вдоль улицы Wualai, исторического серебряного квартала. Лотки с ремёслами, серебром и уличной едой заполняют улицу с позднего вечера; Серебряный храм — прямо на ней.",
+            "zh": "沿Wualai路（历史悠久的银器街区）举办的周六夜市。手工艺品、银器和街头小吃的摊位从傍晚起填满整条街；银庙就坐落在这条街上。"
+          }
         }
       ]
     },
@@ -1442,7 +1607,12 @@
           },
           "optional": true,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Chiang Mai's oldest and largest public market (locally 'Kad Luang'), a bustling Thai-Chinese institution near the river. Good for dried foods, tea, snacks, textiles and northern specialties to take home.",
+            "ru": "Старейший и крупнейший общественный рынок Чиангмая (местное «Кад Луанг»), оживлённый тайско-китайский институт у реки. Хорош для сушёных продуктов, чая, снеков, тканей и северных деликатесов в дорогу.",
+            "zh": "清迈最古老、最大的公共市场（当地称“Kad Luang”），是河边一处热闹的泰-华老字号。适合选购干货、茶叶、零食、纺织品和泰北特产带回家。"
+          }
         },
         {
           "id": "d16-maipharereturn",
@@ -1463,7 +1633,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Return the rental bike here before heading to the airport. The shop opens at 08:00; aim to drop it by ~12:30.",
+            "ru": "Верните арендованный байк здесь перед выездом в аэропорт. Прокат открывается в 08:00; сдать лучше до ~12:30.",
+            "zh": "在前往机场前于此归还租来的摩托车。租车店08:00开门；建议约12:30前还车。"
+          }
         },
         {
           "id": "d16-cnx",
@@ -1484,7 +1659,12 @@
           },
           "optional": false,
           "meal": null,
-          "warn": false
+          "warn": false,
+          "details": {
+            "en": "Chiang Mai International Airport for your ~15:40 departure. Compact and close to town — arriving ~2 hours ahead is comfortable.",
+            "ru": "Международный аэропорт Чиангмая для вашего вылета ~15:40. Компактный и близко к городу — прибыть за ~2 часа комфортно.",
+            "zh": "清迈国际机场，用于您约15:40的航班。机场小巧、离市区近——提前约2小时到达较为从容。"
+          }
         }
       ]
     }

@@ -272,6 +272,46 @@ body {
   background: var(--amber-bg);
 }
 
+/* Тап по карточке раскрывает описание места */
+.loc__summary {
+  cursor: pointer;
+  list-style: none; /* прячем системный треугольник — свой шеврон в шапке */
+  -webkit-tap-highlight-color: transparent;
+}
+
+.loc__summary::-webkit-details-marker { display: none; }
+
+.loc__summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+.loc__chevron {
+  flex: 0 0 auto;
+  align-self: center;
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(45deg);
+  transition: transform .15s ease;
+}
+
+.loc__about[open] .loc__chevron {
+  transform: rotate(-135deg);
+}
+
+.loc__about-text {
+  margin: 10px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 .loc__head {
   display: flex;
   gap: 12px;

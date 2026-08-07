@@ -76,6 +76,9 @@
   /* Раскрытые «Детали дня» — по номеру дня, только на время сессии (без localStorage) */
   var expandedDays = {};
 
+  /* Раскрытые описания активностей — по id точки, так же на время сессии */
+  var expandedLocations = {};
+
   /* ---------- Язык ---------- */
 
   function availableLangs() {
@@ -312,12 +315,39 @@
     var head = el("div", "loc__head");
     head.appendChild(el("span", "loc__time", loc.time || "—"));
     head.appendChild(el("h3", "loc__name", localized(loc.name)));
-    item.appendChild(head);
 
     var note = localized(loc.note);
-    if (note) item.appendChild(el("p", "loc__note", note));
+    var badges = renderBadges(loc);
+    var about = localized(loc.details);
 
-    item.appendChild(renderBadges(loc));
+    if (about) {
+      /* Тап по карточке раскрывает описание места. Кнопки карт намеренно
+         остаются снаружи <details> — иначе тап по ним переключал бы карточку. */
+      var box = document.createElement("details");
+      box.className = "loc__about";
+      box.open = !!expandedLocations[loc.id];
+
+      var summary = document.createElement("summary");
+      summary.className = "loc__summary";
+      head.appendChild(el("span", "loc__chevron"));
+      summary.appendChild(head);
+      if (note) summary.appendChild(el("p", "loc__note", note));
+      summary.appendChild(badges);
+      box.appendChild(summary);
+
+      box.appendChild(el("p", "loc__about-text", about));
+
+      box.addEventListener("toggle", function () {
+        expandedLocations[loc.id] = box.open;
+      });
+
+      item.appendChild(box);
+    } else {
+      /* Датасет без details — карточка как раньше, ничего не раскрывается */
+      item.appendChild(head);
+      if (note) item.appendChild(el("p", "loc__note", note));
+      item.appendChild(badges);
+    }
 
     if (isMappable(loc)) {
       var actions = el("div", "loc__actions");
