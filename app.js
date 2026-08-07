@@ -55,6 +55,7 @@
   var SECTIONS = [
     { id: "itinerary", labelKey: "tabItinerary" },
     { id: "info", labelKey: "tabInfo" },
+    { id: "dining", labelKey: "tabDining" },
     { id: "guide", labelKey: "tabGuide" }
   ];
 
@@ -62,6 +63,7 @@
   var sectionTabsEl = document.getElementById("section-tabs");
   var viewEl = document.getElementById("view-itinerary");
   var infoEl = document.getElementById("view-info");
+  var diningEl = document.getElementById("view-dining");
   var guideEl = document.getElementById("view-guide");
   var titleEl = document.getElementById("trip-title");
   var footerEl = document.getElementById("footer-note");
@@ -313,7 +315,9 @@
     if (loc.warn) item.classList.add("loc--warn");
 
     var head = el("div", "loc__head");
-    head.appendChild(el("span", "loc__time", loc.time || "—"));
+    /* Места из «Ужина» не привязаны ко времени — чип просто не рисуем.
+       У точек дня со временем «—» строка непустая, так что чип остаётся. */
+    if (loc.time) head.appendChild(el("span", "loc__time", loc.time));
     head.appendChild(el("h3", "loc__name", localized(loc.name)));
 
     var note = localized(loc.note);
@@ -487,6 +491,36 @@
     }
   }
 
+  /* ---------- Раздел «Ужин» ----------
+     Места не привязаны к дню, поэтому карточки те же, что у активностей,
+     но без времени, звёзд и прочих полей дня — их у этих записей нет. */
+
+  function renderDining() {
+    diningEl.textContent = "";
+
+    var dining = data.dining;
+    if (!dining) return;
+
+    var card = el("section", "card");
+
+    var title = localized(dining.title);
+    if (title) card.appendChild(el("h2", "card__title", title));
+
+    var intro = localized(dining.intro);
+    if (intro) card.appendChild(el("p", "card__text", intro));
+
+    if (title || intro) diningEl.appendChild(card);
+
+    var places = dining.places || [];
+    if (!places.length) return;
+
+    var list = el("ul", "locations");
+    places.forEach(function (place) {
+      list.appendChild(renderLocation(place));
+    });
+    diningEl.appendChild(list);
+  }
+
   /* ---------- Раздел «Как пользоваться» ---------- */
 
   function renderGuide() {
@@ -537,10 +571,12 @@
     tabsEl.hidden = !itinerary; /* чипы дней нужны только в «Маршруте» */
     viewEl.hidden = !itinerary;
     infoEl.hidden = section !== "info";
+    diningEl.hidden = section !== "dining";
     guideEl.hidden = section !== "guide";
 
     if (itinerary) selectDay(dayIndex, false);
     else if (section === "info") renderInfo();
+    else if (section === "dining") renderDining();
     else renderGuide();
   }
 
