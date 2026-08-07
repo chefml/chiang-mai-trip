@@ -18,9 +18,9 @@
     ],
     "defaultLanguage": "ru",
     "overview": {
-      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman + Rajapruek garden. 8th: Mae Kampong mountain village (east). 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13th: Doi Suthep + billiards. 14th: Thai cooking class. 15th: hilltop temple + spa + Saturday Walking Street. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
-      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман + сад Rajapruek. 8-го — горная деревня Mae Kampong (восток). 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13-го — Дой Сутеп + бильярд. 14-го — кулинарный класс. 15-го — храм на холме + спа + Saturday Walking Street. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
-      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼+Rajapruek花园。8号：湄康蓬山村（东部）。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13号：素贴山+台球。14号：泰餐烹饪课。15号：山顶寺庙+水疗+周六夜市。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
+      "en": "6th (Thu): arrive in the evening, city hotel (3 nights, 6–8). 7th: rent the bike (kept until the 16th), Old City + Nimman + Rajapruek garden. 8th: Mae Kampong mountain village (east). 9–11: The Sher Homestay in the Mae Rim hills. 12th: move back to the city (4 nights, 12–15). 13th: Doi Suthep + billiards. 14th: Thai cooking class + Baan Kang Wat artist village. 15th: hilltop temple + spa + Saturday Walking Street. 16th (Sun): flight ~15:40 — return the bike by ~12:30, airport by ~13:30. Two main meals a day; green season — outdoor mornings, rain layer always.",
+      "ru": "6-го (чт) — прилёт вечером, городской отель (3 ночи, 6–8). 7-го — аренда байка (до 16-го), Старый город + Нимман + сад Rajapruek. 8-го — горная деревня Mae Kampong (восток). 9–11 — The Sher Homestay в горах Мае Рим. 12-го — возврат в город (4 ночи, 12–15). 13-го — Дой Сутеп + бильярд. 14-го — кулинарный класс + деревня художников Baan Kang Wat. 15-го — храм на холме + спа + Saturday Walking Street. 16-го (вс) — рейс ~15:40: байк сдать до ~12:30, в аэропорту к ~13:30. Два основных приёма пищи; зелёный сезон — уличное утром, дождевик всегда.",
+      "zh": "6号（周四）：傍晚抵达，入住市区酒店（3晚，6–8号）。7号：租摩托车（用到16号），古城+尼曼+Rajapruek花园。8号：湄康蓬山村（东部）。9–11号：湄林山区 The Sher 民宿。12号：返回市区（4晚，12–15号）。13号：素贴山+台球。14号：泰餐烹饪课 + Baan Kang Wat 艺术家村。15号：山顶寺庙+水疗+周六夜市。16号（周日）：航班约15:40——约12:30前还车，约13:30抵达机场。每天两顿正餐；雨季——户外活动放上午，随身带雨衣。"
     }
   },
   "ui": {
@@ -439,6 +439,32 @@
             "ru": "Ваша городская база на первые три ночи (6–8). Замените координаты-заглушку на ваш реальный отель.",
             "zh": "前三晚（6–8号）的市区落脚点。请将占位坐标替换为您的实际酒店。"
           }
+        },
+        {
+          "id": "d6-dinner",
+          "name": {
+            "en": "Chang Phueak Pork Leg Rice (“Cowboy Hat Lady”)",
+            "ru": "Chang Phueak Pork Leg Rice («Дама в ковбойской шляпе»)",
+            "zh": "昌抛猪脚饭（“牛仔帽大姐”）"
+          },
+          "time": "22:45",
+          "category": "food",
+          "lat": 18.7958195,
+          "lng": 98.9855155,
+          "placeId": "ChIJG9eEK5E62jARDb2Ukq5XTNM",
+          "note": {
+            "en": "Legendary night stall at Chang Phueak (North) Gate: khao kha moo — stewed pork leg over rice. ~17:00–24:00, cash, cheap. A casual arrival-night bite.",
+            "ru": "Легендарный ночной лоток у Северных ворот (Chang Phueak): кхао кха му — тушёная свиная ножка с рисом. ~17:00–24:00, наличные, дёшево. Непринуждённый ужин в день прилёта.",
+            "zh": "昌抛（北）门传奇夜摊：猪脚饭——炖猪脚盖饭。约17:00–24:00，收现金，便宜。抵达当晚的随意一餐。"
+          },
+          "optional": false,
+          "meal": "dinner",
+          "warn": false,
+          "details": {
+            "en": "A Chiang Mai institution among the Chang Phueak Gate night stalls, run by a vendor in a cowboy hat who has appeared on international food shows. The dish to get is khao kha moo: pork leg stewed for hours until it falls apart, over rice with pickled mustard greens, chilli-garlic vinegar and a soft egg. Counter seating, cash only, open late.",
+            "ru": "Институция Чиангмая среди ночных лотков у ворот Chang Phueak, где заправляет продавщица в ковбойской шляпе, засветившаяся в международных гастропередачах. Главное блюдо — кхао кха му: свиная ножка, тушённая часами до распадения, поверх риса, с маринованной горчицей, чесночно-чили-уксусом и мягким яйцом. Места у стойки, только наличные, работает допоздна.",
+            "zh": "清迈昌抛门夜摊中的招牌摊位，由一位戴牛仔帽、上过国际美食节目的摊主经营。必点猪脚饭：猪脚慢炖数小时至软烂，盖在米饭上，配腌芥菜、蒜蓉辣椒醋和溏心蛋。吧台座位，仅收现金，营业至深夜。"
+          }
         }
       ]
     },
@@ -590,9 +616,9 @@
           "lng": 98.9676299,
           "placeId": "ChIJ8QdNKPU72jARtz_iHmA6_zk",
           "note": {
-            "en": "Creative quarter: cafés, boutiques, design. 11:00–22:00. Dinner in Nimman.",
-            "ru": "Креативный квартал: кафе, бутики, дизайн. 11:00–22:00. Ужин в Нимман.",
-            "zh": "创意街区：咖啡馆、精品店、设计。11:00–22:00。晚餐在尼曼。"
+            "en": "Creative quarter: cafés, boutiques, design. 11:00–22:00.",
+            "ru": "Креативный квартал: кафе, бутики, дизайн. 11:00–22:00.",
+            "zh": "创意街区：咖啡馆、精品店、设计。11:00–22:00。"
           },
           "optional": false,
           "meal": null,
@@ -627,6 +653,32 @@
             "en": "A large royal park in Mae Hia, built for the 2006 International Horticultural Exposition marking King Bhumibol's 60th year on the throne. Its centrepiece is the gilded Lanna-style Ho Kham Royal Pavilion, surrounded by themed and international gardens, a rose garden and glasshouses — the indoor orchid houses make it a good rainy-day choice.",
             "ru": "Большой королевский парк в Мае Хиа, созданный к Международной садоводческой выставке 2006 года в честь 60-летия правления короля Пхумипона. Центр — золочёный ланна-павильон Хо Кхам, окружённый тематическими и национальными садами, розарием и оранжереями; крытые орхидейные теплицы делают его удачным вариантом в дождь.",
             "zh": "位于湄嘉的大型皇家花园，为纪念普密蓬国王在位60周年、于2006年国际园艺博览会而建。核心是描金的兰纳式皇家亭“Ho Kham”，周围环绕主题花园与各国园艺展区、玫瑰园和温室；室内兰花温室使其成为雨天的好选择。"
+          }
+        },
+        {
+          "id": "d7-dinner",
+          "name": {
+            "en": "Dash Teak House",
+            "ru": "Dash Teak House",
+            "zh": "Dash Teak House（柚木屋餐厅）"
+          },
+          "time": "19:30",
+          "category": "food",
+          "lat": 18.7832964,
+          "lng": 98.9914755,
+          "placeId": "ChIJYXZDLqA62jARjhW8xmSUkjk",
+          "note": {
+            "en": "Charming Thai dinner in a restored teak house, Old City. 10:00–22:00, closed Sun. Well-reviewed; live music some evenings.",
+            "ru": "Уютный тайский ужин в реставрированном тиковом доме, Старый город. 10:00–22:00, вс закрыто. Высокие оценки; иногда живая музыка.",
+            "zh": "古城内一座修复的柚木老屋里的雅致泰餐晚宴。10:00–22:00，周日休息。口碑很好；部分晚上有现场音乐。"
+          },
+          "optional": false,
+          "meal": "dinner",
+          "warn": false,
+          "details": {
+            "en": "A family-run Thai restaurant in a beautifully restored teak house just inside the eastern moat, consistently one of the Old City's best-rated dinners. Expect well-executed northern and central dishes — chicken with tamarind, coconut soups, satay — a leafy setting and, some nights, live music. Closed Sundays.",
+            "ru": "Семейный тайский ресторан в красиво отреставрированном тиковом доме сразу за восточным рвом, стабильно один из лучших по оценкам ужинов Старого города. Хорошо приготовленные северные и центральные блюда — курица с тамариндом, кокосовые супы, сатай — зелёная обстановка и иногда живая музыка. Воскресенье — выходной.",
+            "zh": "一家家族经营的泰餐厅，坐落于东护城河内一座精心修复的柚木老屋，长期是古城评价最高的晚餐去处之一。招牌是做工到位的泰北与中部菜——罗望子鸡、椰香汤、沙嗲——环境绿意盎然，部分晚上有现场音乐。周日休息。"
           }
         }
       ]
@@ -742,6 +794,32 @@
             "en": "A private contemporary-art museum in San Kamphaeng, opened in 2016, with a mirror-mosaic façade. It shows modern and contemporary Thai and Southeast Asian art from the Bunnag–Beurdeley family collection plus rotating exhibitions. Open Fri–Mon.",
             "ru": "Частный музей современного искусства в Сан Кампхэнг, открытый в 2016 году, с фасадом из зеркальной мозаики. Показывает современное тайское и юго-восточноазиатское искусство из коллекции семьи Буннаг–Бёрдели плюс сменные выставки. Открыт Пт–Пн.",
             "zh": "位于山甘烹的私立当代艺术馆，2016年开馆，外立面为镜面马赛克。展出Bunnag–Beurdeley家族收藏的泰国及东南亚现当代艺术，并有轮换展览。周五至周一开放。"
+          }
+        },
+        {
+          "id": "d8-dinner",
+          "name": {
+            "en": "The House by Ginger",
+            "ru": "The House by Ginger",
+            "zh": "The House by Ginger（餐厅）"
+          },
+          "time": "19:30",
+          "category": "food",
+          "lat": 18.7927884,
+          "lng": 98.9932209,
+          "placeId": "ChIJNVnFK7062jARHAtoL1m4ZYk",
+          "note": {
+            "en": "Michelin-listed Thai in two elegant Old City mansions. 11:00–23:00. Refined; pricier and popular — book ahead.",
+            "ru": "Мишленовский тайский ресторан в двух изящных особняках Старого города. 11:00–23:00. Изысканно; дороже и популярно — бронируйте.",
+            "zh": "位于古城两座雅致宅邸内、入选米其林的泰餐厅。11:00–23:00。精致；价格偏高且很受欢迎——建议提前订位。"
+          },
+          "optional": false,
+          "meal": "dinner",
+          "warn": false,
+          "details": {
+            "en": "A polished, Michelin-listed Thai restaurant in two graceful colonial-style mansions near the eastern moat. The kitchen plates elevated Thai food — seafood curry in a coconut, pomelo salad, tasting platters — in a setting good for a special meal. Popular and a bit pricey by Chiang Mai standards, so reserve ahead.",
+            "ru": "Изысканный мишленовский тайский ресторан в двух грациозных особняках колониального стиля у восточного рва. Кухня подаёт возвышенную тайскую еду — карри с морепродуктами в кокосе, салат из помело, дегустационные сеты — в обстановке для особого ужина. Популярно и дороговато по меркам Чиангмая, бронируйте заранее.",
+            "zh": "一家精致、入选米其林的泰餐厅，坐落于东护城河附近两座优雅的殖民风格宅邸中。厨房呈现升华版泰餐——椰壳海鲜咖喱、柚子沙拉、拼盘套餐——环境适合正式一餐。人气高、以清迈标准略贵，建议提前订位。"
           }
         }
       ]
@@ -1093,9 +1171,9 @@
         "zh": "返回市区（母亲节）"
       },
       "focus": {
-        "en": "Descend with luggage, check in; an easy evening at the Night Bazaar. Skip Doi Suthep today — holiday crowds.",
-        "ru": "Спуск с багажом, заселение; лёгкий вечер на Night Bazaar. Дой Сутеп сегодня не планируем — праздник, переполнен.",
-        "zh": "带行李下山、入住；傍晚轻松逛夜市。今天避开素贴山——节日人多。"
+        "en": "Descend with luggage, check in; an easy evening along the Khlong Mae Kha canal. Skip Doi Suthep today — holiday crowds.",
+        "ru": "Спуск с багажом, заселение; лёгкий вечер на набережной Khlong Mae Kha. Дой Сутеп сегодня не планируем — праздник, переполнен.",
+        "zh": "带行李下山、入住；傍晚沿 Khlong Mae Kha 运河轻松散步。今天避开素贴山——节日人多。"
       },
       "busyness": 2,
       "roads": {
@@ -1137,29 +1215,29 @@
           }
         },
         {
-          "id": "d12-nightbazaar",
+          "id": "d12-khlongmaekha",
           "name": {
-            "en": "Chiang Mai Night Bazaar",
-            "ru": "Chiang Mai Night Bazaar",
-            "zh": "清迈夜市"
+            "en": "Khlong Mae Kha (canal walking street)",
+            "ru": "Khlong Mae Kha (набережная-канал)",
+            "zh": "Khlong Mae Kha（运河步行街）"
           },
           "time": "18:00",
           "category": "market",
-          "lat": 18.7852244,
-          "lng": 99.0002986,
-          "placeId": "ChIJW0qnDKY62jARHbAmfwD1Lgs",
+          "lat": 18.7770657,
+          "lng": 98.9955681,
+          "placeId": "ChIJJ9zZWLQ72jARL2kwVhxFiSk",
           "note": {
-            "en": "Evening stroll + dinner. Chang Khlan Rd, 17:00–24:00 daily.",
-            "ru": "Вечерняя прогулка + ужин. Ул. Чанг Кхлан, 17:00–24:00 ежедневно.",
-            "zh": "傍晚散步+晚餐。长康路，每天17:00–24:00。"
+            "en": "Restored, pedestrian-only canal walking street with lanterns, cafés and food stalls. ~16:00–22:00. Sit-down or street-food dinner; the Night Bazaar is a short walk away.",
+            "ru": "Восстановленная пешеходная набережная-канал с фонарями, кафе и лотками. ~16:00–22:00. Ужин в кафе или стрит-фуд; Night Bazaar — в двух шагах.",
+            "zh": "修复后的步行运河街，有灯笼、咖啡馆和小吃摊。约16:00–22:00。可坐下用餐或吃街边小吃；夜市就在附近。"
           },
           "optional": false,
           "meal": "dinner",
           "warn": false,
           "details": {
-            "en": "Chiang Mai's original tourist night market, running nightly along Chang Khlan Road on the site of an old caravan-trade route. A sprawling maze of stalls — handicrafts, clothing, souvenirs — plus food courts and street food.",
-            "ru": "Исходный туристический ночной рынок Чиангмая, работающий каждый вечер вдоль улицы Чанг Кхлан на месте старого караванного торгового пути. Разросшийся лабиринт лотков — ремёсла, одежда, сувениры — плюс фуд-корты и уличная еда.",
-            "zh": "清迈最早的旅游夜市，每晚沿长康路（Chang Khlan）营业，此处曾是古商队贸易路线。摊位如迷宫般铺展——手工艺品、服饰、纪念品——外加美食广场和街头小吃。"
+            "en": "A neglected canal on the city's southeast edge that the municipality restored from 2022 into a 750 m, car-free walking street. Two orange lantern bridges, potted plants and Japanese-style storefronts line the water; stalls sell Thai street food, drinks and souvenirs, best from late afternoon into the evening. Calm and photogenic, though a few stalls and the odd canal smell come and go.",
+            "ru": "Заброшенный канал на юго-восточной окраине города, восстановленный муниципалитетом с 2022 года в 750-метровую пешеходную улицу без машин. Два оранжевых моста с фонарями, растения в кадках и витрины в японском стиле вдоль воды; лотки со стрит-фудом, напитками и сувенирами — лучше с позднего дня до вечера. Спокойно и фотогенично, хотя часть лотков и лёгкий запах канала бывают непостоянны.",
+            "zh": "城市东南缘一条曾被忽视的运河，自2022年起由市政府修复为750米长的无车步行街。两座橙色灯笼桥、盆栽和日式店面沿水而立；摊位售卖泰式街头小吃、饮品和纪念品，傍晚前后最佳。宁静上镜，但部分摊位时开时关、偶有运河异味。"
           }
         }
       ]
@@ -1362,30 +1440,30 @@
         "zh": "周五"
       },
       "title": {
-        "en": "Thai cooking class + free afternoon",
-        "ru": "Кулинарный класс + свободный день",
-        "zh": "泰餐烹饪课+自由下午"
+        "en": "Thai cooking class + Baan Kang Wat (artist village)",
+        "ru": "Кулинарный класс + Baan Kang Wat (деревня художников)",
+        "zh": "泰餐烹饪课 + Baan Kang Wat（艺术家村）"
       },
       "focus": {
-        "en": "Cooking class in the morning (hotel pickup 8:30); relaxed afternoon and evening.",
-        "ru": "Кулинарный класс утром (пикап от отеля в 8:30); расслабленные вторая половина дня и вечер.",
-        "zh": "上午烹饪课（8:30酒店接送）；下午和晚上轻松安排。"
+        "en": "Cooking class in the morning (hotel pickup 8:30); the Baan Kang Wat artist village in the afternoon; a Nimman evening walk and dinner.",
+        "ru": "Кулинарный класс утром (пикап 8:30); деревня художников Baan Kang Wat днём; вечером — прогулка по Нимман и ужин.",
+        "zh": "上午烹饪课（8:30接送）；下午 Baan Kang Wat 艺术家村；傍晚漫步尼曼并晚餐。"
       },
       "busyness": 3,
       "roads": {
-        "en": "Hotel pickup for the class — no riding needed in the morning.",
-        "ru": "Пикап от отеля на класс — утром ехать не нужно.",
-        "zh": "烹饪课含酒店接送——上午无需骑车。"
+        "en": "Hotel pickup for the class — no riding in the morning; ~20 min SW by bike to Baan Kang Wat in the afternoon.",
+        "ru": "Пикап от отеля на класс — утром ехать не нужно; во второй половине дня ~20 мин на ЮЗ на байке до Baan Kang Wat.",
+        "zh": "烹饪课含酒店接送——上午无需骑车；下午向西南骑约20分钟到 Baan Kang Wat。"
       },
       "clothing": {
-        "en": "Comfortable clothes for the class; the school asked to bring insect repellent and drinking water; rain layer.",
-        "ru": "Удобная одежда на класс; школа просила взять репеллент и питьевую воду; дождевик.",
-        "zh": "上课穿舒适衣物；学校要求自带驱蚊液和饮用水；雨衣。"
+        "en": "Comfortable clothes for the class; comfortable shoes for wandering the village; the school asked to bring insect repellent and drinking water; rain layer.",
+        "ru": "Удобная одежда на класс; удобная обувь для прогулки по деревне; школа просила взять репеллент и питьевую воду; дождевик.",
+        "zh": "上课穿舒适衣物；逛村子穿舒适鞋；学校要求自带驱蚊液和饮用水；雨衣。"
       },
       "extra": {
-        "en": "Free afternoon after ~14:00: rest, a Thai massage, or optional billiards at Game On (your hobby).",
-        "ru": "Свободная вторая половина дня после ~14:00: отдых, тайский массаж или по желанию бильярд в Game On (ваше хобби).",
-        "zh": "约14:00后自由活动：休息、泰式按摩，或可选去 Game On 打台球（您的爱好）。"
+        "en": "A full but low-key day (class, village, Nimman). If it feels like too much, drop Baan Kang Wat or shorten the Nimman evening; a Thai massage is an easy swap.",
+        "ru": "Насыщенный, но спокойный день (класс, деревня, Нимман). Если покажется много — снимите Baan Kang Wat или сократите вечер в Нимман; лёгкая замена — тайский массаж.",
+        "zh": "充实但轻松的一天（烹饪课、艺术村、尼曼）。若觉得太多，可去掉 Baan Kang Wat 或缩短尼曼傍晚；也可轻松改为泰式按摩。"
       },
       "locations": [
         {
@@ -1412,6 +1490,58 @@
             "en": "A top-rated Thai cooking school. The class usually starts with a local market tour to learn the ingredients, then you cook several northern/Thai dishes and eat what you make. Hotel pickup included; they ask you to bring insect repellent and drinking water.",
             "ru": "Кулинарная школа тайской кухни с высшим рейтингом. Занятие обычно начинается с экскурсии на местный рынок для знакомства с ингредиентами, затем вы готовите несколько северо-тайских/тайских блюд и едите приготовленное. Пикап от отеля включён; просят взять репеллент и питьевую воду.",
             "zh": "一家评价极高的泰餐烹饪学校。课程通常先逛本地市场认识食材，然后烹制数道泰北/泰式菜肴并享用自己的成果。含酒店接送；校方请您自带驱蚊液和饮用水。"
+          }
+        },
+        {
+          "id": "d14-baankangwat",
+          "name": {
+            "en": "Baan Kang Wat (artist village)",
+            "ru": "Baan Kang Wat (деревня художников)",
+            "zh": "Baan Kang Wat（艺术家村）"
+          },
+          "time": "15:00",
+          "category": "market",
+          "lat": 18.7763256,
+          "lng": 98.9487285,
+          "placeId": "ChIJdxPPqzUx2jARn86GcuRsD1s",
+          "note": {
+            "en": "Artist village of craft studios, indie shops and cafés (with resident cats). Tue–Sun 10:00–18:00, closed Mon. Free.",
+            "ru": "Деревня художников: ремесленные студии, инди-магазины и кафе (и местные коты). Вт–Вс 10:00–18:00, пн закрыто. Бесплатно.",
+            "zh": "艺术家村：手工艺工作室、独立小店和咖啡馆（还有村里的猫）。周二至周日10:00–18:00，周一闭村。免费。"
+          },
+          "optional": false,
+          "meal": null,
+          "warn": false,
+          "details": {
+            "en": "A leafy creative community on the western edge of town near Wat Umong, built as a village of small wooden shophouses. Independent artists sell handmade ceramics, prints, textiles and crafts; there are quiet cafés, occasional workshops and a resident colony of cats. Relaxed and photogenic — nicer earlier in the day before it warms up.",
+            "ru": "Зелёная творческая община на западной окраине города у Wat Umong, построенная как деревня из маленьких деревянных лавок. Независимые художники продают керамику ручной работы, принты, ткани и ремёсла; есть тихие кафе, иногда мастер-классы и колония местных котов. Расслабленно и фотогенично — приятнее в первой половине дня, пока не жарко.",
+            "zh": "位于城西、近Wat Umong的一处绿意盎然的创意社区，由小木屋店铺组成村落。独立艺术家出售手工陶瓷、版画、织物和工艺品；有安静的咖啡馆、不定期工作坊，还有一群常驻的猫。轻松上镜——上午天气尚凉时前往更佳。"
+          }
+        },
+        {
+          "id": "d14-nimman",
+          "name": {
+            "en": "Nimman district (evening walk)",
+            "ru": "Район Нимман (вечерняя прогулка)",
+            "zh": "尼曼街区（傍晚漫步）"
+          },
+          "time": "19:00",
+          "category": "market",
+          "lat": 18.800166,
+          "lng": 98.9677615,
+          "placeId": "ChIJz-Ci8WE62jARXFEx0qxJgAA",
+          "note": {
+            "en": "Chiang Mai's café-and-bar district west of the moat, liveliest in the evening. Wander the sois; Tong Tem Toh (Soi 13) is a solid northern-Thai dinner.",
+            "ru": "Кафейно-барный район Чиангмая к западу от рва, оживает вечером. Прогуляйтесь по переулкам; Tong Tem Toh (Soi 13) — хороший северо-тайский ужин.",
+            "zh": "护城河以西的咖啡馆与酒吧街区，傍晚最热闹。可在小巷间漫步；Tong Tem Toh（13巷）是不错的泰北晚餐。"
+          },
+          "optional": false,
+          "meal": "dinner",
+          "warn": false,
+          "details": {
+            "en": "Nimmanhaemin, west of the moat by Chiang Mai University, is the city's contemporary heart — a grid of numbered sois dense with specialty coffee, cocktail bars, design shops, malls (like One Nimman) and restaurants. It's a browsing-and-grazing district rather than a sight; come in the evening when the bars and street food come alive. Tong Tem Toh on Soi 13 is a dependable northern-Thai dinner.",
+            "ru": "Ниммахемин, к западу от рва у Университета Чиангмая, — современное сердце города: сетка нумерованных переулков с кофейнями, коктейль-барами, дизайн-лавками, моллами (как One Nimman) и ресторанами. Это район для прогулки и перекусов, а не «достопримечательность»; приходите вечером, когда оживают бары и стрит-фуд. Tong Tem Toh на Soi 13 — надёжный северо-тайский ужин.",
+            "zh": "尼曼（Nimmanhaemin）位于护城河以西、清迈大学一带，是这座城市的当代中心——一片以数字命名的小巷网格，密布精品咖啡、鸡尾酒吧、设计小店、商场（如 One Nimman）和餐厅。这里适合闲逛与边走边吃，而非「打卡景点」；傍晚酒吧和街头小吃活跃时前来最佳。13巷的 Tong Tem Toh 是可靠的泰北晚餐。"
           }
         }
       ]
